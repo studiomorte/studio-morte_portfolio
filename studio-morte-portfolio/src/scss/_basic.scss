@@ -1,0 +1,78 @@
+// CSS RESETS --------------------------------------------------
+// https://www.digitalocean.com/community/tutorials/css-minimal-css-reset
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body { 
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+  
+// MIXINS ----------------------------------------------------------
+
+@mixin reset-spacing {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin project-gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+
+// VARIABLES --------------------------------------------------
+
+$brand-pink: #F26F8F;
+$brand-black: #3A3A3A;
+$brand-white: #fff;
+
+
+// FONT IMPORTS -------------------------------------------------
+
+@font-face {
+    font-family: "NorfolkSerif";
+    src: local("NorfolkSerif-Regular"),
+     url("./../fonts/NorfolkSerif-Regular.otf") format("truetype");
+}
+
+// Lato font
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+// FONT STYLING ------------------------------------------------------------
+
+@mixin brand-display {
+    font-family: "NorfolkSerif";
+}
+
+body, p, ol, ul {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+// LINK STYLING ------------------------------------------------------------
+

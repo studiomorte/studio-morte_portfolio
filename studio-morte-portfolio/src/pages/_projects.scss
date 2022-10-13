@@ -1,0 +1,31 @@
+@import './../scss/basic';
+
+.project_links {
+    width: 90vw;
+    margin-top: 15vh;
+    overflow: hidden;
+    transform: rotate(-8.93deg);
+
+    border: 1px solid red;
+    li {
+        
+        font-weight: 100;
+        margin-left: 100px;
+        font-size: 80px;
+        letter-spacing: 10px;
+        line-height: 160px;
+        text-transform: uppercase;
+
+    }
+
+    li:hover {
+        
+        @include brand-display;
+        font-size: 130px;
+        color: $brand-pink;
+        text-transform: lowercase;
+
+
+    }
+    
+}

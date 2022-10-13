@@ -1,0 +1,71 @@
+@import '../scss/main';
+
+.navigation_container {
+    width: 100vw;
+    height: min(200px, 20vh);
+    background-color: $brand-black;
+
+    padding: 45px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation_logo {
+    
+    .studio {
+        @include reset-spacing;
+
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: 6px;
+        color: $brand-white;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        line-height: 30px;
+    }
+
+    .morte {
+        @include brand-display;
+        @include reset-spacing;
+
+        color: $brand-pink;
+        font-size: 128px;
+        letter-spacing: 1px;
+        line-height: 60px;
+    }
+}
+
+.navigation_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: right;
+    color: $brand-pink; 
+
+    nav ul {
+        @include reset-spacing;
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+}
+
+.navigation_designer {
+    @include brand-display;
+    @include reset-spacing;
+
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
