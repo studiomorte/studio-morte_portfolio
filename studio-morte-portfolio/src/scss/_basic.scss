@@ -57,9 +57,53 @@ $brand-white: #fff;
      url("./../fonts/NorfolkSerif-Regular.otf") format("truetype");
 }
 
-// Lato font
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@font-face {
+    font-family: "Lato-Thin";
+    src: local("Lato-Thin"),
+     url("./../fonts/Lato-Thin.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: "Lato-Light";
+    src: local("Lato-Light"),
+     url("./../fonts/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: local("Lato-Regular"),
+     url("./../fonts/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: local("Lato-Medium"),
+     url("./../fonts/Lato-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Semibold";
+    src: local("Lato-Semibold"),
+     url("./../fonts/Lato-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: local("Lato-Bold"),
+     url("./../fonts/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Heavy";
+    src: local("Lato-Heavy"),
+     url("./../fonts/Lato-Heavy.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato-Black";
+    src: local("Lato-Black"),
+     url("./../fonts/Lato-Black.ttf") format("truetype");
+}
 
 
 // FONT STYLING ------------------------------------------------------------
@@ -68,17 +112,15 @@ $brand-white: #fff;
     font-family: "NorfolkSerif";
 }
 
-body, p, ol, ul {
-    font-family: 'Lato', sans-serif;
+body {
+    font-family: Lato-Regular;
 }
-
 
 
 // LINK STYLING ------------------------------------------------------------
 
-.page-container {
-    position: relative;
+.main-container {
     height: calc(100vh - 200px);
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }

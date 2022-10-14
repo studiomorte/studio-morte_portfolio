@@ -1,0 +1,23 @@
+@import '../scss/main';
+
+.social_container {
+    z-index: 5;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: max-content;
+    height: max-content;
+
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.social_icon {
+    transition: 0.2s ease;
+}
+
+.social_icon:hover {
+    transform: scale(1.2);
+}

@@ -3,9 +3,14 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from './App';
+import NoMatch from './pages/NoMatch';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Showreel from './pages/Showreel';
+import MyWarhammer from './pages/projects/MyWarhammer';
+import StauntonGallery from './pages/projects/StauntonGallery';
+import SustainabilityVic from './pages/projects/SustainabilityVic';
+import Djaliny from './pages/projects/Djaliny';
 
 
 // React Router
@@ -18,9 +23,16 @@ root.render(
     <Routes>
       <Route element={<App />}>
         <Route index element={<Projects />} />
-        <Route path="projects" element={<Projects />} />
+
+        <Route path="/" element={<Projects />} />
+        <Route path="mywarhammer" element={<MyWarhammer />} />
+        <Route path="stauntongallery" element={<StauntonGallery />} />
+        <Route path="sustainabilityvic" element={<SustainabilityVic />} />
+        <Route path="djaliny" element={<Djaliny />} />
+
         <Route path="about" element={<About />} />
         <Route path="showreel" element={<Showreel />} />
+        <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -1,13 +1,74 @@
 @import './../scss/basic';
 
+.project_page-container {
+    position: relative;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+}
+
 .project_navigation {
-    z-index: 100;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 200px;
+    transition: all 0.5 ease-out;
+    z-index: 3;
+}
+
+.project_background-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+12,ffffff+100&1+32,0.6+69,0+99 */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 12%, rgba(255,255,255,1) 32%, rgba(255,255,255,0.6) 69%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 12%,rgba(255,255,255,1) 32%,rgba(255,255,255,0.6) 69%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 12%,rgba(255,255,255,1) 32%,rgba(255,255,255,0.6) 69%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+
+.project_background-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.project_background-image.show1 {
+    background-image: url("./../images/warhammer-2.jpg");
+    background-position: right center;
+}
+
+.project_background-image.show2 {
+    background-image: url("./../images/staunton-1.jpg");
+    background-position: right bottom;
+}
+
+.project_background-image.show3 {
+    background-image: url("./../images/sustainvic-1.jpg");
+    background-position: right center;
+}
+
+.project_background-image.show4 {
+    background-image: url("./../images/djaliny-1.png");
+    background-position: right center;
+}
+
+.project_navigation ul {
+    transform: rotate(-8.93deg);
     width: 115%;
     margin-left: -150px;
-    padding-top: 200px;
-    transform: rotate(-8.93deg);
-
-    transition: all 0.5 ease-out;
 }
 
 .project_navigation li {
@@ -18,10 +79,10 @@
     height: 260px;
     margin-top: -120px;
 
-    font-weight: 100;
+    font-family: Lato-Thin;    
     font-size: 70px;
     letter-spacing: 10px;
-    line-height: 30px;
+    line-height: 0;
     text-transform: uppercase;
     text-align: left;
 }
@@ -40,7 +101,7 @@
 }
 
 .link.hover {
-    animation: hover 1s;
+    animation: hover 0.5s ease-in-out;
     animation-fill-mode : forwards;
 }
 

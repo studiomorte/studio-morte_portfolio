@@ -1,23 +1,41 @@
+import { NavLink } from 'react-router-dom'
 import './_navbar.scss';
 
 function Navbar(){
+
+    let activeClassName = "isActive";
+
     return (
         <>
             <div className="navigation_container">
-                <div className="navigation_logo">
-                    <p className="studio">Studio</p>
-                    <p className="morte">morte</p>
-                </div>
+                <NavLink to="/" end>
+                    <div className="navigation_logo">
+                        <p className="studio">Studio</p>
+                        <p className="morte">morte</p>
+                    </div>
+                </NavLink>
                 <div className="navigation_right">
                     <p className="navigation_designer">
                         front-end developer<br /> & experience designer
                     </p>
                     <nav>
-                        <ul>
-                            <li>About</li>
-                            <li>Projects</li>
-                            <li>Showreel</li>
-                        </ul>
+                            <NavLink 
+                                to="/about" 
+                                className={({ isActive }) =>
+                                isActive ? activeClassName : null }>
+                            About
+                            </NavLink>
+                            <NavLink to="/" end
+                                className={({ isActive }) =>
+                                isActive ? activeClassName : null }>
+                            Projects
+                            </NavLink>
+                            <NavLink to="/showreel"
+                                className={({ isActive }) =>
+                                isActive ? activeClassName : null }>
+                            Showreel
+                            </NavLink>
+                        
                     </nav>
                 </div>
             </div>

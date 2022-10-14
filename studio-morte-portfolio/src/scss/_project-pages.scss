@@ -1,0 +1,28 @@
+
+.project-pages_container {
+    margin: 0 auto;
+    width: 90vw;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.project-pages_header {
+
+    img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
+}
+
+.project-pages_logo {
+    justify-self: center;
+    grid-column: 1 / -1 ;
+    height: clamp(100px, 20vh, 180px);
+    margin: 100px 0;
+}
+
