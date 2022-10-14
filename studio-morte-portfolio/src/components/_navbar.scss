@@ -1,8 +1,9 @@
 @import '../scss/main';
 
 .navigation_container {
+    z-index: 100;
     width: 100vw;
-    height: min(200px, 20vh);
+    height: 200px;
     background-color: $brand-black;
 
     padding: 45px 50px;
