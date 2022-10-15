@@ -117,10 +117,72 @@ body {
 }
 
 
-// LINK STYLING ------------------------------------------------------------
+// MAIN STYLING ------------------------------------------------------------
 
 .main-container {
     height: calc(100vh - 200px);
     width: 100vw;
     overflow-x: hidden;
+}
+
+
+// GSAP TESTING ------------------------------------------------------------
+
+
+.link {
+    animation: changeFontReverse 0.5s;
+}
+
+.link:hover {
+    font-family: NorfolkSerif;
+    text-transform: lowercase;
+    color: $brand-pink;
+    animation: changeFont 0.5s;
+}
+
+
+.project_link:hover {
+    .rectangle {
+        opacity: 0;
+    }
+}
+
+@keyframes changeFont {
+    from {
+
+    }
+
+    1% {
+        @include brand-display;
+        color: $brand-pink;
+        text-transform: lowercase;
+        line-height: 0px;
+    }
+
+    to {
+        @include brand-display;
+        color: $brand-pink;
+        text-transform: lowercase;
+        line-height: 0px;
+    }
+}
+
+@keyframes changeFontReverse {
+    from {
+        @include brand-display;
+        color: $brand-pink;
+        text-transform: lowercase;
+        line-height: 0px;
+    }
+
+    99% {
+        @include brand-display;
+        color: $brand-pink;
+        text-transform: lowercase;
+        line-height: 0px;
+    }
+
+    to {
+
+    }
 }

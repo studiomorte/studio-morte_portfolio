@@ -2,5 +2,7 @@
 
 // Base styling
 @import 'basic';
-
-@import '../pages/projects'
+@import 'projects';
+@import 'navbar';
+@import 'project-pages';
+@import 'social-icons';

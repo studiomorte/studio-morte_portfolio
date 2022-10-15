@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
 import NoMatch from './pages/NoMatch';
 import Projects from './pages/Projects';
+import ProjectsGsap from './pages/Projects-gsap';
 import About from './pages/About';
 import Showreel from './pages/Showreel';
 import MyWarhammer from './pages/projects/MyWarhammer';
@@ -22,9 +23,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<App />}>
-        <Route index element={<Projects />} />
+        <Route index element={<ProjectsGsap />} />
 
-        <Route path="/" element={<Projects />} />
+        <Route path="/" element={<ProjectsGsap />} />
         <Route path="mywarhammer" element={<MyWarhammer />} />
         <Route path="stauntongallery" element={<StauntonGallery />} />
         <Route path="sustainabilityvic" element={<SustainabilityVic />} />
