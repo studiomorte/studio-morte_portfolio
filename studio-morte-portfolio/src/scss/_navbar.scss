@@ -5,7 +5,7 @@
     height: 200px;
     background-color: $brand-black;
 
-    padding: 45px 50px;
+    padding: 45px 50px 40px 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,6 +58,7 @@
         font-weight: 600;
         letter-spacing: 3px;
         text-transform: uppercase;
+        line-height: 30px;
     }
 
     nav a:after {
@@ -89,5 +90,5 @@
 .isActive {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 10px;
+    text-underline-offset: 16px;
 }

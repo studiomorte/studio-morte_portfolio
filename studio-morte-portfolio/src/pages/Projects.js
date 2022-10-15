@@ -167,65 +167,65 @@ function Projects( index ){
 
           <nav className="project_navigation">
             <ul>
-              <Link to="mywarhammer" >
                 <div ref={link1}>
                     <li className="project_link">
                         <div className="rectangle"></div>
-                            <p 
-                            className="link"
-                            onMouseEnter={() => {setReversed1(!reversed1); setHover1(true)}}
-                            onMouseLeave={() => {setReversed1(true); setHover1(false)}}>
-                                My Warhammer
-                            </p>
+                            <Link to="mywarhammer" >
+                                <p 
+                                className="link"
+                                onMouseEnter={() => {setReversed1(!reversed1); setHover1(true)}}
+                                onMouseLeave={() => {setReversed1(true); setHover1(false)}}>
+                                    My Warhammer
+                                </p>
+                            </Link>
                         <div className="rectangle"></div>
                     </li>
                 </div>
-              </Link>
 
-              <Link to="stauntongallery" >
                 <div ref={link2}>
                     <li className="project_link">
                         <div className="rectangle"></div>
-                            <p 
-                            className="link"
-                            onMouseEnter={() => {setReversed2(!reversed2); setHover2(true)}}
-                            onMouseLeave={() => {setReversed2(true); setHover2(false)}}>
-                              Staunton Gallery
-                            </p>
+                            <Link to="stauntongallery" >
+                                <p 
+                                className="link"
+                                onMouseEnter={() => {setReversed2(!reversed2); setHover2(true)}}
+                                onMouseLeave={() => {setReversed2(true); setHover2(false)}}>
+                                Staunton Gallery
+                                </p>
+                            </Link>
                         <div className="rectangle"></div>
                     </li>
                 </div>
-              </Link>
 
-              <Link to="sustainabilityvic" >
                 <div ref={link3}>
                     <li className="project_link">
                         <div className="rectangle"></div>
-                            <p 
-                            className="link"
-                            onMouseEnter={() => {setReversed3(!reversed3); setHover3(true)}}
-                            onMouseLeave={() => {setReversed3(true); setHover3(false)}}>
-                              Sustainability Victoria
-                            </p>
+                            <Link to="sustainabilityvic" >
+                                <p 
+                                className="link"
+                                onMouseEnter={() => {setReversed3(!reversed3); setHover3(true)}}
+                                onMouseLeave={() => {setReversed3(true); setHover3(false)}}>
+                                Sustainability Victoria
+                                </p>
+                            </Link>
                         <div className="rectangle"></div>
                     </li>
                 </div>
-              </Link>
 
-              <Link to="djaliny" >
                 <div ref={link4}>
                     <li className="project_link">
                         <div className="rectangle"></div>
-                            <p 
-                            className="link"
-                            onMouseEnter={() => {setReversed4(!reversed4); setHover4(true)}}
-                            onMouseLeave={() => {setReversed4(true); setHover4(false)}}>
-                              Djaliny
-                            </p>
+                            <Link to="djaliny" >
+                                <p 
+                                className="link"
+                                onMouseEnter={() => {setReversed4(!reversed4); setHover4(true)}}
+                                onMouseLeave={() => {setReversed4(true); setHover4(false)}}>
+                                Djaliny
+                                </p>
+                            </Link>
                         <div className="rectangle"></div>
                     </li>
                 </div>
-              </Link>
 
             </ul>
           </nav>

@@ -3,7 +3,7 @@
     z-index: 5;
     position: absolute;
     bottom: 40px;
-    right: 50px;
+    right: 0;
     width: max-content;
     height: max-content;
 
@@ -11,6 +11,9 @@
     flex-direction: row;
     gap: 30px;
     align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 60px 10px 20px;
 }
 
 .social_icon {
