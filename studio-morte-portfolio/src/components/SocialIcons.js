@@ -1,6 +1,4 @@
 import { Icon } from '@iconify/react';
-import './_socialicons.scss';
-
 
 function SocialIcons(){
 
