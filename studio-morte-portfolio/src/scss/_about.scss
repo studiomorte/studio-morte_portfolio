@@ -1,0 +1,88 @@
+
+.about_page-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 50px repeat(6, 1fr) 50px;
+    grid-template-rows: repeat(3, 1fr);
+    height: calc(100vh - 200px);
+    margin: 0;
+
+    h1 {
+        grid-column: 5 / -1 ;
+        grid-row: 1 / 2 ;
+        font-family: NorfolkSerif;
+        font-size: 80px;
+        color: $brand-pink;
+        letter-spacing: 5px;
+        transform: rotate(-8.93deg);
+    }
+}
+
+.about_body {
+    grid-column: 5 / 7 ;
+    grid-row: 2 / -1 ;
+    padding: 50px;
+
+    .social_container {
+        background-color: rgba(255, 255, 255, 0);
+        position: relative;
+    }
+}
+
+.about_placeholder-image {
+    margin: 0; // reset auto styling
+    grid-column: 2 / 6 ;
+    grid-row: 1 / -1 ;
+    background-image: url("./../images/about-me.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 1450px) {
+    .about_body {
+        grid-column: 5 / 8 ;
+    }
+    .about_page-container {
+        h1 {
+            grid-column: 2 / -1 ;
+            justify-self: center;
+        }
+    }
+    .about_placeholder-image {
+        grid-column: 1 / 8 ;
+        margin-top: 200px;
+        background-position: left;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .about_page-container {
+        grid-template-rows: repeat(4, 1fr);
+
+        h1 {
+            grid-column: 1 / -1 ;
+            grid-row: 2 / 3 ;
+            font-size: 9vw;
+            align-self: center;
+        }
+    }
+
+    .about_body {
+        grid-column: 1 / -1 ;
+        grid-row: 3 / -1 ;
+        padding: 20px 10vw;
+    }
+
+    .about_placeholder-image {
+        grid-row: 1 / 2 ;
+        margin-top: 50px;
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        background-size: cover;
+        justify-self: center;
+    }
+}

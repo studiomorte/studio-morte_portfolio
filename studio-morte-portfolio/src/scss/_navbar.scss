@@ -34,6 +34,13 @@
         letter-spacing: 1px;
         line-height: 60px;
     }
+
+    transition: 0.5s ease;
+}
+
+.navigation_logo:hover {
+    transform: Scale(1.02);
+    transition: 0.5s ease;
 }
 
 .navigation_right {
@@ -76,6 +83,7 @@
         height: 3px;
         background-color: $brand-pink;
     }
+
 }
 
 .navigation_designer {

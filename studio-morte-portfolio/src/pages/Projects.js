@@ -11,11 +11,13 @@ function Projects( index ){
     // ASK FOR HELP WITH:
     // I want the "my warhammer" project_link to automatically be in a "hovered" state on page load.
     // I also want the hovered state to remain active until another link is hovered over.
+    // When the user stops hovering over another item I want "my warhammer" to return to a hovered state.
+
 
   // TIMELINE 1 -------------------------------------------------------
 
   const link1 = useRef();
-  const [tl1, setTl] = useState(() => gsap.timeline());
+  const [tl1, setTl1] = useState(() => gsap.timeline());
   const [reversed1, setReversed1] = useState(true);
   const [hover1, setHover1] = useState(false)
 
@@ -47,12 +49,10 @@ function Projects( index ){
     tl1.current.reversed(reversed1);
   }, [reversed1, tl1]);
 
-
-
   // TIMELINE 2 ---------------------------------------------------------
 
   const link2 = useRef();
-  const [tl2, setT2] = useState(() => gsap.timeline());
+  const [tl2, setTl2] = useState(() => gsap.timeline());
   const [reversed2, setReversed2] = useState(true);
   const [hover2, setHover2] = useState(false)
 
@@ -88,7 +88,7 @@ function Projects( index ){
   // TIMELINE 3 -----------------------------------------------------
   
   const link3 = useRef();
-  const [tl3, setT3] = useState(() => gsap.timeline());
+  const [tl3, setTl3] = useState(() => gsap.timeline());
   const [reversed3, setReversed3] = useState(true);
   const [hover3, setHover3] = useState(false)
 
@@ -125,7 +125,7 @@ function Projects( index ){
   // TIMELINE 4 ---------------------------------------------------
 
   const link4 = useRef();
-  const [tl4, setT4] = useState(() => gsap.timeline());
+  const [tl4, setTl4] = useState(() => gsap.timeline());
   const [reversed4, setReversed4] = useState(true);
   const [hover4, setHover4] = useState(false)
 
@@ -162,8 +162,8 @@ function Projects( index ){
   return (
     <>
       <div className="main-container">
-      <div class="project_page-container">
-        <SocialIcons />
+        <div class="project_page-container">
+          <SocialIcons />
 
           <nav className="project_navigation">
             <ul>
@@ -173,8 +173,8 @@ function Projects( index ){
                             <Link to="mywarhammer" >
                                 <p 
                                 className="link"
-                                onMouseEnter={() => {setReversed1(!reversed1); setHover1(true)}}
-                                onMouseLeave={() => {setReversed1(true); setHover1(false)}}>
+                                onMouseEnter={() => {setReversed1(!reversed1); setHover1(true); }}
+                                onMouseLeave={() => {setReversed1(true); setHover1(false); }}>
                                     My Warhammer
                                 </p>
                             </Link>
@@ -204,7 +204,7 @@ function Projects( index ){
                                 <p 
                                 className="link"
                                 onMouseEnter={() => {setReversed3(!reversed3); setHover3(true)}}
-                                onMouseLeave={() => {setReversed3(true); setHover3(false)}}>
+                                onMouseLeave={() => {setReversed3(true); setHover3(false); }}>
                                 Sustainability Victoria
                                 </p>
                             </Link>
@@ -219,7 +219,7 @@ function Projects( index ){
                                 <p 
                                 className="link"
                                 onMouseEnter={() => {setReversed4(!reversed4); setHover4(true)}}
-                                onMouseLeave={() => {setReversed4(true); setHover4(false)}}>
+                                onMouseLeave={() => {setReversed4(true); setHover4(false); }}>
                                 Djaliny
                                 </p>
                             </Link>
@@ -234,9 +234,9 @@ function Projects( index ){
           <div className={`project_background-image2 ${hover2 ? "show" : "" }`}></div>
           <div className={`project_background-image3 ${hover3 ? "show" : "" }`}></div>
           <div className={`project_background-image4 ${hover4 ? "show" : "" }`}></div>
-      </div>      
+        </div>      
       </div>
-      </>
+    </>
   );
 }
 
