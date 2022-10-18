@@ -23,9 +23,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<App />}>
-        <Route index element={<ProjectsGsap />} />
+        <Route index element={<Projects />} />
 
-        <Route path="/" element={<ProjectsGsap />} />
+        <Route path="/" element={<Projects />} />
         <Route path="mywarhammer" element={<MyWarhammer />} />
         <Route path="stauntongallery" element={<StauntonGallery />} />
         <Route path="sustainabilityvic" element={<SustainabilityVic />} />

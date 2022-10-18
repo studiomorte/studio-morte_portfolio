@@ -6,83 +6,22 @@
     overflow: hidden;
 }
 
-a {
-    color: inherit;
-}
-
 .project_navigation {
     position: relative;
     height: 100vh;
-    width: 200vw;
-    margin-top: -5vw;
-    margin-left: -150px;
-
+    width: 100vw;    
+    margin-top: 100px;
+    margin-left: 200px;
     z-index: 3;
 }
 
-.project_background-overlay {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+12,ffffff+100&1+32,0.6+69,0+99 */
-    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 12%, rgba(255,255,255,1) 32%, rgba(255,255,255,0.6) 69%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 12%,rgba(255,255,255,1) 32%,rgba(255,255,255,0.6) 69%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  rgba(255,255,255,1) 12%,rgba(255,255,255,1) 32%,rgba(255,255,255,0.6) 69%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
-}
-
-.project_background-image1, 
-.project_background-image2, 
-.project_background-image3, 
-.project_background-image4 {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-    transition: 1s ease;
-    opacity: 0;
-}
-
-.project_background-image1.show {
-    opacity: 1;
-    background-image: url("./../images/warhammer-2.jpg");
-}
-
-.project_background-image2.show {
-    opacity: 1;
-    background-image: url("./../images/staunton-2.jpg");
-}
-
-.project_background-image3.show {
-    opacity: 1;
-    background-image: url("./../images/sustainvic-1.jpg");
-}
-
-.project_background-image4.show {
-    opacity: 1;
-    background-image: url("./../images/djaliny-1.png");
-}
-
-
 .project_navigation ul {
-    transform: rotate(-8.93deg);
-    width: 115%;
+    width: 100vw;
 }
 
 .project_navigation li {
     display: grid;
-    grid-template-columns: 200px max-content 5fr;
-    align-items: center;
-    gap: 50px;
-    height: 260px;
-    margin-top: -100px;
-
+    grid-template-columns: 1fr;
     font-family: Lato-Thin;    
     font-size: 70px;
     letter-spacing: 10px;
@@ -91,36 +30,19 @@ a {
     text-align: left;
 }
 
-.rectangle {
-    margin-top: 15px;
-    height: 80px; 
-    width: 100%;
-    background-color: $brand-pink;
-    opacity: 0;
-}
-
-
-.link {
+/*
+.project_link {
     animation: changeFontReverse 0.5s;
 }
 
-.is-active {
-    animation: changeFontReverse 0.5s;
-}
-
-.is-active:hover {
+.project_link:hover {
     font-family: NorfolkSerif;
     text-transform: lowercase;
     color: $brand-pink;
     animation: changeFont 0.5s;
 
 }
-
-.project_link:hover {
-    .rectangle {
-        opacity: 0;
-    }
-}
+*/
 
 
 @keyframes changeFont {
@@ -161,44 +83,4 @@ a {
     to {
 
     }
-}
-
-@media only screen and (max-height: 1300px) {
-    .project_navigation {
-        margin-top: -150px;
-    }
-}
-
-@media only screen and (max-width: 1920px) {
-    .project_navigation {
-        transform: scale(0.8);
-        margin-left: -27vw;
-        margin-top: 0;
-    }
-}
-
-@media only screen and (max-width: 1700px) {
-    .hidden { display: none; }
-}
-
-@media only screen and (max-width: 1500px) {
-    .project_navigation {
-        transform: scale(0.7);
-        margin-left: -36vw;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .project_navigation {
-        width: 200vw;
-        transform: scale(0.6);
-        margin-left: -49vw;
-
-        .project_navigation li {
-            font-size: 200px;
-            margin-top: -90px;
-        }
-    }
-
-
 }

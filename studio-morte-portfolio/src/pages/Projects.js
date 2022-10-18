@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from 'react';
@@ -6,245 +6,146 @@ import { useLayoutEffect, useRef } from 'react';
 import SocialIcons from '../components/SocialIcons'
 
 function Projects( index ){
-
     
-    // ASK FOR HELP WITH:
-    // I want the "my warhammer" project_link to automatically be in a "hovered" state on page load.
-    // I also want the hovered state to remain active until another link is hovered over.
-    // When the user stops hovering over another item I want "my warhammer" to return to a hovered state.
-
-
-  // TIMELINE 1 -------------------------------------------------------
-
-  const link1 = useRef();
-  const [tl1, setTl1] = useState(() => gsap.timeline());
-  const [reversed1, setReversed1] = useState(true);
-  const [hover1, setHover1] = useState(false)
-
   useLayoutEffect(() => {
-    const ctx1 = gsap.context(() => {
-      tl1.current = gsap.timeline( { defaults: {duration: 0.5} } )
 
-      .to(".link", {
-        className: 'is-active',
+    // On initial page load, let the first project_link-container be active (inline)
+    let first = document.querySelector(".project_link-container");
+    initialLoad(first)
 
+    function initialLoad(container) {
+      let link = container.querySelector(".project_link"),
+          background = document.getElementById(container.getAttribute('data-background'));
+
+      // SET first container to final animated state
+      gsap.set(link, { 
         fontSize: 130,
-        ease: "power1",
-        delay: 1
-      }, index * 0)
+      })
 
-      .to(".rectangle", {
-        opacity: 1,
-        ease: "power1"
-      }, index * 0)
+      gsap.set(background, {
+        autoAlpha: 1,
+      })
+    }
 
-      .to(".project_background-image1", {
-        opacity: 1,
-        ease: "power4"
-      }, index * 0);
+    // When hovering over link container
+    function onEnter(container) { 
 
-    }, link1);
-    return () => ctx1.revert();
-  }, [tl1, index]);
+      // if project-link is already active, don't run the onEnter function
+      if(container.classList.contains("active")){
+        return
+      }
 
-  useEffect(() => {
-    tl1.current.reversed(reversed1);
-  }, [reversed1, tl1]);
+      // if project-link is already active, run the onExit function
+      let active = document.querySelectorAll(".project_link-container.active");
+      active.forEach( (el) => { 
+        onExit(el)
+      }) 
 
-  // TIMELINE 2 ---------------------------------------------------------
+      // onEnter animation:
+      let link = container.querySelector(".project_link"),
+          background = document.getElementById(container.getAttribute('data-background'));
 
-  const link2 = useRef();
-  const [tl2, setTl2] = useState(() => gsap.timeline());
-  const [reversed2, setReversed2] = useState(true);
-  const [hover2, setHover2] = useState(false)
-
-  useLayoutEffect(() => {
-    const ctx2 = gsap.context(() => {
-      tl2.current = gsap.timeline( { defaults: {duration: 0.5} } )
-
-      .to(".link", {
-        className: 'is-active',
-
+      gsap.to(link, { 
         fontSize: 130,
-        ease: "power1",
-        delay: 1
-      }, index * 0)
-
-      .to(".rectangle", {
-        opacity: 1,
         ease: "power1"
-      }, index * 0)
+      })
 
-      .to(".project_background-image2", {
-        opacity: 1,
-        ease: "power4"
-      }, index * 0);
-
-    }, link2);
-    return () => ctx2.revert();
-  }, [tl2, index]);
-
-  useEffect(() => {
-    tl2.current.reversed(reversed2);
-  }, [reversed2, tl2]);
-
-
-  // TIMELINE 3 -----------------------------------------------------
-  
-  const link3 = useRef();
-  const [tl3, setTl3] = useState(() => gsap.timeline());
-  const [reversed3, setReversed3] = useState(true);
-  const [hover3, setHover3] = useState(false)
-
-  useLayoutEffect(() => {
-    const ctx3 = gsap.context(() => {
-      tl3.current = gsap.timeline( { defaults: {duration: 0.5} } )
-
-      .to(".link", {
-        className: 'is-active',
-
-        fontSize: 130,
-        ease: "power1",
-        delay: 1
-      }, index * 0)
-
-      .to(".rectangle", {
-        opacity: 1,
+      gsap.to(background, {
+        autoAlpha: 1,
         ease: "power1"
-      }, index * 0)
+      }, "<")
 
-      .to(".project_background-image3", {
-        opacity: 1,
-        ease: "power4"
-      }, index * 0);
+      // add active class to project-link
+      container.classList.add("active")
+    } 
 
-    }, link3);
-    return () => ctx3.revert();
-  }, [tl3, index]);
+    // onExit animation:
+    function onExit (container) {
+      let link = container.querySelector(".project_link"),
+      background = document.getElementById(container.getAttribute('data-background'));
 
-  useEffect(() => {
-    tl3.current.reversed(reversed3);
-  }, [reversed3, tl3]);
-
-
-
-  // TIMELINE 4 ---------------------------------------------------
-
-  const link4 = useRef();
-  const [tl4, setTl4] = useState(() => gsap.timeline());
-  const [reversed4, setReversed4] = useState(true);
-  const [hover4, setHover4] = useState(false)
-
-  useLayoutEffect(() => {
-    const ctx4 = gsap.context(() => {
-      tl4.current = gsap.timeline( { defaults: {duration: 0.5} } )
-
-      .to(".link", {
-        className: 'is-active',
-        fontSize: 130,
-        ease: "power1",
-        delay: 1
-      }, index * 0)
-
-      .to(".rectangle", {
-        opacity: 1,
+      gsap.to(link, { 
+        fontSize: 70,
         ease: "power1"
-      }, index * 0)
+      })
 
-      .to(".project_background-image3", {
-        opacity: 1,
-        ease: "power4"
-      }, index * 0);
+      gsap.to(background, {
+        autoAlpha: 0,
+        ease: "power1"
+      }, "<")
 
-    }, link4);
-    return () => ctx4.revert();
-  }, [tl4, index]);
+      // remove active class from project-link
+      container.classList.remove("active")
+    }
 
-  useEffect(() => {
-    tl4.current.reversed(reversed4);
-  }, [reversed4, tl4]);
-
-
+    // GSAP ARRAY
+    // On hover, run the onEnter function
+    gsap.utils.toArray(".project_link-container").forEach(container => {
+      container.addEventListener("mouseenter", () => onEnter( container ) );
+    })
+  })
 
   return (
     <>
-        <div class="project_page-container">
+      <div class="project_page-container">
 
-          <nav className="project_navigation">
-            <ul>
-                <div ref={link1}>
-                    <li className="project_link">
-                        <div className="rectangle"></div>
-                            <Link to="mywarhammer" >
-                                <p 
-                                className="link"
-                                onMouseEnter={() => {setReversed1(!reversed1); setHover1(true);}}
-                                onMouseLeave={() => {setReversed1(true); setHover1(false); }}>
-                                    My Warhammer
-                                </p>
-                            </Link>
-                        <div className="rectangle"></div>
-                    </li>
-                </div>
+        <nav className="project_navigation">
+          <ul>
+              <div className="project_link-container active" data-background="background-1">
+                  <li className="project_link">
+                      <div className="rectangle"></div>
+                          <Link to="mywarhammer" >
+                              <p className="link">My Warhammer</p>
+                          </Link>
+                      <div className="rectangle"></div>
+                  </li>
+              </div>
 
-                <div ref={link2}>
-                    <li className="project_link">
-                        <div className="rectangle"></div>
-                            <Link to="stauntongallery" >
-                                <p 
-                                className="link"
-                                onMouseEnter={() => {setReversed2(!reversed2); setHover2(true);}}
-                                onMouseLeave={() => {setReversed2(true); setHover2(false);}}>
-                                Staunton Gallery
-                                </p>
-                            </Link>
-                        <div className="rectangle"></div>
-                    </li>
-                </div>
+              <div className="project_link-container" data-background="background-2">
+                  <li className="project_link">
+                      <div className="rectangle"></div>
+                          <Link to="stauntongallery" >
+                              <p className="link">Staunton Gallery</p>
+                          </Link>
+                      <div className="rectangle"></div>
+                  </li>
+              </div>
 
-                <div ref={link3}>
-                    <li className="project_link">
-                        <div className="rectangle"></div>
-                            <Link to="sustainabilityvic" >
-                                <p 
-                                className="link"
-                                onMouseEnter={() => {setReversed3(!reversed3); setHover3(true)}}
-                                onMouseLeave={() => {setReversed3(true); setHover3(false); }}>
+              <div className="project_link-container"  data-background="background-3">
+                  <li className="project_link">
+                      <div className="rectangle"></div>
+                          <Link to="sustainabilityvic" >
+                              <p className="link">
                                 Sustainability Vic<span className="hidden">toria</span>
-                                </p>
-                            </Link>
-                        <div className="rectangle"></div>
-                    </li>
-                </div>
+                              </p>
+                          </Link>
+                      <div className="rectangle"></div>
+                  </li>
+              </div>
 
-                <div ref={link4}>
-                    <li className="project_link">
-                        <div className="rectangle"></div>
-                            <Link to="djaliny" >
-                                <p 
-                                className="link"
-                                onMouseEnter={() => {setReversed4(!reversed4); setHover4(true)}}
-                                onMouseLeave={() => {setReversed4(true); setHover4(false); }}>
-                                Djaliny
-                                </p>
-                            </Link>
-                        <div className="rectangle"></div>
-                    </li>
-                </div>
+              <div className="project_link-container"  data-background="background-4">
+                  <li className="project_link">
+                      <div className="rectangle"></div>
+                          <Link to="djaliny" >
+                              <p className="link">Djaliny</p>
+                          </Link>
+                      <div className="rectangle"></div>
+                  </li>
+              </div>
 
-            </ul>
-          </nav>
+          </ul>
+        </nav>
 
-          <SocialIcons />
+        <SocialIcons />
 
-          <div className="project_background-overlay"></div>
-          <div className={`project_background-image1 ${hover1 ? "show" : "" }`}></div>
-          <div className={`project_background-image2 ${hover2 ? "show" : "" }`}></div>
-          <div className={`project_background-image3 ${hover3 ? "show" : "" }`}></div>
-          <div className={`project_background-image4 ${hover4 ? "show" : "" }`}></div>
-        </div>      
+        <div className="project_background-overlay"></div>
+        <div className="project_background-image" id="background-1"></div>
+        <div className="project_background-image" id="background-2"></div>
+        <div className="project_background-image" id="background-3"></div>
+        <div className="project_background-image" id="background-4"></div>
+      </div>      
     </>
-  );
+  )
 }
 
 export default Projects
