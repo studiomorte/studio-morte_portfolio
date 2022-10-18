@@ -5,7 +5,7 @@ import { useLayoutEffect, useRef } from 'react';
 
 import SocialIcons from '../components/SocialIcons'
 
-function Projects( index ){
+function ProjectsGsap( index ){
 
     
     // ASK FOR HELP WITH:
@@ -247,4 +247,4 @@ function Projects( index ){
   );
 }
 
-export default Projects
+export default ProjectsGsap
