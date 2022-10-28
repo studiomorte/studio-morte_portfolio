@@ -2,6 +2,8 @@ import { Link, redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from 'react';
+import { Icon } from '@iconify/react';
+
 
 import SocialIcons from '../components/SocialIcons'
 
@@ -85,6 +87,10 @@ function Projects( index ){
     })
   })
 
+
+  // MOBILE SLIDER ----------------------------------------------------
+
+
   return (
     <>
       <div class="project_page-container">
@@ -134,6 +140,20 @@ function Projects( index ){
               </div>
 
           </ul>
+        </nav>
+
+        <nav className="project_navigation-mobile">
+              <div className="project_slide-arrows">
+                <Icon id="arrow-left" icon="dashicons:arrow-right-alt2" />
+                <Icon id="arrow-right" icon="dashicons:arrow-right-alt2" />
+              </div>
+            <div className="project_navigation-slide">
+              <div className="project_slide-content">
+                <p className="project_slide-title">My Warhammer</p>
+                <div className="project_slide-button">Explore Project</div>
+              </div>
+              <div className="project_background-image" id="background-1-mob"/>
+            </div>
         </nav>
 
         <SocialIcons />

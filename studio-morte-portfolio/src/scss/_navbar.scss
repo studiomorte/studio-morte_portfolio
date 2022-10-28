@@ -84,6 +84,8 @@
         background-color: $brand-pink;
     }
 
+    .hamburger { display: none; }
+
 }
 
 .navigation_designer {
@@ -99,4 +101,74 @@
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 16px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .navigation_container {
+        height: 150px;
+    }
+
+    .navigation_logo {
+        .studio {
+            font-size: 20px;
+            line-height: 5px;
+        }
+
+        .morte {
+            font-size: 80px;
+        }
+    }
+
+    .navigation_designer {
+        display: none;
+    }
+
+    .navigation_right {
+        justify-content: center;
+
+        nav a { display: none; }
+
+        .hamburger { 
+            display: block; 
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .navigation_container {
+        height: 100px;
+        padding: 20px 30px 20px 0px;
+    }
+
+    .navigation_logo {
+        transform: scale(0.8);
+
+        .studio {
+            font-size: 20px;
+            line-height: 5px;
+        }
+
+        .morte {
+            font-size: 80px;
+        }
+    }
+
+    .navigation_designer {
+        display: none;
+    }
+
+    .navigation_right {
+        justify-content: center;
+
+        nav a { display: none; }
+
+        .hamburger { 
+            display: block; 
+            height: 50px;
+            width: 50px;
+        }
+    }
 }

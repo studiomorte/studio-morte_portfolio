@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom'
+import { Icon } from '@iconify/react';
+
 
 function Navbar(){
 
@@ -14,6 +16,7 @@ function Navbar(){
                     </div>
                 </NavLink>
                 <div className="navigation_right">
+                    <Icon className="hamburger" icon="gg:menu" />
                     <p className="navigation_designer">
                         front-end developer<br /> & experience designer
                     </p>

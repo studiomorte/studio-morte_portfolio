@@ -28,3 +28,7 @@
 .social_icon:hover {
     transform: scale(1.2);
 }
+
+@media only screen and (max-width: 900px) {
+    .social_container { display: none }
+}
