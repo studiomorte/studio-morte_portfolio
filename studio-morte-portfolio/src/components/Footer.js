@@ -28,8 +28,10 @@ function Footer(){
     return (
         <>
             <footer class="footer">
-                <p>© 2022 Studio Morte</p>
-                <SocialIconsFooter />
+                <div class="footer-container">
+                    <p>© 2022 Studio Morte</p>
+                    <SocialIconsFooter />
+                </div>
             </footer>
         </>
     )
