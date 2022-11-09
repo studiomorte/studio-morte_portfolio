@@ -131,8 +131,15 @@ body {
     }
 }
 
+@media only screen and (max-height: 900px) {
+    .main-container {
+        height: calc(100vh - 100px);
+    }
+}
+/*
 @media only screen and (max-height: 700px) {
     .main-container {
         height: calc(100vh - 100px);
     }
 }
+*/
