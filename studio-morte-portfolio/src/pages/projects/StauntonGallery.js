@@ -1,5 +1,4 @@
 import './../../scss/_project-pages.scss'
-import './../../scss/_project-staunton.scss'
 import headerImg from './../../images/stauntonv3.png'
 import brandLogo from './../../images/staunton-logo.png'
 import Footer from './../../components/Footer'

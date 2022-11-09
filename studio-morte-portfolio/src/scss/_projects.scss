@@ -198,7 +198,7 @@ a {
 
     .project_navigation-slide {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         overflow: hidden;
 
         .project_background-image {
@@ -208,7 +208,7 @@ a {
 
     .project_slide-arrows {
         grid-area: 1 / 1 / -1 / -1 ;
-        align-self: end;
+        align-self: flex-end;
 
         display: flex;
         flex-direction: row;
