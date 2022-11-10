@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
 
-
 import SocialIcons from '../components/SocialIcons'
 
 function Projects( index ){

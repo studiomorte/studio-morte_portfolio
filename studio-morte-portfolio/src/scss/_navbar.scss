@@ -1,18 +1,19 @@
-
 .navigation_container {
     z-index: 100;
     width: 100vw;
-    height: 200px;
+    height: 150px;
     background-color: $brand-black;
 
-    padding: 45px 50px 40px 50px;
+    padding: 25px 50px 25px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .navigation_logo {
-    
+    transform: scale(0.8);
+    transition: 0.5s ease;
+
     .studio {
         @include reset-spacing;
 
@@ -34,13 +35,10 @@
         letter-spacing: 1px;
         line-height: 60px;
     }
-
-    transition: 0.5s ease;
 }
 
 .navigation_logo:hover {
-    transform: Scale(1.02);
-    transition: 0.5s ease;
+    transform: Scale(0.9);
 }
 
 .navigation_right {
@@ -52,8 +50,8 @@
     color: $brand-pink; 
 
     nav {
-
         @include reset-spacing;
+
         display: flex;
         flex-direction: row;
         gap: 70px;
@@ -75,7 +73,7 @@
         height: 3px;
         display: block;
         transition: all 0.3s ease;
-        bottom: -10px;
+        bottom: -7px;
     }
 
     nav a:hover::after {
@@ -95,12 +93,13 @@
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 1px;
+    padding-top: 5px;
 }
 
 .isActive {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 16px;
+    text-underline-offset: 13px;
 }
 
 @media only screen and (max-height: 900px) {
