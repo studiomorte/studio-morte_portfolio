@@ -43,6 +43,7 @@ a {
 }
 
 
+
 // VARIABLES --------------------------------------------------
 
 $brand-pink: #F26F8F;
@@ -125,6 +126,14 @@ body {
     color: $brand-pink;
 }
 
+.bold-italic {
+    padding-top: 1em;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1.3em;
+}
+
 .xxl { font-size: 4em; }
 .xl { font-size: 2em; }
 .l { font-size: 1.8em; }
@@ -142,7 +151,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
     .main-container {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 100px);
     }
 }
 

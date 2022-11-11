@@ -1,11 +1,11 @@
+/* IMPORTS */
 import Footer from './../components/Footer'
 import { Icon } from '@iconify/react';
 import React from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import FigmaEmbed from 'react-figma-embed';
 
-
-/* images */
+/* IMAGES */
 import bullet from './../images/bullet.png'
 import headerImg from './../images/stauntonv3.png'
 import featureImg from './../images/staunton1.png'
@@ -25,15 +25,16 @@ function Staunton(){
     return (
         <>
             <header className="project-pages_header">
-                <img className="project-pages_logo" src={ brandLogo } alt="Staunton Gallery Logo"/>
+                <img className="project-pages_logo logo-staunton" src={ brandLogo } alt="Staunton Gallery Logo"/>
                 <div className="project-pages_hero-overlay"></div>
                 <img className="project-pages_hero staunton-hero" src={ headerImg } alt="Collection of screens designed for Staunton Gallery"/>
             </header>
             <section className="project-pages_container">
 
-{ /* Opening Section ------------------------------------------- */}
-                <section className="staunton-project_summary">
-                    <div className="opening-block written">
+            { /* Opening Section ------------------------------------------- */}
+
+                <section className="project_summary">
+                    <div className="opening-block written left">
                         <h2>Overview</h2>
                         <p>Staunton Gallery is a local art gallery situated in the heart of Subiaco featuring multiple exhibition spaces. The gallery curates and hosts exhibitions, provides a support network to associated artists, and houses artist studios. Heather Staunton has been operating the gallery as an independent artist since 2007 and is seeking to reimagine the galleries online presence with a brand new website.</p>
                         <p>The website design must showcase the venue, their exhibitions, artists, and history, while also providing their clientele with information regarding upcoming events. The design must reflect the creative nature of the gallery, appeal to their existing customer base, and seek to attract a younger audience.</p>
@@ -67,12 +68,12 @@ function Staunton(){
                         </ul>
                     </nav>
 
-                    <div className="problem-statement">
+                    <div className="problem-statement full-width">
                         <p>Staunton Gallery wants to reimagine their online presence with a brand new website that reflects the creative nature of the gallery in a professional, yet aesthetically pleasing manner.</p>
                         <p>The design must showcase the venue, their exhibitions, artists, and history, while providing information on upcoming events.</p>
                     </div>
 
-                    <div className="project-goals written bullets">
+                    <div className="project-goals written left bullets">
                         <h2>Project Goals</h2>
                         <ul>
                             <li><img src={ bullet } alt="bullet point"/><span>Create an aesthetically pleasing design that leverages white space to convey the 'feeling' that the user is browsing through a physical gallery</span></li>
@@ -82,13 +83,13 @@ function Staunton(){
                         </ul>
                     </div>
 
-                    <div className="project-solution written">
+                    <div className="project-solution written right">
                         <h2>The Solution</h2>
-                        <p>Featuring a soft colour palette, asymmetrical layout, and geometric colour blocks, the final design is a unique and modern website that’s easy to navigate and pleasant to browse. The minimalistic design accomodates the needs of older users, while the subtle animations and clean, editorial style design simultaneously appeals to a younger audience.</p>
+                        <p>Featuring a soft colour palette, asymmetrical layout, and geometric colour blocks, the final design is a unique and modern website that's easy to navigate and pleasant to browse. The minimalistic design accomodates the needs of older users, while the subtle animations and clean, editorial style design simultaneously appeals to a younger audience.</p>
                         <p>The final design is fully responsive, with careful consideration given to layout adjustments made for mobile devices.</p>
                     </div>
 
-                    <div className="project-feature">
+                    <div className="project-feature full-width">
                         <img src={featureImg} />
                     </div>
                 </section>
@@ -97,18 +98,18 @@ function Staunton(){
 { /* Case Study Section ------------------------------------- */ }
 
                 <section className="staunton-case-study">
-                    <div className="project-heading research">
+                    <div className="project-heading first-heading full-width">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">research</span>
-                    </div>
-
-                    <div className="quote right staunton-research-quote">
-                        <p>“Many young people do not feel at home in art galleries or are inhibited from visiting them by the very way in which these institutions collect and display art” (Mason, 2006)</p>
                     </div>
 
                     <div className="written left">
                         <p>To understand the needs of the project brief I initially conducted topic research focusing on understanding what <i>artist studios</i> and <i>resident artists</i> are. I also researched other small art galleries found throughout Perth, analysing their online presence including social media pages.</p>
                         <p>I discovered that small art galleries typically feature raw and unfinished materials in their buildings, imperfections that give these spaces a relaxed and inviting atmosphere</p>
+                    </div>
+                    
+                    <div className="quote right staunton-research-quote">
+                        <p>“Many young people do not feel at home in art galleries or are inhibited from visiting them by the very way in which these institutions collect and display art” (Mason, 2006)</p>
                     </div>
 
                     <div className="written left">
@@ -143,20 +144,24 @@ function Staunton(){
                                     <Image src={persona3} />
                                 </Slide>
                             </Slider>
-                            <div className="carousel-buttons">
-                                <ButtonBack>
-                                    <Icon icon="dashicons:arrow-left-alt2" />
-                                </ButtonBack>
-                                <ButtonNext>
-                                    <Icon icon="dashicons:arrow-right-alt2" />
-                                </ButtonNext>
-                            </div>
                         </CarouselProvider>
+                    </div>
+
+                    <div className="mobile-image-container mobile-personas">
+                        <div>
+                            <img src={ persona1 } alt="Original mockups of the Staunton Gallery website"/>
+                        </div>
+                        <div>
+                            <img src={ persona2 } alt="Redesigned mockups of the Staunton Gallery website"/>
+                        </div>
+                        <div>
+                            <img src={ persona3 } alt="Redesigned mockups of the Staunton Gallery website"/>
+                        </div>
                     </div>
     { /* Slider One END ------------------------------------- */ }
 
 
-                    <div className="project-heading ideation">
+                    <div className="project-heading full-width ideation">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">ideation & wireframes</span>
                     </div>
@@ -188,19 +193,24 @@ function Staunton(){
                                     <Image src={wireframe2} />
                                 </Slide>
                             </Slider>
-                            <div className="carousel-buttons">
-                                <ButtonBack>
-                                    <Icon icon="dashicons:arrow-left-alt2" />
-                                </ButtonBack>
-                                <ButtonNext>
-                                    <Icon icon="dashicons:arrow-right-alt2" />
-                                </ButtonNext>
-                            </div>
                         </CarouselProvider>
                     </div>
+
+                    <div className="mobile-image-container">
+                        <div>
+                            <img src={ ideation } alt="Original mockups of the Staunton Gallery website"/>
+                        </div>
+                        <div>
+                            <img src={ wireframe1 } alt="Redesigned mockups of the Staunton Gallery website"/>
+                        </div>
+                        <div>
+                            <img src={ wireframe2 } alt="Redesigned mockups of the Staunton Gallery website"/>
+                        </div>
+                    </div>
+
     { /* Slider Two END ------------------------------------- */ }
 
-                    <div className="project-heading mockups">
+                    <div className="project-heading full-width mockups">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">high-fidelity mockups</span>
                     </div>
@@ -209,6 +219,15 @@ function Staunton(){
                         <p>From the initial wireframes I created high-fidelity mockups that feature parallax animation. Ultimately I decided to remove this as, while this parallax animation looked interesting and unique, it didn’t serve to enhance the artworks or photography on display.</p>
                         <p>Upon removal of the large background images I opted to include more of the brand colour in the design, choosing to strategically add colour blocks to various sections of the design. These blocks of colour add to the structure of the website and an element of interest without taking away from the incredible artworks on display.</p>
                         <p className="bold-italic">Click through to the Figma Design to explore the design iterations and responsive variations.</p>
+                    </div>
+
+                    <div className="link-body">
+                        <ul>
+                            <li>
+                                <Icon icon="bxl:figma"/>
+                                Figma Design
+                            </li>
+                        </ul>
                     </div>
 
     { /* Slider Three ------------------------------------- */ }
@@ -233,19 +252,23 @@ function Staunton(){
                                 </Slide>
 
                             </Slider>
-                            <div className="carousel-buttons">
-                                <ButtonBack>
-                                    <Icon icon="dashicons:arrow-left-alt2" />
-                                </ButtonBack>
-                                <ButtonNext>
-                                    <Icon icon="dashicons:arrow-right-alt2" />
-                                </ButtonNext>
-                            </div>
                         </CarouselProvider>
                     </div>
+
+                    <div className="mobile-image-container">
+                        <div>
+                            <h3>Original Mockup</h3>
+                            <img src={ mockup1 } alt="Original mockups of the Staunton Gallery website"/>
+                        </div>
+                        <div>
+                            <h3>Redesigned Mockup</h3>
+                            <img src={ mockup2 } alt="Redesigned mockups of the Staunton Gallery website"/>
+                        </div>
+                    </div>
+
     { /* Slider Three END ------------------------------------- */ }
 
-                    <div className="project-heading prototype">
+                    <div className="project-heading full-width prototype">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">prototype</span>
                     </div>
@@ -255,14 +278,14 @@ function Staunton(){
                         <FigmaEmbed url="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5551&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5551"/>
                     </div>
 
-                    <div className="project-heading design-system">
+                    <div className="project-heading full-width design-system">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">design system</span>
                     </div>
 
                     <div className="written left">Some stuff</div>
 
-                    <div className="project-heading conclusion">
+                    <div className="project-heading full-width conclusion">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">conclusion</span>
                     </div>

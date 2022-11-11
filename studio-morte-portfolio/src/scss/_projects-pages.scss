@@ -1,0 +1,119 @@
+
+// MY WARHAMMER STYLING -----------------------------------------------------
+
+.project-pages_header{
+    .logo-warhammer {
+        width: clamp(150px, 20vw, 300px);
+    }
+
+    .logo-left {
+        width: clamp(120px, 20vw, 200px);
+        justify-self: flex-start;
+        margin-left: 10%;
+    }
+    
+    .logo-right {
+        width: clamp(120px, 20vw, 200px);
+        justify-self: flex-end;
+        margin-right: 10%;
+    }
+}
+
+// STAUNTON GALLERY STYLING -------------------------------------------------
+
+.logo-staunton {
+    width: clamp(350px, 50vw, 600px);
+}
+
+.staunton-hero {
+    object-position: center bottom;
+}
+
+.staunton-case-study {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 20px;
+}
+
+.staunton-research-quote {
+    align-self: center;
+    height: 40%;
+
+    @media only screen and (max-width: 900px) {
+        margin-top: $space-between;
+        height: unset;
+    }
+}
+
+.design-system, .conclusion {
+    margin-top: $space-above;
+}
+
+
+// SUSTAINABILITY VICTORIA STYLING ------------------------------------------
+
+.logo-sustainabilityvic {
+    width: clamp(350px, 50vw, 600px);
+}
+
+
+// DJALINY STYLING ----------------------------------------------------------
+
+.logo-djaliny {
+    width: clamp(300px, 50vw, 500px);
+}
+
+.djaliny-title {
+    grid-column: 2 / -2 ;
+    text-align: center;
+    margin-top: $space-above;
+
+    p {
+        line-height: 1em;
+    }
+
+    p:last-of-type {
+        margin-top: -1em;
+    }
+}
+
+.djaliny-sponsors {
+    grid-column: 2 / -2 ;
+    margin-top: $space-above;
+    
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .djaliny-sponsors {
+        img {
+            transform: scale(0.8);
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .djaliny-sponsors {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: $space-below;
+        
+        div {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        img {
+            justify-self: center;
+            transform: scale(0.9);
+        }
+    }
+}

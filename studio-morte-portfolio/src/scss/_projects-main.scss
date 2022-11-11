@@ -11,11 +11,7 @@
         object-fit: cover;
         z-index: 1;
     }
-    
-    .staunton-hero {
-        object-position: center bottom;
-    }
-    
+
     .project-pages_hero-overlay {
         grid-area: 1 / 1 / -1 / -1;
         background-color: rgba(255, 255, 255, 0.5);
@@ -26,7 +22,6 @@
         grid-area: 1 / 1 / -1 / -1;
         justify-self: center;
         align-self: center;
-        width: clamp(350px, 50vw, 600px);
         z-index: 3;
     }
 }
@@ -37,24 +32,23 @@
     padding-bottom: 30px;
 }
 
-.opening-block {
-    grid-area: 1 / 2 / 2 / 7 ;
-    padding-top: $space-between;
+.project_summary {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 20px;
 }
 
-/*
-@media only screen and (max-width: 1550px) {
-    .opening-block {
-        grid-area: 1 / 2 / 2 / 7 ;
-        padding-left: 0;
-    }
-    
-}
-*/
+.left { grid-column: 2 / 6 ; }
+.right { grid-column: 7 / 11 ; }
+.full-width { grid-column: 1 / -1 ; }
 
-.links-block {
-    grid-area: 1 / 8 / 2 / -1 ;
-    margin-top: $space-above;
+.opening-block { padding-top: $space-between; }
+
+.first-heading { margin-top: calc( 2 * $space-above ); }
+
+.links-block, .link-body {
+    align-self: center;
+    grid-column: 8 / -1;
     overflow: hidden;
     padding: 50px 0 ;
 
@@ -136,11 +130,11 @@
 }
 
 .problem-statement {
-    grid-area: 2 / 1 / 3 / -1;
     display: grid;
     margin-top: $space-above;
     padding: 50px 250px ;
     align-items: center;
+    min-height: 300px;
 
     background-color: $brand-black;
     color: #fff;
@@ -150,25 +144,23 @@
     line-height: 1.4em;
 }
 
-.project-goals {
-    grid-area: 3 / 2 / 4 / 6 ;
+.project_fine-print {
+    grid-column: 2 / -2 ;
     margin-top: $space-above;
+    font-size: 0.8em;
+
+    .project_references {
+        display: flex;
+        gap: 50px;
+        font-style: italic;
+    }
 }
 
-.project-solution {
-    grid-area: 3 / 7 / 4 / 11 ;
-    margin-top: $space-above;
-}
-
-.project-feature {
-    grid-area: 5 / 1 / 6 / -1 ;
-    height: auto;
-    margin-top: $space-above;
+.project-goals, .project-solution, .project-feature { 
+    margin-top: $space-above; 
 }
 
 .project-heading {
-    grid-column: 1 / -1 ;
-
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     gap: 20px;
@@ -180,51 +172,14 @@
         height: 100%;
     }
 
-    span {
-        grid-column: 2 / -1 ;
-    }
+    span { grid-column: 2 / -1 ; }
 }
-
-.staunton-project_summary {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    gap: 20px;
-
-}
-
-.staunton-case-study {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    gap: 20px;
-}
-
-.staunton-research-quote {
-    grid-row: 2 / 3 ;
-    
-    align-self: center;
-    height: 40%;
-}
-
-.research {
-    grid-row: 1 / 2 ;
-    margin-top: calc(2 * $space-above);
-}
-
-.left {
-    grid-column: 2 / 6 ;
-}
-
-.right {
-    grid-column: 7 / 11 ;
-}
-
 
 .slider_container {
     grid-column: 2 / 11 ;
     margin-top: $space-above;
     display: flex;
     height: max-content;
-
     position: relative;
     overflow: hidden;
 
@@ -244,34 +199,34 @@
         margin-right: 0;
     }
 
-    .carousel-buttons {
-        position: absolute;
-        top: 40%;
-        left: 1%;
-        width: 98%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    // .carousel-buttons {
+    //     position: absolute;
+    //     top: 40%;
+    //     left: 1%;
+    //     width: 98%;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
 
-    .carousel__back-button, .carousel__next-button {
-        border: 0;
-        padding: 0;
-        background-color: white;
-        border-radius: 50px;
-        height: 50px;
-        width: 50px;
+    // .carousel__back-button, .carousel__next-button {
+    //     border: 0;
+    //     padding: 0;
+    //     background-color: white;
+    //     border-radius: 50px;
+    //     height: 50px;
+    //     width: 50px;
 
-        svg {
-            height: 30px;
-            width: 30px;
-            transition: 0.5s ease-in-out;
-        }
+    //     svg {
+    //         height: 30px;
+    //         width: 30px;
+    //         transition: 0.5s ease-in-out;
+    //     }
 
-        svg:hover {
-            transform: scale(1.2);
-        }
-    }
+    //     svg:hover {
+    //         transform: scale(1.2);
+    //     }
+    // }
 }
 
 .rectangle-images {
@@ -286,41 +241,104 @@
     }
 }
 
-.bold-italic {
-    padding-top: 1em;
-    font-weight: 600;
-    font-style: italic;
-    font-size: 0.9em;
-    line-height: 1.3em;
-}
-
-.design-system, .conclusion {
-    margin-top: $space-above;
-}
-
-.project_fine-print {
-    grid-column: 2 / -2 ;
-    margin-top: $space-above;
-    font-size: 0.8em;
-
-    .project_references {
-        display: flex;
-        gap: 50px;
-        font-style: italic;
-    }
-}
-
 .project_figma-container {
     grid-column: 2 / -2 ;
     margin-top: $space-between;
     background-color: lightgrey;
     height: 60vh;
 
-
     iframe {
         height: 100%;
         width: 100%;
         border: 0;
         box-shadow: 2px 5px 10px 5px rgba($brand-black, 0.1);
+    }
+}
+
+// MEDIA QUERIES -------------------------------------------------------------
+
+
+@media only screen and (max-width: 1200px) {
+    .links-block, .link-body {
+        grid-column: 7 / -1;
+    }
+
+    .problem-statement {
+        padding: 50px 10%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-image-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .links-block, .link-body {
+        grid-column: 2 / -1 ;
+        padding-left: 0px;
+
+        ul { padding: 0; }
+
+        li {
+            width: 110%;
+            transform: rotate(0deg);
+        }
+    }
+
+    .link-body {
+        padding: 0;
+    }
+
+    .left { grid-column: 2 / -2 ; }
+    .right { grid-column: 2 / -2 ; }
+
+    .written {
+        max-width: 100%;
+    }
+
+    .project-heading:not(:first-of-type) {
+        margin-top: $space-above;
+    }
+
+    .problem-statement {
+        padding: 50px 10% ;
+        margin-top: 0;
+    }
+
+    .project-feature {
+        height: 60vh;
+
+        img {
+            max-width: unset;
+            height: 100%;
+        }
+    }
+
+    .slider_container {
+        display: none;
+    }
+
+    .mobile-image-container {
+        grid-column: 2 / -2 ;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $space-below;
+        margin-top: $space-between;
+
+        div:not(:first-of-type) {
+            margin-top: $space-between;
+        }
+    }
+
+    .mobile-personas {
+        div:not(:first-of-type) {
+            display: none;
+        }
+    }
+
+    .project_figma-container {
+        height: 40vh;
     }
 }
