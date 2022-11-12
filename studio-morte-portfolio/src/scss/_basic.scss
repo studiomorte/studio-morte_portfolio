@@ -8,6 +8,7 @@ html {
 
 body { 
     margin: 0;
+    color: #3A3A3A;
 }
 
 *, *:before, *:after {
@@ -28,6 +29,14 @@ a {
     text-decoration: none;
 }
 
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    
+}
+
   
 // MIXINS ----------------------------------------------------------
 
@@ -42,12 +51,16 @@ a {
 }
 
 
+
 // VARIABLES --------------------------------------------------
 
 $brand-pink: #F26F8F;
 $brand-black: #3A3A3A;
 $brand-white: #fff;
 
+$space-above: 80px;
+$space-below: 80px;
+$space-between: 40px;
 
 // FONT IMPORTS -------------------------------------------------
 
@@ -116,23 +129,58 @@ body {
     font-family: Lato-Regular;
 }
 
+.brand-display {
+    @include brand-display;
+    color: $brand-pink;
+}
+
+.bold-italic {
+    padding-top: 1em;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1.3em;
+}
+
+.xxl { font-size: 4em; }
+.xl { font-size: 2em; }
+.l { font-size: 1.8em; }
+.m { font-size: 1.3em; }
+.s { font-size: 1em; }
+
 
 // MAIN STYLING ------------------------------------------------------------
 
 .main-container {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 150px);
     width: 100vw;
     overflow-x: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
     .main-container {
-        height: calc(100vh - 150px);
+        height: calc(100vh - 100px);
     }
 }
 
+@media only screen and (max-height: 900px) {
+    .main-container {
+        height: calc(100vh - 100px);
+    }
+}
+/*
 @media only screen and (max-height: 700px) {
     .main-container {
         height: calc(100vh - 100px);
     }
+}
+*/
+
+.showreel_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

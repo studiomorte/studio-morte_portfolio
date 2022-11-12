@@ -4,7 +4,7 @@ function SocialIconsFooter(){
     return (
         <>
             <div className="footer_social-container">
-                <a href="#"  className="social_icon">
+                <a href="https://www.instagram.com/studiomorte/"  className="social_icon">
                     <Icon icon="ant-design:instagram-filled" width="32px" color="#fff" />
                 </a>
                 <a href="https://www.linkedin.com/in/studiomorte/"  className="social_icon">
@@ -28,8 +28,10 @@ function Footer(){
     return (
         <>
             <footer class="footer">
-                <p>© 2022 Studio Morte</p>
-                <SocialIconsFooter />
+                <div class="footer-container">
+                    <p>© 2022 Studio Morte</p>
+                    <SocialIconsFooter />
+                </div>
             </footer>
         </>
     )

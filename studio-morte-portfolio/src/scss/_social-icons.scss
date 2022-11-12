@@ -1,4 +1,3 @@
-
 .social_container {
     z-index: 5;
     position: absolute;
@@ -18,6 +17,10 @@
 
 .social_icon {
     transition: 0.2s ease;
+
+    svg {
+        color: $brand-black;
+    }
 }
 
 .social_icon:last-of-type {

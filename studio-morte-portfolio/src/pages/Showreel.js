@@ -3,7 +3,9 @@ import SocialIcons from './../components/SocialIcons'
 function Showreel(){
     return (
         <>
-            Showreel
+            <div className="showreel_container xl">
+                Showreel Coming Soon
+            </div>
             <SocialIcons />
         </>
     )

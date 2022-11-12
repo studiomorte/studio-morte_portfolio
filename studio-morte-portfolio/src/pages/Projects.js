@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
 
-
 import SocialIcons from '../components/SocialIcons'
 
 function Projects( index ){
@@ -142,7 +141,7 @@ function Projects( index ){
           </ul>
         </nav>
 
-        <nav className="project_navigation-mobile">
+        {/* <nav className="project_navigation-mobile">
               <div className="project_slide-arrows">
                 <Icon id="arrow-left" icon="dashicons:arrow-right-alt2" />
                 <Icon id="arrow-right" icon="dashicons:arrow-right-alt2" />
@@ -154,7 +153,7 @@ function Projects( index ){
               </div>
               <div className="project_background-image" id="background-1-mob"/>
             </div>
-        </nav>
+        </nav> */}
 
         <SocialIcons />
 

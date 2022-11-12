@@ -8,10 +8,10 @@ import Projects from './pages/Projects';
 import ProjectsGsap from './pages/ProjectsGsap';
 import About from './pages/About';
 import Showreel from './pages/Showreel';
-import MyWarhammer from './pages/projects/MyWarhammer';
-import StauntonGallery from './pages/projects/StauntonGallery';
-import SustainabilityVic from './pages/projects/SustainabilityVic';
-import Djaliny from './pages/projects/Djaliny';
+import MyWarhammer from './pages/MyWarhammer';
+import StauntonGallery from './pages/StauntonGallery';
+import SustainabilityVic from './pages/SustainabilityVic';
+import Djaliny from './pages/Djaliny';
 
 
 // React Router
