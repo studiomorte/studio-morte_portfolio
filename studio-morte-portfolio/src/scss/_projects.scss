@@ -49,16 +49,18 @@ a {
 }
 
 #background-1 {
-    background-image: url("./../images/warhammer-2.jpg");
+    background-image: url("./../images/warhammer-header.jpg");
+    background-position: center;
 }
 
-
 #background-2 {
-    background-image: url("./../images/stauntonv3.png");
+    background-image: url("./../images/stauntonv4.png");
+    background-position: right;
 }
 
 #background-3 {
-    background-image: url("./../images/sustainvic-1.jpg");
+    background-image: url("./../images/sustainabilityvic1.png");
+    background-position: center;
 }
 
 #background-4 {
@@ -177,8 +179,23 @@ a {
     }
 }
 
+
+
 @media only screen and (max-width: 1000px) {
-    .project_navigation { display: none; }
+    // .project_navigation { display: none; }
+
+    .project_navigation {
+        ul {
+            position: absolute;
+            bottom: 0;
+            width: 150%;
+            margin-left: -15%;
+        }
+        li {
+            font-family: Lato-Medium;   
+            transform: scale(0.8);
+        }
+    }
 
     .project_background-overlay { 
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+88&0+1,0.6+31,1+68 */
@@ -258,6 +275,22 @@ a {
 
     .project_background-overlay {
         height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .project_navigation {
+        ul {
+
+            width: 300%;
+            margin-left: -75%;
+            
+        }
+        li {
+            font-family: Lato-Medium;   
+            transform: scale(0.5);
+            margin-top: -150px;
+        }
     }
 }
 

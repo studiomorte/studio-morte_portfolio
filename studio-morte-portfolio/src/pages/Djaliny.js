@@ -2,8 +2,6 @@
 import Footer from './../components/Footer'
 import { Icon } from '@iconify/react';
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import FigmaEmbed from 'react-figma-embed';
 
 /* IMAGES */
 import bullet from './../images/bullet.png'
@@ -173,10 +171,10 @@ function Djaliny(){
                         </div>
                     </div>
 
-                    <div className="project-heading full-width prototype">
+                    {/* <div className="project-heading full-width prototype">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">prototype</span>
-                    </div>
+                    </div> */}
 
                     <div className="project-heading full-width conclusion">
                         <div className="project-heading_rectangle"></div>

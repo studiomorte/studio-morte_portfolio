@@ -2,8 +2,6 @@
 import Footer from './../components/Footer'
 import { Icon } from '@iconify/react';
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import FigmaEmbed from 'react-figma-embed';
 
 /* IMAGES */
 import bullet from './../images/bullet.png'
@@ -82,10 +80,10 @@ function SustainabilityVic(){
                         </ul>
                     </div>
 
-                    <div className="project-solution written right">
+                    {/* <div className="project-solution written right">
                         <h2>The Solution</h2>
                         <p>Write something here</p>
-                    </div>
+                    </div> */}
 
                     <div className="project-feature full-width">
                         <img src={headerImg} />

@@ -2,7 +2,7 @@
 import Footer from './../components/Footer'
 import { Icon } from '@iconify/react';
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Image } from 'pure-react-carousel';
 import FigmaEmbed from 'react-figma-embed';
 
 /* IMAGES */
@@ -282,7 +282,7 @@ function Staunton(){
                         <FigmaEmbed url="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5551&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5551"/>
                     </div>
 
-                    <div className="project-heading full-width design-system">
+                    {/* <div className="project-heading full-width design-system">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">design system</span>
                     </div>
@@ -294,7 +294,7 @@ function Staunton(){
                         <span className="brand-display xxl">conclusion</span>
                     </div>
 
-                    <div className="written left">Some stuff</div>
+                    <div className="written left">Some stuff</div> */}
 
                     <div className="project_fine-print">
                         <p>This is a fictional brief. This project has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners.</p>
