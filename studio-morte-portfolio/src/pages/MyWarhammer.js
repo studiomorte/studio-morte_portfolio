@@ -39,22 +39,26 @@ function MyWarhammer(){
 
                     <nav className="links-block">
                         <ul>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Design
-                            </li>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Prototype
-                            </li>
-                            <li>
+                            <a href="https://www.figma.com/file/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=0%3A1">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Design
+                                </li>
+                            </a>
+                            <a href="https://www.figma.com/proto/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=139%3A165&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=139%3A165&show-proto-sidebar=1">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Prototype
+                                </li>
+                            </a>
+                            {/* <li>
                                 <Icon icon="ic:round-download"/>
                                 Full Documentation
                             </li>
                             <li>
                                 <Icon icon="bi:medium" />
                                 Medium Articles
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
 

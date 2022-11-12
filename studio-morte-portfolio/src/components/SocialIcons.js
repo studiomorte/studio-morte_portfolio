@@ -5,7 +5,7 @@ function SocialIcons(){
     return(
         <>
             <div className="social_container">
-                <a href="#"  className="social_icon">
+                <a href="https://www.instagram.com/studiomorte/"  className="social_icon">
                     <Icon icon="ant-design:instagram-filled" width="37px" color="#3a3a3a" />
                 </a>
                 <a href="https://www.linkedin.com/in/studiomorte/"  className="social_icon">

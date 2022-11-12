@@ -32,6 +32,12 @@
     padding-bottom: 30px;
 }
 
+.project-pages_case-study {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 20px;
+}
+
 .project_summary {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
@@ -45,6 +51,43 @@
 .opening-block { padding-top: $space-between; }
 
 .first-heading { margin-top: calc( 2 * $space-above ); }
+
+.further-development {
+    grid-column: 2 / -2 ;
+    max-width: 100%;
+    margin-top: $space-between;
+
+    h2 { 
+        font-family: Lato-Black;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-bottom: 1.5em;
+    }
+    
+    .list-container {
+        margin-top: $space-between;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li, span {
+            color: unset;
+        }
+    }
+
+    
+    @media only screen and (max-width: 1300px) {
+        .written {
+            max-width: 45%;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .written {
+            max-width: 100%;
+        }
+    }
+}
 
 .links-block, .link-body {
     align-self: center;
@@ -127,6 +170,9 @@
     font-weight: 700;
     font-style: italic;
     line-height: 1.7em;
+
+    align-self: center;
+    height: auto;
 }
 
 .problem-statement {
@@ -311,8 +357,9 @@
         height: 60vh;
 
         img {
-            max-width: unset;
+            max-width: 100vw;
             height: 100%;
+            object-fit: cover;
         }
     }
 

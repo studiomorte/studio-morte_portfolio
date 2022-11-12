@@ -35,22 +35,36 @@ function SustainabilityVic(){
 
                     <nav className="links-block">
                         <ul>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Design
-                            </li>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Prototype
-                            </li>
-                            <li>
+                            <a href="https://www.figma.com/file/KppDzWtrEi3yASHX0ta4Li/Sustainability-Victoria?node-id=1012%3A15501">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Design
+                                </li>
+                            </a>
+                            <a href="https://www.figma.com/proto/KppDzWtrEi3yASHX0ta4Li/Sustainability-Victoria?node-id=1026%3A15502&scaling=scale-down&page-id=1012%3A15501&starting-point-node-id=1026%3A15502&show-proto-sidebar=1">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Prototype
+                                </li>
+                            </a>
+
+                            {/* <li>
                                 <Icon icon="ic:round-download"/>
                                 Full Documentation
-                            </li>
-                            <li>
-                                <Icon icon="bi:medium" />
-                                Medium Articles
-                            </li>
+                            </li> */}
+
+                            <a href="https://studiomorte.medium.com/an-app-design-exploration-sustainability-victoria-bba40518dc40">
+                                <li>
+                                    <Icon icon="bi:medium" />
+                                    Medium Article #1
+                                </li>
+                            </a>
+                            <a href="https://studiomorte.medium.com/sustainability-victoria-when-accessibility-small-space-living-and-augmented-reality-collide-deaf9ff71c35">
+                                <li>
+                                    <Icon icon="bi:medium" />
+                                    Medium Article #2
+                                </li>
+                            </a>
                         </ul>
                     </nav>
 

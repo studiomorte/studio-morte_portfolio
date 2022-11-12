@@ -45,15 +45,19 @@ function Staunton(){
 
                     <nav className="links-block">
                         <ul>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Design
-                            </li>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Prototype
-                            </li>
-                            <li>
+                            <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Design
+                                </li>
+                            </a>
+                            <a href="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5042&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5042">
+                                <li>    
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Prototype
+                                </li>
+                            </a>
+                            {/* <li>
                                 <Icon icon="ic:round-download"/>
                                 Design System
                             </li>
@@ -64,7 +68,7 @@ function Staunton(){
                             <li>
                                 <Icon icon="ph:codepen-logo-fill"/>
                                 Codepen
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
 
@@ -97,7 +101,7 @@ function Staunton(){
 
 { /* Case Study Section ------------------------------------- */ }
 
-                <section className="staunton-case-study">
+                <section className="project-pages_case-study">
                     <div className="project-heading first-heading full-width">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">research</span>
