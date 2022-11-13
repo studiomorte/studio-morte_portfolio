@@ -27,8 +27,8 @@ function SocialIconsFooter(){
 function Footer(){
     return (
         <>
-            <footer class="footer">
-                <div class="footer-container">
+            <footer className="footer">
+                <div className="footer-container">
                     <p>© 2022 Studio Morte</p>
                     <SocialIconsFooter />
                 </div>

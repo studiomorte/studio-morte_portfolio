@@ -5,15 +5,15 @@ import React from 'react';
 
 /* IMAGES */
 import bullet from './../images/bullet.png'
-import headerImg from './../images/djaliny2.png'
-import featureImg from './../images/djaliny1.png'
+import headerImg from './../images/djaliny2.jpg'
+import featureImg from './../images/djaliny1.jpg'
 import brandLogo from './../images/logo-djaliny.png'
 import curtinLogo from './../images/logo-curtin.png'
 import adobeLogo from './../images/logo-adobe.png'
 import linkedinLogo from './../images/logo-linkedin.png'
 import unityLogo from './../images/logo-unity.png'
 import persona1 from './../images/persona-djaliny1.jpg'
-import persona2 from './../images/persona-djaliny2.png'
+import persona2 from './../images/persona-djaliny2.jpg'
 
 
 function Djaliny(){

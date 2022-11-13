@@ -7,17 +7,17 @@ import FigmaEmbed from 'react-figma-embed';
 
 /* IMAGES */
 import bullet from './../images/bullet.png'
-import headerImg from './../images/stauntonv3.png'
-import featureImg from './../images/staunton1.png'
+import headerImg from './../images/stauntonv3.jpg'
+import featureImg from './../images/staunton1.jpg'
 import brandLogo from './../images/staunton-logo.png'
-import persona1 from './../images/persona-jason.png'
-import persona2 from './../images/persona-cathy.png'
-import persona3 from './../images/persona-heather.png'
-import ideation from './../images/staunton-ideation.png'
-import wireframe1 from './../images/staunton-wireframes1.png'
-import wireframe2 from './../images/staunton-wireframes2.png'
-import mockup1 from './../images/staunton-mockup1.png'
-import mockup2 from './../images/staunton-mockup2.png'
+import persona1 from './../images/persona-jason.jpg'
+import persona2 from './../images/persona-cathy.jpg'
+import persona3 from './../images/persona-heather.jpg'
+import ideation from './../images/staunton-ideation.jpg'
+import wireframe1 from './../images/staunton-wireframes1.jpg'
+import wireframe2 from './../images/staunton-wireframes2.jpg'
+import mockup1 from './../images/staunton-mockup1.jpg'
+import mockup2 from './../images/staunton-mockup2.jpg'
 
 
 function Staunton(){
@@ -99,7 +99,7 @@ function Staunton(){
                 </section>
 
 
-{ /* Case Study Section ------------------------------------- */ }
+            { /* Case Study Section ------------------------------------- */ }
 
                 <section className="project-pages_case-study">
                     <div className="project-heading first-heading full-width">
@@ -134,8 +134,8 @@ function Staunton(){
                                 totalSlides={3}
                                 step={1}
                                 dragStep={1}
-                                naturalSlideWidth={400}
-                                naturalSlideHeight={500}
+                                naturalSlideWidth={500}
+                                naturalSlideHeight={529}
                         >  
                             <Slider>
                                 <Slide index={0}>
@@ -183,8 +183,8 @@ function Staunton(){
                                 totalSlides={3}
                                 step={1}
                                 dragStep={1}
-                                naturalSlideWidth={1400}
-                                naturalSlideHeight={700}
+                                naturalSlideWidth={1000}
+                                naturalSlideHeight={500}
                         >  
                             <Slider>
                                 <Slide index={0}>
@@ -227,10 +227,12 @@ function Staunton(){
 
                     <div className="link-body">
                         <ul>
-                            <li>
-                                <Icon icon="bxl:figma"/>
-                                Figma Design
-                            </li>
+                            <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Figma Design
+                                </li>
+                            </a>
                         </ul>
                     </div>
 
@@ -242,8 +244,8 @@ function Staunton(){
                                 totalSlides={2}
                                 step={1}
                                 dragStep={1}
-                                naturalSlideWidth={1400}
-                                naturalSlideHeight={700}
+                                naturalSlideWidth={1000}
+                                naturalSlideHeight={500}
                         >  
                             <Slider>
                                 <Slide index={0}>

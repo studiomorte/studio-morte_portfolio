@@ -17,6 +17,67 @@
         justify-self: flex-end;
         margin-right: 10%;
     }
+
+    @media only screen and (max-width: 500px) {
+        .logo-left, .logo-right {
+            display: none;
+        }
+    }
+}
+
+.warhammer-container {
+    .project-pages_staggered-container {
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .right:last-of-type {
+        grid-row: 4 / 6 ;
+    }
+}
+
+.warhammer-logo-container {
+    margin-top: $space-above;
+    grid-column: 2 / 6 ;
+    
+    img {
+        width: 150px;
+    }
+}
+
+.warhammer-right-image {
+    grid-row: 2 / span 4 ;
+
+    img {
+        object-position: center;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        grid-row: 4 / 5 ;
+    }
+}
+
+.warhammer-scenarios {
+    margin-top: -$space-above;
+
+    .carousel__slide {
+        height: 700px;
+        
+        img {
+            box-shadow: unset !important;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: -80px;
+    }
+}
+
+.warhammer-usergoals {
+    margin-top: 0;
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: $space-above;
+    }
 }
 
 // STAUNTON GALLERY STYLING -------------------------------------------------
@@ -45,6 +106,30 @@
 
 .logo-sustainabilityvic {
     width: clamp(350px, 50vw, 600px);
+}
+
+.susvic-quote-research {
+    margin-top: $space-above;
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: 0;
+    }
+}
+
+.susvic-revisited {
+    margin-top: -20px;
+
+    .written {
+        margin-top: 0;
+    }
+}
+
+.testing, .final-design-rev {
+    margin-top: $space-above;
+}
+
+.final-design {
+    margin-top: 100px;
 }
 
 

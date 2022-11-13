@@ -27,7 +27,7 @@ function ProjectsGsap( index ){
 
   return (
     <>
-        <div class="project_page-container">
+        <div className="project_page-container">
 
           <nav className="project_navigation">
             <ul>

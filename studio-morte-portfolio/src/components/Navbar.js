@@ -1,51 +1,71 @@
 import { NavLink } from 'react-router-dom'
 import { Icon } from '@iconify/react';
+import { useState } from 'react';
 import SocialIcons from './SocialIcons';
 
 
 function Navbar(){
-
-    let activeClassName = "isActive";
+  // This will run one time after the component mounts
 
     // HAMBURGER MENU
-    const menu = document.querySelector(".mobile-menu");
     const menuItems = document.querySelectorAll(".menuItem");
-    const hamburger = document.querySelector(".hamburger");
-    const closeIcon = document.querySelector("#closeIcon");
-    const menuIcon = document.querySelector("#menuIcon");
+    const [ clicked, setClicked ] = useState('');
 
-    function toggleMenu() {
-        if (menu.classList.contains("showMenu")) {
-            menu.classList.remove("showMenu");
-            closeIcon.style.display = "none" ;
+    const handleClick = () => {
+        const menu = document.querySelector("#mobileMenu");
+        const closeIcon = document.querySelector("#closeIcon");
+        const menuIcon = document.querySelector("#menuIcon");
+
+        clicked ? setClicked('') : setClicked ('show-menu');
+
+        if(menu.classList.contains("show-menu")) {
+            closeIcon.style.display ="none" ;
             menuIcon.style.display = "block" ;
         } else {
-            menu.classList.add("showMenu");
-            closeIcon.style.display = "block" ;
+            closeIcon.style.display ="block" ;
             menuIcon.style.display = "none" ;
         }
     }
-
-    hamburger.addEventListener("click", toggleMenu);
     
     menuItems.forEach( 
         function(menuItem) { 
-          menuItem.addEventListener("click", toggleMenu);
+        menuItem.addEventListener("click", handleClick);
         }
     )
 
+    const homeClick = () => {
+        const menu = document.querySelector("#mobileMenu");
+        const closeIcon = document.querySelector("#closeIcon");
+        const menuIcon = document.querySelector("#menuIcon");
+
+        clicked ? setClicked('') : setClicked ('');
+
+        if(menu.classList.contains("hide-menu")) {
+            menu.classList.remove("hide-menu");
+            closeIcon.style.display ="none" ;
+            menuIcon.style.display = "block" ;
+        } else {
+            menu.classList.remove("hide-menu");
+            // closeIcon.style.display ="block" ;
+            // menuIcon.style.display = "none" ;
+        }
+    }
+
+
+    // ACTIVE NAVIGATION ITEM
+    let activeClassName = "isActive";
 
     return (
         <>
             <div className="navigation_container">
-                <NavLink to="/" end>
+                <NavLink to="/" end onClick={ homeClick }>
                     <div className="navigation_logo">
                         <p className="studio">Studio</p>
                         <p className="morte">morte</p>
                     </div>
                 </NavLink>
                 <div className="navigation_right">
-                    <button class="hamburger">
+                    <button className="hamburger" onClick={ handleClick }>
                         <Icon id="menuIcon" icon="gg:menu" color="#F26F8F"/>
                         <Icon id="closeIcon" icon="ep:close-bold" color="#F26F8F"/>
                     </button>
@@ -76,7 +96,7 @@ function Navbar(){
             </div>
 
             {/* MOBILE MENU */}
-            <nav className="mobile-menu xl">
+            <nav id="mobileMenu" className={`${clicked} hide-menu`}>
                 <ul>
                     <li className="menuItem">
                         <NavLink 
