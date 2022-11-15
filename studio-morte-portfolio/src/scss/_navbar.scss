@@ -213,7 +213,7 @@
 @media only screen and (max-width: 1000px) {
     .navigation_container {
         height: 100px;
-        padding: 20px 50px 20px 25px;
+        padding: 20px 30px 20px 25px;
     }
 
     .navigation_logo {
@@ -305,9 +305,5 @@
 @media only screen and (max-width: 400px) {
     .navigation_container {
         padding: 20px 25px 20px 20px;
-    }
-
-    .navigation_logo {
-        // margin-right: 20px;
     }
 }
