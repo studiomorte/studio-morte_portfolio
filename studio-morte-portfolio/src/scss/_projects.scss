@@ -67,6 +67,25 @@ a {
     background-image: url("./../images/djaliny-1.jpg");
 }
 
+#background-1-mob {
+    background-image: url("./../images/warhammer-header.jpg");
+    background-position: center;
+}
+
+#background-2-mob {
+    background-image: url("./../images/stauntonv4.jpg");
+    background-position: right;
+}
+
+#background-3-mob {
+    background-image: url("./../images/sustainabilityvic1.jpg");
+    background-position: center;
+}
+
+#background-4-mob {
+    background-image: url("./../images/djaliny-1.jpg");
+}
+
 
 .project_navigation ul {
     transform: rotate(-8.93deg);
@@ -182,7 +201,7 @@ a {
 
 
 @media only screen and (max-width: 1000px) {
-    // .project_navigation { display: none; }
+    .project_navigation { display: none; }
 
     .project_navigation {
         ul {
@@ -212,7 +231,8 @@ a {
         width: 100%;
     }
 
-    .project_navigation-slide {
+    .project_navigation-slide.active {
+        height: calc(100vh - 120px);
         display: flex;
         align-items: flex-end;
         overflow: hidden;

@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 
 import SocialIcons from '../components/SocialIcons'
 
-function Projects( index ){
+function Projects(){
     
   useLayoutEffect(() => {
 
@@ -141,19 +141,45 @@ function Projects( index ){
           </ul>
         </nav>
 
-        {/* <nav className="project_navigation-mobile">
+        <nav className="project_navigation-mobile">
               <div className="project_slide-arrows">
                 <Icon id="arrow-left" icon="dashicons:arrow-right-alt2" />
                 <Icon id="arrow-right" icon="dashicons:arrow-right-alt2" />
               </div>
-            <div className="project_navigation-slide">
+
+            <div className="project_navigation-slide active" data-mobile-bg="background-1-mob">
               <div className="project_slide-content">
                 <p className="project_slide-title">My Warhammer</p>
                 <div className="project_slide-button">Explore Project</div>
               </div>
               <div className="project_background-image" id="background-1-mob"/>
             </div>
-        </nav> */}
+
+            <div className="project_navigation-slide" data-mobile-bg="background-2-mob">
+              <div className="project_slide-content">
+                <p className="project_slide-title">Staunton Gallery</p>
+                <div className="project_slide-button">Explore Project</div>
+              </div>
+              <div className="project_background-image" id="background-2-mob"/>
+            </div>
+
+            <div className="project_navigation-slide" data-mobile-bg="background-3-mob">
+              <div className="project_slide-content">
+                <p className="project_slide-title">Sustainability Victoria</p>
+                <div className="project_slide-button">Explore Project</div>
+              </div>
+              <div className="project_background-image" id="background-3-mob"/>
+            </div>
+
+            <div className="project_navigation-slide" data-mobile-bg="background-4-mob">
+              <div className="project_slide-content">
+                <p className="project_slide-title">Djaliny</p>
+                <div className="project_slide-button">Explore Project</div>
+              </div>
+              <div className="project_background-image" id="background-4-mob"/>
+            </div>
+
+        </nav>
 
         <SocialIcons />
 
