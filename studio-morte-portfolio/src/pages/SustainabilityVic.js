@@ -91,10 +91,11 @@ function SustainabilityVic(){
                         </ul>
                     </div>
 
-                    {/* <div className="project-solution written right">
+                    <div className="project-solution written right">
                         <h2>The Solution</h2>
-                        <p>Write something here</p>
-                    </div> */}
+                        <p>Leveraging Augmented Reality, the final solution focuses on educating users on small-space gardening and supporting them with a genuinely useful app design. The app is loaded with an abundance of information, a helpful calendar & reminders feature, and the ability to use AR to ‘scan and save’ your garden.</p>
+                        <p>Future development of the app could include partnerships with major companies to suggest gardening materials, plants, etc. to further enhance the user experience and the apps profitability.</p>
+                    </div>
 
                     <div className="project-feature full-width">
                         <img src={featureImg} />
@@ -326,7 +327,7 @@ function SustainabilityVic(){
                     </div>
 
                     <div className="project-large-image margin-width">
-                        <img src={ featureImg } />
+                        <img src={ headerImg } />
                     </div>
 
                     {/* <div className="project-heading full-width conclusion">

@@ -45,14 +45,32 @@
 }
 
 .warhammer-right-image {
-    grid-row: 2 / span 4 ;
+    grid-column: 2 / -1 ;
 
     img {
-        object-position: center;
+        object-fit: cover;
+        object-position: 0 30%;
+        height: 300px;
+        width: 100%;
     }
 
-    @media only screen and (max-width: 1000px) {
-        grid-row: 4 / 5 ;
+    @media only screen and (max-width: 1500px) {
+        grid-column: 1 / -1 ;
+    }
+}
+
+.citadel-right-image {
+    grid-column: 2 / -1 ;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 300px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1500px) {
+        grid-column: 1 / -1 ;
     }
 }
 

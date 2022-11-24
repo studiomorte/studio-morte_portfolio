@@ -13,6 +13,7 @@ import warhammerLogo from './../images/logo-warhammer.png'
 import battleHonoursLogo from './../images/logo-battlehonours.png'
 import citadelColourLogo from './../images/logo-citadelcolour.png'
 import battleHonoursImg from './../images/mockup1-2.jpg'
+import citadelColourImg from './../images/citadelcolour.jpg'
 import persona1 from './../images/persona-warhammer1.jpg'
 import persona2 from './../images/persona-warhammer2.jpg'
 import persona3 from './../images/persona-warhammer3.jpg'
@@ -59,14 +60,18 @@ function MyWarhammer(){
                                     Figma Prototype
                                 </li>
                             </a>
-                            {/* <li>
-                                <Icon icon="ic:round-download"/>
-                                Full Documentation
-                            </li>
-                            <li>
-                                <Icon icon="bi:medium" />
-                                Medium Articles
-                            </li> */}
+                            <a href="https://vigorous-mayer-dfea3a.netlify.app/">
+                                <li>
+                                    <Icon icon="ri:external-link-line"/>
+                                    Battle Honours Website
+                                </li>
+                            </a>
+                            <a href="https://fanciful-custard-b67eea.netlify.app/">
+                                <li>
+                                    <Icon icon="ri:external-link-line" />
+                                    Citadel Colour Website (WIP)
+                                </li>
+                            </a>
                         </ul>
                     </nav>
 
@@ -111,7 +116,19 @@ function MyWarhammer(){
                         <p>The Battle Honours programme is designed to introduce new hobbyists to Warhammer by encouraging them to complete activities to receive exclusive rewards. The programme launched in mid 2021, a time where many potential hobbyists were isolated due to the Covid 19 pandemic, but what if this programme was available online? </p>
                     </div>
 
-                    <div className="project_side-image right warhammer-right-image">
+                    <div className="link-body citadel-colour">
+                        <ul>
+                            <a href="https://vigorous-mayer-dfea3a.netlify.app/">
+                                <li>
+                                    <Icon icon="ri:external-link-line" />
+                                    Battle Honours Website
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    
+
+                    <div className="project_side-image full-width warhammer-right-image">
                         <img src={ battleHonoursImg } />
                     </div>
 
@@ -193,6 +210,29 @@ function MyWarhammer(){
 
                     <div className="written left">
                         <p>Games Workshop's very own paint range, Citadel Colour, offers hobbyists a wide variety of paints and tools to get their miniature projects looking spectacular. Currently the Citadel Colour website and mobile app offer different content, the website offering limited in comparison to the recently updated mobile app. The goal of this project was to bring the same mobile app offering of step-by-step tutorials and the inventory/wishlist to a reimagined web application, including a brand new "my projects" section to support the painting process of all Warhammer hobbyists.</p>
+                        <p className="bold-italic">Click through to explore the live website. Although unfinished, development of this website has been suspended in favour of developing the redesigned My Warhammer website.</p>
+                    </div>
+
+                    <div className="link-body citadel-colour">
+                        <ul>
+                            <a href="https://fanciful-custard-b67eea.netlify.app/">
+                                <li>
+                                    <Icon icon="ri:external-link-line" />
+                                    Citadel Colour Website (WIP)
+                                </li>
+                            </a>
+                        </ul>
+                        <div className="link-body-below">
+                            <p><b>Sign in using the following details:</b></p>
+                            <p>Email: jamesworkshop@citadel.com</p>
+                            <p>Password: James1234</p>
+                            <p><i>or</i></p>
+                            <p>Create your own account!</p>
+                        </div>
+                    </div>
+
+                    <div className="project_side-image full-width citadel-right-image">
+                        <img src={ citadelColourImg } />
                     </div>
 
                     {/* <div className="warhammer-container project-pages_staggered-container">
@@ -213,20 +253,7 @@ function MyWarhammer(){
                         </div>
                     </div> */}
 
-                    {/* <div className="written left">
-                        <p className="bold-italic">Click through to explore the live website. Although unfinished, development of this website has been suspended in favour of developing the redesigned My Warhammer website.</p>
-                    </div>
 
-                    <div className="link-body">
-                        <ul>
-                            <a href="https://studiomorte.medium.com/sustainability-victoria-when-accessibility-small-space-living-and-augmented-reality-collide-deaf9ff71c35">
-                                <li>
-                                    <Icon icon="akar-icons:link-out" />
-                                    Live Website
-                                </li>
-                            </a>
-                        </ul>
-                    </div> */}
 
 
                 { /* Slider TWO ------------------------------------- */ }
@@ -416,13 +443,13 @@ function MyWarhammer(){
 
                     <div className="project-heading full-width conclusion">
                         <div className="project-heading_rectangle"></div>
-                        <span className="brand-display xxl">conclusion</span>
+                        <span className="brand-display xxl">Further Development</span>
                     </div>
 
-                    <div className="written left">Some stuff</div>
+                    {/* <div className="written left">Some stuff</div> */}
 
                     <div className="further-development bullets">
-                        <h2>Further Development</h2>
+                        {/* <h2>Further Development</h2> */}
                         <div className="list-container">
                             <ul className="written">
                                 <li><img src={ bullet } alt="bullet point"/><span>Improve Battle Honours experience beyond written activities. Think: online group sessions, allow users to upload photos of doing/completing activity</span></li>

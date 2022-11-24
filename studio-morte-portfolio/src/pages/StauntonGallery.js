@@ -57,11 +57,13 @@ function Staunton(){
                                     Figma Prototype
                                 </li>
                             </a>
+                            <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=949%3A3352&t=GocV1JCtJcYRRznx-0">
+                                <li>
+                                    <Icon icon="bxl:figma"/>
+                                    Design System
+                                </li>
+                            </a>
                             {/* <li>
-                                <Icon icon="ic:round-download"/>
-                                Design System
-                            </li>
-                            <li>
                                 <Icon icon="ic:round-download"/>
                                 Full Documentation
                             </li>

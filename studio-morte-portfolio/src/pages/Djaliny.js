@@ -43,14 +43,18 @@ function Djaliny(){
 
                     <nav className="links-block">
                         <ul>
-                            <li>
-                                <Icon icon="ci:adobe-xd" />
-                                Adobe Xd Design
-                            </li>
-                            <li>
-                                <Icon icon="ci:adobe-xd" />
-                                Adobe Xd Prototype
-                            </li>
+                            <a href="https://xd.adobe.com/view/ea91c219-d72c-4cfc-a53f-b48d3d583a74-bfc2/">
+                                <li>
+                                    <Icon icon="ci:adobe-xd" />
+                                    Adobe Xd Design
+                                </li>
+                            </a>
+                            <a href="https://www.canva.com/design/DAEkRub92Hs/dNB19iOXZMKl9oht2fl1tw/view?utm_content=DAEkRub92Hs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
+                                <li>
+                                    <Icon icon="simple-icons:canva" />
+                                    Presentation & Prototype
+                                </li>
+                            </a>
                             <a href="https://www.youtube.com/watch?v=xsF3di2qqXM">
                                 <li>
                                     <Icon icon="akar-icons:youtube-fill" />
