@@ -295,3 +295,15 @@ a {
 }
 
 
+.mySwiper {
+    width: 100%;
+    height: auto;
+
+    .swiper-slide {
+        width: max-content;
+    }
+    
+    img {
+        height: 60vh;
+    }
+}

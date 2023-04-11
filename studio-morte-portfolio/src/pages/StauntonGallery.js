@@ -4,6 +4,12 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import { CarouselProvider, Slider, Slide, Image } from 'pure-react-carousel';
 import FigmaEmbed from 'react-figma-embed';
+// import { useRef, useEffect } from 'react';
+// import { register } from 'swiper/element/bundle';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 /* IMAGES */
 import bullet from './../images/bullet.png'
@@ -128,10 +134,31 @@ function Staunton(){
                         <p>Initial user research revealed that although art is enjoyed by people of all ages and genders, those that typically browse art galleries tend to be more educated, well-paid, and professional. I also uncovered interviews suggesting that young people believe that art galleries are uninviting, silent, and cold.</p>
                     </div>
 
+
+    { /* Slider One SWIPER (Updates 11/04/23) ------------------------------------- */ }
+
+                    <Swiper 
+                    navigation={true} 
+                    modules={[Navigation]} 
+                    slidesPerView={"auto"} 
+                    // centeredSlides={true}
+                    spaceBetween={30} 
+                    className="mySwiper full-width">
+                        <SwiperSlide>
+                            <img src={persona1} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={persona2} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={persona3} />
+                        </SwiperSlide>
+                    </Swiper>
+
     { /* Slider One ------------------------------------- */ }
-                    <div className="slider_container">
+                    {/* <div className="slider_container"> */}
                         {/* https://github.com/express-labs/pure-react-carousel */}
-                        <CarouselProvider
+                        {/* <CarouselProvider
                                 visibleSlides={2.2}
                                 totalSlides={3}
                                 step={1}
@@ -163,7 +190,7 @@ function Staunton(){
                         <div>
                             <img src={ persona3 } alt="Redesigned mockups of the Staunton Gallery website"/>
                         </div>
-                    </div>
+                    </div> */}
     { /* Slider One END ------------------------------------- */ }
 
 
