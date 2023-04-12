@@ -297,7 +297,15 @@ a {
 
 .mySwiper {
     width: 100%;
-    height: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    grid-column: 2 / -2 ;
+    // display: grid !important;
+    // grid-template-columns: repeat(12, 1fr);
+    
+    .swiper-wrapper {
+        // grid-column: 2 / -2;
+    }
 
     .swiper-slide {
         width: max-content;

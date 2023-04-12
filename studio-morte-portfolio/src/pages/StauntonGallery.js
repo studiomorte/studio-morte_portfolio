@@ -4,12 +4,7 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import { CarouselProvider, Slider, Slide, Image } from 'pure-react-carousel';
 import FigmaEmbed from 'react-figma-embed';
-// import { useRef, useEffect } from 'react';
-// import { register } from 'swiper/element/bundle';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
+import PersonaSwiper from '../components/Swiper';
 
 /* IMAGES */
 import bullet from './../images/bullet.png'
@@ -28,7 +23,13 @@ import mockup2 from './../images/staunton-mockup2.jpg'
 
 function Staunton(){
 
-    return (
+  const images = [
+    { id: 'slide1', imageUrl: persona1 },
+    { id: 'slide2', imageUrl: persona2 },
+    { id: 'slide3', imageUrl: persona3 },
+  ];
+  
+  return (
         <>
             <header className="project-pages_header">
                 <img className="project-pages_logo logo-staunton" src={ brandLogo } alt="Staunton Gallery Logo"/>
@@ -137,23 +138,7 @@ function Staunton(){
 
     { /* Slider One SWIPER (Updates 11/04/23) ------------------------------------- */ }
 
-                    <Swiper 
-                    navigation={true} 
-                    modules={[Navigation]} 
-                    slidesPerView={"auto"} 
-                    // centeredSlides={true}
-                    spaceBetween={30} 
-                    className="mySwiper full-width">
-                        <SwiperSlide>
-                            <img src={persona1} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={persona2} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={persona3} />
-                        </SwiperSlide>
-                    </Swiper>
+                    <PersonaSwiper images={images}/>
 
     { /* Slider One ------------------------------------- */ }
                     {/* <div className="slider_container"> */}
@@ -310,7 +295,7 @@ function Staunton(){
 
                     <div className="project_figma-container">
                         { /* https://github.com/nagelflorian/react-figma-embed */ }
-                        <FigmaEmbed url="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5551&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5551"/>
+                        {/* <FigmaEmbed url="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5551&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5551"/> */}
                     </div>
 
                     {/* <div className="project-heading full-width design-system">
