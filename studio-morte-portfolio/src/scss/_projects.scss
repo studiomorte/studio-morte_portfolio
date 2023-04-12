@@ -295,11 +295,13 @@ a {
 }
 
 
+// SWIPER CLASSES ---------------------------------------
+
 .mySwiper {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 100px;
-    grid-column: 2 / -2 ;
+    
     // display: grid !important;
     // grid-template-columns: repeat(12, 1fr);
     
@@ -310,8 +312,20 @@ a {
     .swiper-slide {
         width: max-content;
     }
-    
+}
+
+.persona-swiper, .landscape-swiper {
+    grid-column: 2 / -2 ;
+}
+
+.persona-swiper .mySwiper {
     img {
         height: 60vh;
+    }
+}
+
+.landscape-swiper .mySwiper {
+    img {
+        height: auto;
     }
 }

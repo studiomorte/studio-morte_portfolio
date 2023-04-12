@@ -4,14 +4,11 @@ import { Keyboard, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
+function PersonaSwiper({personas}) {
 
-
-
-function PersonaSwiper({images}) {
-
-  const swiperSlides = images.map((image) => 
-  <SwiperSlide key={image.id} >
-      <img src={image.imageUrl} />
+  const swiperSlides = personas.map((persona) => 
+  <SwiperSlide key={persona.id} >
+      <img src={persona.imageUrl} />
     </SwiperSlide>
   );
   console.log(swiperSlides);
@@ -21,6 +18,7 @@ function PersonaSwiper({images}) {
       <Swiper
         slidesPerView={"auto"}
         // centeredSlides={true}
+        centerInsufficientSlides={true}
         spaceBetween={30}
         modules={[Navigation, Keyboard]}
         navigation={true}
