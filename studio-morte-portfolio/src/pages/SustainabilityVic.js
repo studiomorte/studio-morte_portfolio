@@ -1,11 +1,9 @@
-/* IMPORTS */
 import React from "react";
 import Footer from "./../components/Footer";
-import { Icon } from "@iconify/react";
 import ProjectSwiper from "../components/ProjectSwiper";
+import BulletList from "../components/BulletList";
 
 /* IMAGES */
-import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/susvic1.jpg";
 import featureImg from "./../images/sustainabilityvic1.jpg";
 import brandLogo from "./../images/logo-sustainabilityvic.png";
@@ -18,6 +16,7 @@ import wireframe1 from "./../images/wireframes-susvic1.jpg";
 import wireframe2 from "./../images/wireframes-susvic2.jpg";
 import testing from "./../images/testing-susvic.jpg";
 import original from "./../images/original-susvic.jpg";
+import LinkBlock from "../components/LinkBlock";
 
 function SustainabilityVic() {
   const personas = [
@@ -44,6 +43,142 @@ function SustainabilityVic() {
     },
   ];
 
+  const projectGoals = [
+    {
+      id: 1,
+      copy: "Create an aesthetically pleasing and practical app design that is accessible and educational",
+    },
+    {
+      id: 2,
+      copy: "Utilise Augmented Reality to enhance the user experience, leveraging the novelty of AR while providing a genuinely useful service",
+    },
+    {
+      id: 3,
+      copy: "Provide users with easy access to the knowledge required to grow and cook their own food",
+    },
+  ];
+
+  const userGoals = [
+    {
+      id: 1,
+      copy: "Learn how to grow in a small space",
+    },
+    {
+      id: 2,
+      copy: "Gardening in as little time as possible",
+    },
+    {
+      id: 3,
+      copy: "Cook meals at home more often and use home-grown ingredients",
+    },
+    {
+      id: 4,
+      copy: "Limit their impact on climate change by growing their own food to live more sustainably",
+    },
+  ];
+
+  const splitTest = [
+    {
+      id: 1,
+      copy: "Navigation menu (hamburger/bottom tabs)",
+    },
+    {
+      id: 2,
+      copy: "Plants list (larger/smaller photos)",
+    },
+    {
+      id: 3,
+      copy: "Plant info icon colours",
+    },
+    {
+      id: 4,
+      copy: "Pantry items (written/visual list)",
+    },
+    {
+      id: 5,
+      copy: "Recipes (written/visual list)",
+    },
+    {
+      id: 6,
+      copy: "Recipes ('save'/'save to cookbook')",
+    },
+    {
+      id: 7,
+      copy: "Dashboard notifications (specific/ambiguous)",
+    },
+  ];
+
+  const finalDesignLeft = [
+    {
+      id: 1,
+      copy: "Improve the apps accessibility by adding subtitles for deaf users",
+    },
+    {
+      id: 2,
+      copy: "Dreamtime stories and location information narrated by Indigenous persons from each region, adding to the authenticity of the experience",
+    },
+    {
+      id: 3,
+      copy: "A fully realised augmented reality experience that enhances the users learning and discovery",
+    },
+  ];
+
+  const finalDesignRight = [
+    {
+      id: 1,
+      copy: "Notifications that encourage users to interact with the app and/or notify users about how many times they've listened to a particular sound",
+    },
+    {
+      id: 2,
+      copy: "Include a favourites/saved section so that users can easily return to the sounds they appreciate the most",
+    },
+  ];
+
+  const topLinks = [
+    {
+      id: 1,
+      link: "https://www.figma.com/file/KppDzWtrEi3yASHX0ta4Li/Sustainability-Victoria?node-id=1012%3A15501",
+      icon: "bxl:figma",
+      title: "Figma Design",
+    },
+    {
+      id: 2,
+      link: "https://www.figma.com/proto/KppDzWtrEi3yASHX0ta4Li/Sustainability-Victoria?node-id=1026%3A15502&scaling=scale-down&page-id=1012%3A15501&starting-point-node-id=1026%3A15502&show-proto-sidebar=1",
+      icon: "bxl:figma",
+      title: "Figma Prototype",
+    },
+    {
+      id: 3,
+      link: "https://studiomorte.medium.com/an-app-design-exploration-sustainability-victoria-bba40518dc40",
+      icon: "bi:medium",
+      title: "Medium Article #1",
+    },
+    {
+      id: 4,
+      link: "https://studiomorte.medium.com/sustainability-victoria-when-accessibility-small-space-living-and-augmented-reality-collide-deaf9ff71c35",
+      icon: "bi:medium",
+      title: "Medium Article #2",
+    },
+  ];
+
+  const designConceptsLink = [
+    {
+      id: 1,
+      link: "https://studiomorte.medium.com/an-app-design-exploration-sustainability-victoria-bba40518dc40",
+      icon: "bi:medium",
+      title: "Medium Article #1",
+    },
+  ];
+
+  const finalDesignLink = [
+    {
+      id: 1,
+      link: "https://studiomorte.medium.com/sustainability-victoria-when-accessibility-small-space-living-and-augmented-reality-collide-deaf9ff71c35",
+      icon: "bi:medium",
+      title: "Medium Article #2",
+    },
+  ];
+
   return (
     <>
       <header className="project-pages_header">
@@ -59,6 +194,7 @@ function SustainabilityVic() {
           alt="Collection of screens designed for Sustainability Victoria"
         />
       </header>
+
       <section className="project-pages_container">
         {/* Opening Section ------------------------------------------- */}
         <section className="project_summary">
@@ -82,7 +218,7 @@ function SustainabilityVic() {
             <i> Complete</i>
             <br />
             <span className="fictional-brief">
-              This is a{" "}
+              This is a
               <i>
                 <b>fictional brief</b>
               </i>
@@ -90,40 +226,7 @@ function SustainabilityVic() {
             </span>
           </div>
 
-          <nav className="links-block">
-            <ul>
-              <a href="https://www.figma.com/file/KppDzWtrEi3yASHX0ta4Li/Sustainability-Victoria?node-id=1012%3A15501">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Design
-                </li>
-              </a>
-              <a href="https://www.figma.com/proto/KppDzWtrEi3yASHX0ta4Li/Sustainability-Victoria?node-id=1026%3A15502&scaling=scale-down&page-id=1012%3A15501&starting-point-node-id=1026%3A15502&show-proto-sidebar=1">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Prototype
-                </li>
-              </a>
-
-              {/* <li>
-                                <Icon icon="ic:round-download"/>
-                                Full Documentation
-                            </li> */}
-
-              <a href="https://studiomorte.medium.com/an-app-design-exploration-sustainability-victoria-bba40518dc40">
-                <li>
-                  <Icon icon="bi:medium" />
-                  Medium Article #1
-                </li>
-              </a>
-              <a href="https://studiomorte.medium.com/sustainability-victoria-when-accessibility-small-space-living-and-augmented-reality-collide-deaf9ff71c35">
-                <li>
-                  <Icon icon="bi:medium" />
-                  Medium Article #2
-                </li>
-              </a>
-            </ul>
-          </nav>
+          <LinkBlock items={topLinks} />
 
           <div className="problem-statement full-width">
             <p>
@@ -138,30 +241,7 @@ function SustainabilityVic() {
 
           <div className="project-goals written left bullets">
             <h2>Project Goals</h2>
-            <ul>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Create an aesthetically pleasing and practical app design that
-                  is accessible and educational
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Utilise Augmented Reality to enhance the user experience,
-                  leveraging the novelty of AR while providing a genuinely
-                  useful service
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Provide users with easy access to the knowledge required to
-                  grow and cook their own food
-                </span>
-              </li>
-            </ul>
+            <BulletList items={projectGoals} />
           </div>
 
           <div className="project-solution written right">
@@ -186,7 +266,6 @@ function SustainabilityVic() {
         </section>
 
         {/* Case Study Section ------------------------------------- */}
-
         <section className="project-pages_case-study">
           <div className="project-heading first-heading full-width">
             <div className="project-heading_rectangle"></div>
@@ -214,38 +293,15 @@ function SustainabilityVic() {
             </p>
           </div>
 
-          <div className="project-large-image margin-width">
-            <img
-              src={research}
-              alt="large-scale affinity mapping in black and white"
-            />
-          </div>
+          <img
+            src={research}
+            alt="large-scale affinity mapping in black and white"
+            className="project-large-image margin-width"
+          />
 
           <div className="project-goals written left bullets">
             <h2>User Goals</h2>
-            <ul>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>Learn how to grow in a small space</span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>Gardening in as little time as possible</span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Cook meals at home more often and use home-grown ingredients
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Limit their impact on climate change by growing their own food
-                  to live more sustainably
-                </span>
-              </li>
-            </ul>
+            <BulletList items={userGoals} />
           </div>
 
           <div className="quote right susvic-quote-research">
@@ -265,12 +321,9 @@ function SustainabilityVic() {
             </p>
           </div>
 
-          {/* Slider One ------------------------------------- */}
           <div className="persona-swiper">
             <ProjectSwiper images={personas} />
           </div>
-
-          {/* Slider One END ------------------------------------- */}
 
           <div className="project-pages_staggered-container">
             <div className="written left">
@@ -346,18 +399,8 @@ function SustainabilityVic() {
             </p>
           </div>
 
-          <div className="link-body">
-            <ul>
-              <a href="https://studiomorte.medium.com/an-app-design-exploration-sustainability-victoria-bba40518dc40">
-                <li>
-                  <Icon icon="bi:medium" />
-                  Medium Article #1
-                </li>
-              </a>
-            </ul>
-          </div>
+          <LinkBlock items={designConceptsLink} className="link-body" />
 
-          {/* Slider Two ------------------------------------- */}
           <div className="landscape-swiper">
             <ProjectSwiper images={drafts} />
           </div>
@@ -373,36 +416,7 @@ function SustainabilityVic() {
               the prototype which included the following changes:
             </p>
             <div className="bullets">
-              <ul>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Navigation menu (hamburger/bottom tabs)</span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Plants list (larger/smaller photos)</span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Plant info icon colours</span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Pantry items (written/visual list)</span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Recipes (written/visual list)</span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Recipes ('save'/'save to cookbook')</span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>Dashboard notifications (specific/ambiguous)</span>
-                </li>
-              </ul>
+              <BulletList items={splitTest} />
             </div>
             <p>
               While most users preferred the pantry list images, the same users
@@ -416,9 +430,11 @@ function SustainabilityVic() {
             </p>
           </div>
 
-          <div className="project_side-image right">
-            <img src={testing} alt="screenshot of figma a/b split testing" />
-          </div>
+          <img
+            src={testing}
+            alt="screenshot of figma a/b split testing"
+            className="project_side-image right"
+          />
 
           <div className="project-heading full-width final-design">
             <div className="project-heading_rectangle"></div>
@@ -442,16 +458,7 @@ function SustainabilityVic() {
             </p>
           </div>
 
-          <div className="link-body">
-            <ul>
-              <a href="https://studiomorte.medium.com/sustainability-victoria-when-accessibility-small-space-living-and-augmented-reality-collide-deaf9ff71c35">
-                <li>
-                  <Icon icon="bi:medium" />
-                  Medium Article #2
-                </li>
-              </a>
-            </ul>
-          </div>
+          <LinkBlock items={finalDesignLink} className="link-body" />
 
           <div className="project-large-image margin-width">
             <img
@@ -480,56 +487,16 @@ function SustainabilityVic() {
               In redesigning the concept my goals were to:
             </p>
             <div className="list-container">
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Improve the apps accessibility by adding subtitles for deaf
-                    users
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Dreamtime stories and location information narrated by
-                    Indigenous persons from each region, adding to the
-                    authenticity of the experience
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    A fully realised augmented reality experience that enhances
-                    the users learning and discovery
-                  </span>
-                </li>
-              </ul>
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Notifications that encourage users to interact with the app
-                    and/or notify users about how many times they've listened to
-                    a particular sound
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Include a favourites/saved section so that users can easily
-                    return to the sounds they appreciate the most
-                  </span>
-                </li>
-              </ul>
+              <BulletList items={finalDesignLeft} />
+              <BulletList items={finalDesignRight} />
             </div>
           </div>
 
-          <div className="project-large-image margin-width">
-            <img
-              src={headerImg}
-              alt="mockup of 3 screens from final mobile design"
-            />
-          </div>
+          <img
+            src={headerImg}
+            alt="mockup of 3 screens from final mobile design"
+            className="project-large-image margin-width"
+          />
 
           {/* <div className="project-heading full-width conclusion">
                         <div className="project-heading_rectangle"></div>
@@ -552,6 +519,7 @@ function SustainabilityVic() {
           </div>
         </section>
       </section>
+
       <Footer />
     </>
   );

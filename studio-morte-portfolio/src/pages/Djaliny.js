@@ -1,10 +1,9 @@
-/* IMPORTS */
 import React from "react";
 import Footer from "./../components/Footer";
-import { Icon } from "@iconify/react";
+import BulletList from "../components/BulletList";
+import LinkBlock from "../components/LinkBlock";
 
 /* IMAGES */
-import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/djaliny2.jpg";
 import featureImg from "./../images/djaliny1.jpg";
 import brandLogo from "./../images/logo-djaliny.png";
@@ -16,6 +15,64 @@ import persona1 from "./../images/persona-djaliny1.jpg";
 import persona2 from "./../images/persona-djaliny2.jpg";
 
 function Djaliny() {
+  const projectGoals = [
+    {
+      id: 1,
+      copy: "Utilise all of our design experience to understand the brief requirements and produce a top-notch design that the team would be proud to present",
+    },
+    {
+      id: 2,
+      copy: "Create a unique mobile app that genuinely connects people to country and that is respectful of Aboriginal and Torres Straight Islander peoples",
+    },
+  ];
+
+  const furtherDevLeft = [
+    {
+      id: 1,
+      copy: "Improve the apps accessibility by adding subtitles for deaf users",
+    },
+    {
+      id: 2,
+      copy: "Dreamtime stories and location information narrated by Indigenous persons from each region, adding to the authenticity of the experience",
+    },
+    {
+      id: 3,
+      copy: "A fully realised augmented reality experience that enhances the users learning and discovery",
+    },
+  ];
+
+  const furtherDevRight = [
+    {
+      id: 1,
+      copy: "Notifications that encourage users to interact with the app and/or notify users about how many times they've listened to a particular sound",
+    },
+    {
+      id: 2,
+      copy: "Include a favourites/saved section so that users can easily return to the sounds they appreciate the most",
+    },
+  ];
+
+  const topLinks = [
+    {
+      id: 1,
+      link: "https://xd.adobe.com/view/ea91c219-d72c-4cfc-a53f-b48d3d583a74-bfc2/",
+      icon: "ci:adobe-xd",
+      title: "Adobe Xd Design",
+    },
+    {
+      id: 2,
+      link: "https://www.canva.com/design/DAEkRub92Hs/dNB19iOXZMKl9oht2fl1tw/view?utm_content=DAEkRub92Hs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      icon: "simple-icons:canva",
+      title: "Presentation & Prototype",
+    },
+    {
+      id: 3,
+      link: "https://www.youtube.com/watch?v=xsF3di2qqXM",
+      icon: "akar-icons:youtube-fill",
+      title: "Official Highlight Reel",
+    },
+  ];
+
   return (
     <>
       <header className="project-pages_header">
@@ -58,7 +115,7 @@ function Djaliny() {
             <i> Complete</i>
             <br />
             <span className="fictional-brief">
-              This is a{" "}
+              This is a
               <i>
                 <b>fictional brief</b>
               </i>
@@ -66,28 +123,7 @@ function Djaliny() {
             </span>
           </div>
 
-          <nav className="links-block">
-            <ul>
-              <a href="https://xd.adobe.com/view/ea91c219-d72c-4cfc-a53f-b48d3d583a74-bfc2/">
-                <li>
-                  <Icon icon="ci:adobe-xd" />
-                  Adobe Xd Design
-                </li>
-              </a>
-              <a href="https://www.canva.com/design/DAEkRub92Hs/dNB19iOXZMKl9oht2fl1tw/view?utm_content=DAEkRub92Hs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
-                <li>
-                  <Icon icon="simple-icons:canva" />
-                  Presentation & Prototype
-                </li>
-              </a>
-              <a href="https://www.youtube.com/watch?v=xsF3di2qqXM">
-                <li>
-                  <Icon icon="akar-icons:youtube-fill" />
-                  Official Highlight Reel
-                </li>
-              </a>
-            </ul>
-          </nav>
+          <LinkBlock items={topLinks} />
 
           <div className="djaliny-sponsors">
             <h2>Sponsored By</h2>
@@ -110,24 +146,7 @@ function Djaliny() {
 
           <div className="project-goals written left bullets">
             <h2>Project Goals</h2>
-            <ul>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Utilise all of our design experience to understand the brief
-                  requirements and produce a top-notch design that the team
-                  would be proud to present
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Create a unique mobile app that genuinely connects people to
-                  country and that is respectful of Aboriginal and Torres
-                  Straight Islander peoples
-                </span>
-              </li>
-            </ul>
+            <BulletList items={projectGoals} />
           </div>
 
           <div className="project-solution written right">
@@ -289,54 +308,15 @@ function Djaliny() {
             </p>
           </div>
 
-          <div className="further-development bullets">
+          <div className="further-development">
             <h2>Further Development</h2>
             <p className="written">
               In the final presentation we also recognised some points for
               further development, listed below:
             </p>
-            <div className="list-container">
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Improve the apps accessibility by adding subtitles for deaf
-                    users
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Dreamtime stories and location information narrated by
-                    Indigenous persons from each region, adding to the
-                    authenticity of the experience
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    A fully realised augmented reality experience that enhances
-                    the users learning and discovery
-                  </span>
-                </li>
-              </ul>
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Notifications that encourage users to interact with the app
-                    and/or notify users about how many times they've listened to
-                    a particular sound
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Include a favourites/saved section so that users can easily
-                    return to the sounds they appreciate the most
-                  </span>
-                </li>
-              </ul>
+            <div className="list-container bullets">
+              <BulletList items={furtherDevLeft} />
+              <BulletList items={furtherDevRight} />
             </div>
           </div>
 

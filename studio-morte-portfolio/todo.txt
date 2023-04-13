@@ -1,15 +1,21 @@
 ~ 'reactify' project -- reusable components
     ~ [DONE] Condense separate swipers into one
     ~ [DONE] Swiper styles
+    ~ [DONE] Bullet list component
+    ~ [DONE] Link block component
+    ~ Research better way to include component props?
 
 
+~ [DONE] remove showreel tab?
+~ [DONE] replace bullet.png with svg, style accordingly
 ~ homepage GSAP/swiper (mobile)
 ~ animations when elements enter viewport
-~ replace bullet.png with svg, style accordingly
 ~ external links
 ~ revisit logo animation
-~ [DONE] remove showreel tab?
+    ~ Make logo an svg (multiple paths)
+~ restyle underline on navbar links
 ~ restructure folders based on learning
+~ RESTRUCTURE HTML (SEMANTICS)
 
 
 ~ rewrite about me section

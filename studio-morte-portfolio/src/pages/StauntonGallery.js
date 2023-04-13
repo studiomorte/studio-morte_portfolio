@@ -1,11 +1,10 @@
-/* IMPORTS */
 import React from "react";
 import Footer from "./../components/Footer";
-import { Icon } from "@iconify/react";
 import ProjectSwiper from "../components/ProjectSwiper";
+import BulletList from "../components/BulletList";
+import LinkBlock from "../components/LinkBlock";
 
 /* IMAGES */
-import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/stauntonv3.jpg";
 import featureImg from "./../images/staunton1.jpg";
 import brandLogo from "./../images/staunton-logo.png";
@@ -60,6 +59,55 @@ function Staunton() {
     },
   ];
 
+  const projectGoals = [
+    {
+      id: 1,
+      copy: "Create an aesthetically pleasing design that leverages white space to convey the 'feeling' that the user is browsing through a physical gallery",
+    },
+    {
+      id: 2,
+      copy: "Feature artworks and photography as key structural elements of each page, creating an editoral style design",
+    },
+    {
+      id: 3,
+      copy: "Utilise subtle animations to engage users",
+    },
+    {
+      id: 4,
+      copy: "Strategically plan page navigation to limit clicks and encourage engagement",
+    },
+  ];
+
+  const topLinks = [
+    {
+      id: 1,
+      link: "https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868",
+      icon: "bxl:figma",
+      title: "Figma Design",
+    },
+    {
+      id: 2,
+      link: "https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5042&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5042",
+      icon: "bxl:figma",
+      title: "Figma Prototype",
+    },
+    {
+      id: 3,
+      link: "https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=949%3A3352&t=GocV1JCtJcYRRznx-0",
+      icon: "bxl:figma",
+      title: "Design System",
+    },
+  ];
+
+  const mockupLink = [
+    {
+      id: 1,
+      link: "https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868",
+      icon: "bxl:figma",
+      title: "Figma Design",
+    },
+  ];
+
   return (
     <>
       <header className="project-pages_header">
@@ -102,7 +150,7 @@ function Staunton() {
             <i> Development Stage</i>
             <br />
             <span className="fictional-brief">
-              This is a{" "}
+              This is a
               <i>
                 <b>fictional brief</b>
               </i>
@@ -110,36 +158,7 @@ function Staunton() {
             </span>
           </div>
 
-          <nav className="links-block">
-            <ul>
-              <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Design
-                </li>
-              </a>
-              <a href="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5042&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5042">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Prototype
-                </li>
-              </a>
-              <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=949%3A3352&t=GocV1JCtJcYRRznx-0">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Design System
-                </li>
-              </a>
-              {/* <li>
-                                <Icon icon="ic:round-download"/>
-                                Full Documentation
-                            </li>
-                            <li>
-                                <Icon icon="ph:codepen-logo-fill"/>
-                                Codepen
-                            </li> */}
-            </ul>
-          </nav>
+          <LinkBlock items={topLinks} />
 
           <div className="problem-statement full-width">
             <p>
@@ -155,34 +174,7 @@ function Staunton() {
 
           <div className="project-goals written left bullets">
             <h2>Project Goals</h2>
-            <ul>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Create an aesthetically pleasing design that leverages white
-                  space to convey the 'feeling' that the user is browsing
-                  through a physical gallery
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Feature artworks and photography as key structural elements of
-                  each page, creating an editoral style design
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>Utilise subtle animations to engage users</span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Strategically plan page navigation to limit clicks and
-                  encourage engagement
-                </span>
-              </li>
-            </ul>
+            <BulletList items={projectGoals} />
           </div>
 
           <div className="project-solution written right">
@@ -299,7 +291,7 @@ function Staunton() {
               From the initial wireframes I created high-fidelity mockups that
               feature parallax animation. Ultimately I decided to remove this
               as, while this parallax animation looked interesting and unique,
-              it didn’t serve to enhance the artworks or photography on display.
+              it didn't serve to enhance the artworks or photography on display.
             </p>
             <p>
               Upon removal of the large background images I opted to include
@@ -315,23 +307,11 @@ function Staunton() {
             </p>
           </div>
 
-          <div className="link-body">
-            <ul>
-              <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Design
-                </li>
-              </a>
-            </ul>
-          </div>
+          <LinkBlock items={mockupLink} className="link-body" />
 
-          {/* Slider Three ------------------------------------- */}
           <div className="landscape-swiper">
             <ProjectSwiper images={mockups} />
           </div>
-
-          {/* Slider Three END ------------------------------------- */}
 
           <div className="project-heading full-width prototype">
             <div className="project-heading_rectangle"></div>

@@ -1,11 +1,10 @@
-/* IMPORTS */
-import Footer from "./../components/Footer";
-import { Icon } from "@iconify/react";
 import React from "react";
+import Footer from "./../components/Footer";
 import ProjectSwiper from "../components/ProjectSwiper";
+import BulletList from "../components/BulletList";
+import LinkBlock from "../components/LinkBlock";
 
 /* IMAGES */
-import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/warhammer-header.jpg";
 import featureImg from "./../images/warhammer-feature.jpg";
 import warhammerLogo from "./../images/logo-warhammer.png";
@@ -32,6 +31,141 @@ function MyWarhammer() {
     { id: "slide1", imageUrl: scenario1, alt: "Kelsey Byrne scenario" },
     { id: "slide2", imageUrl: scenario2, alt: "David Melaney scenario" },
     { id: "slide3", imageUrl: scenario3, alt: "Jake Evans scenario" },
+  ];
+
+  const projectGoals = [
+    {
+      id: 1,
+      copy: "Streamline the existing My Warhammer website and improve the aesthetic design",
+    },
+    {
+      id: 2,
+      copy: "Improve navigation between all Games Workshop websites by streamlining the main navigation menu",
+    },
+    {
+      id: 3,
+      copy: "Redesign the Citadel Colour 'my projects' user flow",
+    },
+    {
+      id: 4,
+      copy: "Adapt the Battle Honours project for use within the My Warhammer website redesign",
+    },
+    {
+      id: 5,
+      copy: "Include and expand upon the inventory and wishlist feature on the Citadel Colour mobile app",
+    },
+  ];
+
+  const userGoalsLeft = [
+    {
+      id: 1,
+      copy: "Easy access to the full range of Games Workshop products with a straight forward way to keep track of purchases and wishlists",
+    },
+    {
+      id: 2,
+      copy: "Have a better experience navigating the various Games Workshop websites and easily adjust personal details and/or subscriptions",
+    },
+    {
+      id: 3,
+      copy: "Be able to seamlessly access the same content from multiple device",
+    },
+  ];
+
+  const userGoalsRight = [
+    {
+      id: 4,
+      copy: "An easy way to maintain colour schemes when painting Warhammer miniatures and the ability to share colour schemes with others",
+    },
+    {
+      id: 5,
+      copy: "A digital way to work through their Battle Honours programme",
+    },
+  ];
+
+  const furtherDevLeft = [
+    {
+      id: 1,
+      copy: "Improve Battle Honours experience beyond written activities. Think: online group sessions, allow users to upload photos of doing/completing activity",
+    },
+    {
+      id: 2,
+      copy: "Further expansion of My Projects section allowing users to link directly to Citadel Colour tutorials within their projects",
+    },
+    {
+      id: 3,
+      copy: "Warhammer store profiles to allow stores to showcase and share customers/their own projects, create tournament/painting events, etc.",
+    },
+  ];
+
+  const furtherDevRight = [
+    {
+      id: 1,
+      copy: "The original article about adding user profiles on the My Warhammer website suggested the ability to save Warhammer Community articles to read later and create army lists that can be shared with others",
+    },
+    {
+      id: 2,
+      copy: "User testing throughout My Projects section to enhance and further streamline the experience, testing with a range of highly experienced and brand new hobbyists",
+    },
+  ];
+
+  const topLinks = [
+    {
+      id: 1,
+      link: "https://www.figma.com/file/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=0%3A1",
+      icon: "bxl:figma",
+      title: "Figma Design",
+    },
+    {
+      id: 2,
+      link: "https://www.figma.com/proto/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=153%3A3929&scaling=scale-down&page-id=0%3A1&starting-point-node-id=153%3A3929",
+      icon: "bxl:figma",
+      title: "Figma Prototype",
+    },
+    {
+      id: 3,
+      link: "https://vigorous-mayer-dfea3a.netlify.app/",
+      icon: "ri:external-link-line",
+      title: "Battle Honours Website",
+    },
+    {
+      id: 4,
+      link: "https://fanciful-custard-b67eea.netlify.app/",
+      icon: "ri:external-link-line",
+      title: "Citadel Colour Website (WIP)",
+    },
+  ];
+
+  const battleHonoursLink = [
+    {
+      id: 1,
+      link: "https://vigorous-mayer-dfea3a.netlify.app/",
+      icon: "ri:external-link-line",
+      title: "Battle Honours Website",
+    },
+  ];
+
+  const citadelColourLink = [
+    {
+      id: 1,
+      link: "https://fanciful-custard-b67eea.netlify.app/",
+      icon: "ri:external-link-line",
+      title: "Citadel Colour Website (WIP)",
+    },
+  ];
+
+  const prototypeLinks = [
+    {
+      id: 1,
+      link: "https://www.figma.com/file/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=0%3A1",
+      icon: "bxl:figma",
+      title: "Figma Design",
+    },
+    {
+      id: 2,
+      link: "https://www.figma.com/proto/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=153%3A3929&scaling=scale-down&page-id=0%3A1&starting-point-node-id=153%3A3929",
+      icon: "bxl:figma",
+      title: "Figma Prototype",
+    },
   ];
 
   return (
@@ -83,7 +217,7 @@ function MyWarhammer() {
             <i> Development Stage</i>
             <br />
             <span className="fictional-brief">
-              This is a{" "}
+              This is a
               <i>
                 <b>fictional brief</b>
               </i>
@@ -91,34 +225,7 @@ function MyWarhammer() {
             </span>
           </div>
 
-          <nav className="links-block">
-            <ul>
-              <a href="https://www.figma.com/file/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=0%3A1">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Design
-                </li>
-              </a>
-              <a href="https://www.figma.com/proto/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=153%3A3929&scaling=scale-down&page-id=0%3A1&starting-point-node-id=153%3A3929">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Prototype
-                </li>
-              </a>
-              <a href="https://vigorous-mayer-dfea3a.netlify.app/">
-                <li>
-                  <Icon icon="ri:external-link-line" />
-                  Battle Honours Website
-                </li>
-              </a>
-              <a href="https://fanciful-custard-b67eea.netlify.app/">
-                <li>
-                  <Icon icon="ri:external-link-line" />
-                  Citadel Colour Website (WIP)
-                </li>
-              </a>
-            </ul>
-          </nav>
+          <LinkBlock items={topLinks} />
 
           <div className="problem-statement full-width">
             <p>
@@ -129,42 +236,9 @@ function MyWarhammer() {
             </p>
           </div>
 
-          <div className="project-goals written left bullets">
+          <div className="project-goals left bullets">
             <h2>Project Goals</h2>
-            <ul>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Streamline the existing My Warhammer website and improve the
-                  aesthetic design
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Improve navigation between all Games Workshop websites by
-                  streamlining the main navigation menu
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>Redesign the Citadel Colour 'my projects' user flow</span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Adapt the Battle Honours project for use within the My
-                  Warhammer website redesign
-                </span>
-              </li>
-              <li>
-                <img src={bullet} alt="bullet point" />
-                <span>
-                  Include and expand upon the inventory and wishlist feature on
-                  the Citadel Colour mobile app
-                </span>
-              </li>
-            </ul>
+            <BulletList items={projectGoals} />
           </div>
 
           <div className="project-solution written right">
@@ -183,9 +257,11 @@ function MyWarhammer() {
             </p>
           </div>
 
-          <div className="project-feature full-width">
-            <img src={featureImg} alt="mockup of final website design" />
-          </div>
+          <img
+            src={featureImg}
+            alt="mockup of final website design"
+            className="project-feature full-width"
+          />
         </section>
 
         {/* Case Study Section ------------------------------------- */}
@@ -210,16 +286,10 @@ function MyWarhammer() {
             </p>
           </div>
 
-          <div className="link-body citadel-colour">
-            <ul>
-              <a href="https://vigorous-mayer-dfea3a.netlify.app/">
-                <li>
-                  <Icon icon="ri:external-link-line" />
-                  Battle Honours Website
-                </li>
-              </a>
-            </ul>
-          </div>
+          <LinkBlock
+            items={battleHonoursLink}
+            className="link-body citadel-colour"
+          />
 
           <div className="project_side-image full-width warhammer-right-image">
             <img
@@ -261,44 +331,6 @@ function MyWarhammer() {
                         </ul>
                     </div> */}
 
-          {/* Slider One ------------------------------------- */}
-          {/* <div className="slider_container rectangle-images"> */}
-          {/* https://github.com/express-labs/pure-react-carousel */}
-          {/* <CarouselProvider
-                                visibleSlides={1.2}
-                                totalSlides={3}
-                                step={1}
-                                dragStep={1}
-                                naturalSlideWidth={1000}
-                                naturalSlideHeight={500}
-                        >  
-                            <Slider>
-                                <Slide index={0}>
-                                    <Image src={ideation} />
-                                </Slide>
-                                <Slide index={1}>
-                                    <Image src={wireframe1}/>
-                                </Slide>
-                                <Slide index={2}>
-                                    <Image src={wireframe2} />
-                                </Slide>
-                            </Slider>
-                        </CarouselProvider>
-                    </div>
-
-                    <div className="mobile-image-container">
-                        <div>
-                            <img src={ ideation } alt="Original mockups of the Staunton Gallery website"/>
-                        </div>
-                        <div>
-                            <img src={ wireframe1 } alt="Redesigned mockups of the Staunton Gallery website"/>
-                        </div>
-                        <div>
-                            <img src={ wireframe2 } alt="Redesigned mockups of the Staunton Gallery website"/>
-                        </div>
-                    </div> */}
-          {/* Slider One END ------------------------------------- */}
-
           <div className="warhammer-logo-container">
             <img src={citadelColourLogo} alt="Citadel Colour logo" />
           </div>
@@ -323,34 +355,16 @@ function MyWarhammer() {
             </p>
           </div>
 
-          <div className="link-body citadel-colour">
-            <ul>
-              <a href="https://fanciful-custard-b67eea.netlify.app/">
-                <li>
-                  <Icon icon="ri:external-link-line" />
-                  Citadel Colour Website (WIP)
-                </li>
-              </a>
-            </ul>
-            <div className="link-body-below">
-              {/* <p>
-                <b>Sign in using the following details:</b>
-              </p>
-              <p>Email: jamesworkshop@citadel.com</p>
-              <p>Password: James1234</p>
-              <p>
-                <i>or</i>
-              </p>
-              <p>Create your own account!</p> */}
-            </div>
-          </div>
+          <LinkBlock
+            items={citadelColourLink}
+            className="link-body citadel-colour"
+          />
 
-          <div className="project_side-image full-width citadel-right-image">
-            <img
-              src={citadelColourImg}
-              alt="screenshot of redesigned citadel colour website"
-            />
-          </div>
+          <img
+            src={citadelColourImg}
+            alt="screenshot of redesigned citadel colour website"
+            className="project_side-image full-width citadel-right-image"
+          />
 
           {/* <div className="warhammer-container project-pages_staggered-container">
                         <div className="written left">
@@ -390,61 +404,19 @@ function MyWarhammer() {
             </p>
           </div>
 
-          {/* Slider THREE ------------------------------------- */}
           <div className="persona-swiper">
             <ProjectSwiper images={personas} />
           </div>
-          {/* Slider FOUR ------------------------------------- */}
+
           <div className="landscape-swiper">
             <ProjectSwiper images={scenarios} />
           </div>
 
-          {/* Slider FOUR END ------------------------------------- */}
-
           <div className="further-development bullets warhammer-usergoals">
             <h2>User Goals</h2>
             <div className="list-container">
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Easy access to the full range of Games Workshop products
-                    with a straight forward way to keep track of purchases and
-                    wishlists
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Have a better experience navigating the various Games
-                    Workshop websites and easily adjust personal details and/or
-                    subscriptions
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Be able to seamlessly access the same content from multiple
-                    devices
-                  </span>
-                </li>
-              </ul>
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    An easy way to maintain colour schemes when painting
-                    Warhammer miniatures and the ability to share colour schemes
-                    with others
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    A digital way to work through their Battle Honours programme
-                  </span>
-                </li>
-              </ul>
+              <BulletList items={userGoalsLeft} />
+              <BulletList items={userGoalsRight} />
             </div>
           </div>
 
@@ -462,12 +434,11 @@ function MyWarhammer() {
             </p>
           </div>
 
-          <div className="project-large-image margin-width">
-            <img
-              src={infoArch}
-              alt="information architecture for My Warhammer website"
-            />
-          </div>
+          <img
+            src={infoArch}
+            alt="information architecture for My Warhammer website"
+            className="project-large-image margin-width"
+          />
 
           <div className="project-heading full-width">
             <div className="project-heading_rectangle"></div>
@@ -487,22 +458,7 @@ function MyWarhammer() {
             </p>
           </div>
 
-          <div className="link-body">
-            <ul>
-              <a href="https://www.figma.com/file/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=0%3A1">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Design
-                </li>
-              </a>
-              <a href="https://www.figma.com/proto/b0wW4zp4bcrRvJp0MB1NDf/My-Warhammer?node-id=153%3A3929&scaling=scale-down&page-id=0%3A1&starting-point-node-id=153%3A3929">
-                <li>
-                  <Icon icon="bxl:figma" />
-                  Figma Prototype
-                </li>
-              </a>
-            </ul>
-          </div>
+          <LinkBlock items={prototypeLinks} className="link-body" />
 
           <div className="project_figma-container"></div>
 
@@ -516,51 +472,8 @@ function MyWarhammer() {
           <div className="further-development bullets">
             {/* <h2>Further Development</h2> */}
             <div className="list-container">
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Improve Battle Honours experience beyond written activities.
-                    Think: online group sessions, allow users to upload photos
-                    of doing/completing activity
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Further expansion of My Projects section allowing users to
-                    link directly to Citadel Colour tutorials within their
-                    projects
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    Warhammer store profiles to allow stores to showcase and
-                    share customers/their own projects, create
-                    tournament/painting events, etc.
-                  </span>
-                </li>
-              </ul>
-              <ul className="written">
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    The original article about adding user profiles on the My
-                    Warhammer website suggested the ability to save Warhammer
-                    Community articles to read later and create army lists that
-                    can be shared with others
-                  </span>
-                </li>
-                <li>
-                  <img src={bullet} alt="bullet point" />
-                  <span>
-                    User testing throughout My Projects section to enhance and
-                    further streamline the experience, testing with a range of
-                    highly experienced and brand new hobbyists
-                  </span>
-                </li>
-              </ul>
+              <BulletList items={furtherDevLeft} />
+              <BulletList items={furtherDevRight} />
             </div>
           </div>
 
@@ -578,6 +491,7 @@ function MyWarhammer() {
           </div>
         </section>
       </section>
+
       <Footer />
     </>
   );
