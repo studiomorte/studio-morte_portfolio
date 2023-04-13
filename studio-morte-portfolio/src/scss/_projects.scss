@@ -21,7 +21,9 @@ a {
     z-index: 3;
 }
 
-.project_navigation-mobile { display: none; }
+.project_navigation-mobile {
+    display: none;
+}
 
 .project_background-overlay {
     position: absolute;
@@ -30,11 +32,9 @@ a {
     width: 100%;
     z-index: 2;
 
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+12,ffffff+100&1+32,0.6+69,0+99 */
-    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 12%, rgba(255,255,255,1) 32%, rgba(255,255,255,0.6) 69%, rgba(255,255,255,0) 99%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 12%,rgba(255,255,255,1) 32%,rgba(255,255,255,0.6) 69%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  rgba(255,255,255,1) 12%,rgba(255,255,255,1) 32%,rgba(255,255,255,0.6) 69%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.6) 69%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.6) 69%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.6) 69%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
 }
 
 .project_background-image {
@@ -81,7 +81,7 @@ a {
     height: 260px;
     margin-top: -100px;
 
-    font-family: Lato-Thin;    
+    font-family: Lato-Thin;
     font-size: 70px;
     letter-spacing: 10px;
     line-height: 0;
@@ -91,7 +91,7 @@ a {
 
 .rectangle {
     margin-top: 15px;
-    height: 80px; 
+    height: 80px;
     width: 100%;
     background-color: $brand-pink;
     opacity: 0;
@@ -121,7 +121,7 @@ a {
 
 
 @keyframes changeFont {
-    from { }
+    from {}
 
     1% {
         @include brand-display;
@@ -156,7 +156,9 @@ a {
 
 
 @media only screen and (max-width: 1700px) {
-    .hidden { display: none; }
+    .hidden {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -191,21 +193,26 @@ a {
             width: 150%;
             margin-left: -15%;
         }
+
         li {
-            font-family: Lato-Medium;   
+            font-family: Lato-Medium;
             transform: scale(0.8);
         }
     }
 
-    .project_background-overlay { 
+    .project_background-overlay {
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+88&0+1,0.6+31,1+68 */
-        background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,0.6) 31%, rgba(255,255,255,1) 68%, rgba(255,255,255,1) 88%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,0.6) 31%,rgba(255,255,255,1) 68%,rgba(255,255,255,1) 88%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,0.6) 31%,rgba(255,255,255,1) 68%,rgba(255,255,255,1) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.6) 31%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 88%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.6) 31%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 88%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.6) 31%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 88%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+        /* IE6-9 */
     }
 
-    .project_navigation-mobile { 
+    .project_navigation-mobile {
         z-index: 100;
         display: grid;
         height: 100%;
@@ -223,7 +230,7 @@ a {
     }
 
     .project_slide-arrows {
-        grid-area: 1 / 1 / -1 / -1 ;
+        grid-area: 1 / 1 / -1 / -1;
         align-self: flex-end;
 
         display: flex;
@@ -241,7 +248,7 @@ a {
     }
 
     .project_slide-content {
-        grid-area: 1 / 1 / -1 / -1 ;
+        grid-area: 1 / 1 / -1 / -1;
         transform: rotate(-8.93deg);
         text-align: center;
         width: 120vw;
@@ -284,10 +291,11 @@ a {
 
             width: 300%;
             margin-left: -75%;
-            
+
         }
+
         li {
-            font-family: Lato-Medium;   
+            font-family: Lato-Medium;
             transform: scale(0.5);
             margin-top: -150px;
         }
@@ -297,35 +305,98 @@ a {
 
 // SWIPER CLASSES ---------------------------------------
 
-.mySwiper {
+.swiper {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 100px;
-    
-    // display: grid !important;
-    // grid-template-columns: repeat(12, 1fr);
-    
+
     .swiper-wrapper {
-        // grid-column: 2 / -2;
+        padding-bottom: 50px;
     }
 
     .swiper-slide {
-        width: max-content;
-    }
-}
 
-.persona-swiper, .landscape-swiper {
-    grid-column: 2 / -2 ;
-}
-
-.persona-swiper .mySwiper {
-    img {
-        height: 60vh;
-    }
-}
-
-.landscape-swiper .mySwiper {
-    img {
         height: auto;
+
+        // img {
+        //     max-height: 800px;
+        // }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: unset;
+        bottom: 0px;
+        z-index: 2;
+        color: $brand-black;
+
+        transition: {
+            property: color;
+            duration: $timing;
+            timing-function: $ease-std;
+        }
+
+        &::after {
+            font-size: 30px;
+        }
+
+        &:hover {
+            color: $brand-pink;
+            opacity: 1;
+        }
+    }
+
+    .swiper-pagination {
+        z-index: 1;
+
+        .swiper-pagination-bullet-active {
+            background-color: $brand-black;
+        }
+
+        .swiper-pagination-bullet {
+            transition: {
+                property: background-color, opacity;
+                duration: $timing;
+                timing-function: $ease-std;
+            }
+
+            &:hover {
+                background-color: $brand-pink;
+                opacity: 1;
+            }
+        }
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 15px;
+    }
+}
+
+.persona-swiper,
+.landscape-swiper {
+    grid-column: 2 / -2;
+}
+
+.persona-swiper .swiper {
+    .swiper-slide {
+        width: auto;
+        height: auto;
+
+        @media only screen and (max-width: 850px) {
+            width: 90%;
+        }
+
+        img {
+            max-height: 800px;
+        }
+    }
+}
+
+.landscape-swiper .swiper {
+    .swiper-slide {
+        width: 90%;
     }
 }

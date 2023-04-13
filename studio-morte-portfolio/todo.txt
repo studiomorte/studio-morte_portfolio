@@ -1,13 +1,19 @@
 ~ 'reactify' project -- reusable components
-    ~ Swiper styles
+    ~ [DONE] Condense separate swipers into one
+    ~ [DONE] Swiper styles
+
 
 ~ homepage GSAP/swiper (mobile)
 ~ animations when elements enter viewport
+~ replace bullet.png with svg, style accordingly
+~ external links
 ~ revisit logo animation
+~ [DONE] remove showreel tab?
+~ restructure folders based on learning
+
+
 ~ rewrite about me section
     ~ include testimonials?
 ~ revisit CV
 ~ include CV PDF download
-
-~ remove showreel tab?
 ~ write medium articles (as originally intended)

@@ -55,14 +55,14 @@
     justify-content: space-between;
 
     text-align: right;
-    color: $brand-pink; 
+    color: $brand-pink;
 
     nav {
         @include reset-spacing;
 
         display: flex;
         flex-direction: row;
-        gap: 70px;
+        justify-content: flex-end;
     }
 
     nav a {
@@ -72,6 +72,10 @@
         letter-spacing: 3px;
         text-transform: uppercase;
         line-height: 30px;
+    }
+
+    nav a:not(:last-of-type) {
+        margin-right: 30px;
     }
 
     nav a:after {
@@ -90,11 +94,18 @@
         background-color: $brand-pink;
     }
 
-    #menuIcon { display: none; }
-    #closeIcon { display: none; }
+    #menuIcon {
+        display: none;
+    }
+
+    #closeIcon {
+        display: none;
+    }
 }
 
-.hamburger { display: none; }
+.hamburger {
+    display: none;
+}
 
 .navigation_designer {
     @include brand-display;
@@ -125,11 +136,11 @@
 }
 
 
-#menuIcon { 
+#menuIcon {
     transition: 1s ease-in-out;
 }
 
-#closeIcon { 
+#closeIcon {
     transition: 1s ease-in-out;
 }
 
@@ -152,12 +163,12 @@
     transition: transform 0.2s;
 
     ul {
-        padding: 0 ;
+        padding: 0;
         margin-top: -100px;
     }
 
     li {
-        margin: 10vh 0 ;
+        margin: 10vh 0;
         text-align: center;
         letter-spacing: 0.2em;
         text-transform: uppercase;
@@ -241,10 +252,12 @@
     .navigation_right {
         justify-content: center;
 
-        nav a { display: none; }
+        nav a {
+            display: none;
+        }
 
-        .hamburger { 
-            display: block; 
+        .hamburger {
+            display: block;
             height: 50px;
             width: 50px;
 
@@ -253,7 +266,9 @@
                 width: 50px;
             }
 
-            #menuIcon { display: block; }
+            #menuIcon {
+                display: block;
+            }
 
         }
     }
@@ -285,10 +300,12 @@
     .navigation_right {
         justify-content: center;
 
-        nav a { display: none; }
+        nav a {
+            display: none;
+        }
 
-        .hamburger { 
-            display: block; 
+        .hamburger {
+            display: block;
             height: 50px;
             width: 50px;
 
@@ -297,7 +314,9 @@
                 width: 50px;
             }
 
-            #menuIcon { display: block; }
+            #menuIcon {
+                display: block;
+            }
 
         }
     }
@@ -325,6 +344,6 @@
     }
 
     .navigation_container {
-        padding-inline: 6vw ;
+        padding-inline: 6vw;
     }
 }

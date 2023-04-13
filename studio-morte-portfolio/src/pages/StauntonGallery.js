@@ -2,10 +2,7 @@
 import Footer from "./../components/Footer";
 import { Icon } from "@iconify/react";
 import React from "react";
-import { CarouselProvider, Slider, Slide, Image } from "pure-react-carousel";
-import FigmaEmbed from "react-figma-embed";
-import PersonaSwiper from "../components/PersonaSwiper";
-import LandscapeSwiper from "../components/LandscapeSwiper";
+import ProjectSwiper from "../components/ProjectSwiper";
 
 /* IMAGES */
 import bullet from "./../images/bullet.png";
@@ -22,94 +19,118 @@ import mockup1 from "./../images/staunton-mockup1.jpg";
 import mockup2 from "./../images/staunton-mockup2.jpg";
 
 function Staunton() {
-	const personas = [
-		{ id: "slide1", imageUrl: persona1 },
-		{ id: "slide2", imageUrl: persona2 },
-		{ id: "slide3", imageUrl: persona3 },
-	];
+  const personas = [
+    { id: "slide1", imageUrl: persona1, alt: "Jason Winters persona" },
+    { id: "slide2", imageUrl: persona2, alt: "Cathy Andersen persona" },
+    {
+      id: "slide3",
+      imageUrl: persona3,
+      alt: "Heather Staunton client profile",
+    },
+  ];
 
-	const drafts = [
-		{ id: "slide1", imageUrl: ideation },
-		{ id: "slide2", imageUrl: wireframe1 },
-		{ id: "slide3", imageUrl: wireframe2 },
-	];
+  const drafts = [
+    {
+      id: "slide1",
+      imageUrl: ideation,
+      alt: "photo of hand drawn ideation steps",
+    },
+    {
+      id: "slide2",
+      imageUrl: wireframe1,
+      alt: "screenshot of desktop wireframes of initial design",
+    },
+    {
+      id: "slide3",
+      imageUrl: wireframe2,
+      alt: "screenshot of mobile wireframes of initial design",
+    },
+  ];
 
-	const mockups = [
-		{ id: "slide1", imageUrl: mockup1 },
-		{ id: "slide2", imageUrl: mockup2 },
-	];
+  const mockups = [
+    {
+      id: "slide1",
+      imageUrl: mockup1,
+      alt: "screenshot of original high-fidelity desktop design",
+    },
+    {
+      id: "slide2",
+      imageUrl: mockup2,
+      alt: "screenshot of new high-fidelity desktop design",
+    },
+  ];
 
-	return (
-		<>
-			<header className="project-pages_header">
-				<img
-					className="project-pages_logo logo-staunton"
-					src={brandLogo}
-					alt="Staunton Gallery Logo"
-				/>
-				<div className="project-pages_hero-overlay"></div>
-				<img
-					className="project-pages_hero staunton-hero"
-					src={headerImg}
-					alt="Collection of screens designed for Staunton Gallery"
-				/>
-			</header>
-			<section className="project-pages_container">
-				{/* Opening Section ------------------------------------------- */}
+  return (
+    <>
+      <header className="project-pages_header">
+        <img
+          className="project-pages_logo logo-staunton"
+          src={brandLogo}
+          alt="Staunton Gallery Logo"
+        />
+        <div className="project-pages_hero-overlay"></div>
+        <img
+          className="project-pages_hero staunton-hero"
+          src={headerImg}
+          alt="Collection of screens designed for Staunton Gallery"
+        />
+      </header>
+      <section className="project-pages_container">
+        {/* Opening Section ------------------------------------------- */}
 
-				<section className="project_summary">
-					<div className="opening-block written left">
-						<h2>Overview</h2>
-						<p>
-							Staunton Gallery is a local art gallery situated in the heart of
-							Subiaco featuring multiple exhibition spaces. The gallery curates
-							and hosts exhibitions, provides a support network to associated
-							artists, and houses artist studios. Heather Staunton has been
-							operating the gallery as an independent artist since 2007 and is
-							seeking to reimagine the galleries online presence with a brand
-							new website.
-						</p>
-						<p>
-							The website design must showcase the venue, their exhibitions,
-							artists, and history, while also providing their clientele with
-							information regarding upcoming events. The design must reflect the
-							creative nature of the gallery, appeal to their existing customer
-							base, and seek to attract a younger audience.
-						</p>
-						<br />
-						<span className="project-status">Project Status:</span>
-						<i> Development Stage</i>
-						<br />
-						<span className="fictional-brief">
-							This is a{" "}
-							<i>
-								<b>fictional brief</b>
-							</i>
-							, further details at the end of this page
-						</span>
-					</div>
+        <section className="project_summary">
+          <div className="opening-block written left">
+            <h2>Overview</h2>
+            <p>
+              Staunton Gallery is a local art gallery situated in the heart of
+              Subiaco featuring multiple exhibition spaces. The gallery curates
+              and hosts exhibitions, provides a support network to associated
+              artists, and houses artist studios. Heather Staunton has been
+              operating the gallery as an independent artist since 2007 and is
+              seeking to reimagine the galleries online presence with a brand
+              new website.
+            </p>
+            <p>
+              The website design must showcase the venue, their exhibitions,
+              artists, and history, while also providing their clientele with
+              information regarding upcoming events. The design must reflect the
+              creative nature of the gallery, appeal to their existing customer
+              base, and seek to attract a younger audience.
+            </p>
+            <br />
+            <span className="project-status">Project Status:</span>
+            <i> Development Stage</i>
+            <br />
+            <span className="fictional-brief">
+              This is a{" "}
+              <i>
+                <b>fictional brief</b>
+              </i>
+              , further details at the end of this page
+            </span>
+          </div>
 
-					<nav className="links-block">
-						<ul>
-							<a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
-								<li>
-									<Icon icon="bxl:figma" />
-									Figma Design
-								</li>
-							</a>
-							<a href="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5042&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5042">
-								<li>
-									<Icon icon="bxl:figma" />
-									Figma Prototype
-								</li>
-							</a>
-							<a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=949%3A3352&t=GocV1JCtJcYRRznx-0">
-								<li>
-									<Icon icon="bxl:figma" />
-									Design System
-								</li>
-							</a>
-							{/* <li>
+          <nav className="links-block">
+            <ul>
+              <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
+                <li>
+                  <Icon icon="bxl:figma" />
+                  Figma Design
+                </li>
+              </a>
+              <a href="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5042&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5042">
+                <li>
+                  <Icon icon="bxl:figma" />
+                  Figma Prototype
+                </li>
+              </a>
+              <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=949%3A3352&t=GocV1JCtJcYRRznx-0">
+                <li>
+                  <Icon icon="bxl:figma" />
+                  Design System
+                </li>
+              </a>
+              {/* <li>
                                 <Icon icon="ic:round-download"/>
                                 Full Documentation
                             </li>
@@ -117,212 +138,209 @@ function Staunton() {
                                 <Icon icon="ph:codepen-logo-fill"/>
                                 Codepen
                             </li> */}
-						</ul>
-					</nav>
+            </ul>
+          </nav>
 
-					<div className="problem-statement full-width">
-						<p>
-							Staunton Gallery wants to reimagine their online presence with a
-							brand new website that reflects the creative nature of the gallery
-							in a professional, yet aesthetically pleasing manner.
-						</p>
-						<p>
-							The design must showcase the venue, their exhibitions, artists,
-							and history, while providing information on upcoming events.
-						</p>
-					</div>
+          <div className="problem-statement full-width">
+            <p>
+              Staunton Gallery wants to reimagine their online presence with a
+              brand new website that reflects the creative nature of the gallery
+              in a professional, yet aesthetically pleasing manner.
+            </p>
+            <p>
+              The design must showcase the venue, their exhibitions, artists,
+              and history, while providing information on upcoming events.
+            </p>
+          </div>
 
-					<div className="project-goals written left bullets">
-						<h2>Project Goals</h2>
-						<ul>
-							<li>
-								<img src={bullet} alt="bullet point" />
-								<span>
-									Create an aesthetically pleasing design that leverages white
-									space to convey the 'feeling' that the user is browsing
-									through a physical gallery
-								</span>
-							</li>
-							<li>
-								<img src={bullet} alt="bullet point" />
-								<span>
-									Feature artworks and photography as key structural elements of
-									each page, creating an editoral style design
-								</span>
-							</li>
-							<li>
-								<img src={bullet} alt="bullet point" />
-								<span>Utilise subtle animations to engage users</span>
-							</li>
-							<li>
-								<img src={bullet} alt="bullet point" />
-								<span>
-									Strategically plan page navigation to limit clicks and
-									encourage engagement
-								</span>
-							</li>
-						</ul>
-					</div>
+          <div className="project-goals written left bullets">
+            <h2>Project Goals</h2>
+            <ul>
+              <li>
+                <img src={bullet} alt="bullet point" />
+                <span>
+                  Create an aesthetically pleasing design that leverages white
+                  space to convey the 'feeling' that the user is browsing
+                  through a physical gallery
+                </span>
+              </li>
+              <li>
+                <img src={bullet} alt="bullet point" />
+                <span>
+                  Feature artworks and photography as key structural elements of
+                  each page, creating an editoral style design
+                </span>
+              </li>
+              <li>
+                <img src={bullet} alt="bullet point" />
+                <span>Utilise subtle animations to engage users</span>
+              </li>
+              <li>
+                <img src={bullet} alt="bullet point" />
+                <span>
+                  Strategically plan page navigation to limit clicks and
+                  encourage engagement
+                </span>
+              </li>
+            </ul>
+          </div>
 
-					<div className="project-solution written right">
-						<h2>The Solution</h2>
-						<p>
-							Featuring a soft colour palette, asymmetrical layout, and
-							geometric colour blocks, the final design is a unique and modern
-							website that's easy to navigate and pleasant to browse. The
-							minimalistic design accomodates the needs of older users, while
-							the subtle animations and clean, editorial style design
-							simultaneously appeals to a younger audience.
-						</p>
-						<p>
-							The final design is fully responsive, with careful consideration
-							given to layout adjustments made for mobile devices.
-						</p>
-					</div>
+          <div className="project-solution written right">
+            <h2>The Solution</h2>
+            <p>
+              Featuring a soft colour palette, asymmetrical layout, and
+              geometric colour blocks, the final design is a unique and modern
+              website that's easy to navigate and pleasant to browse. The
+              minimalistic design accomodates the needs of older users, while
+              the subtle animations and clean, editorial style design
+              simultaneously appeals to a younger audience.
+            </p>
+            <p>
+              The final design is fully responsive, with careful consideration
+              given to layout adjustments made for mobile devices.
+            </p>
+          </div>
 
-					<div className="project-feature full-width">
-						<img src={featureImg} />
-					</div>
-				</section>
+          <div className="project-feature full-width">
+            <img src={featureImg} alt="mockup of final website design" />
+          </div>
+        </section>
 
-				{/* Case Study Section ------------------------------------- */}
+        {/* Case Study Section ------------------------------------- */}
 
-				<section className="project-pages_case-study">
-					<div className="project-heading first-heading full-width">
-						<div className="project-heading_rectangle"></div>
-						<span className="brand-display xxl">research</span>
-					</div>
+        <section className="project-pages_case-study">
+          <div className="project-heading first-heading full-width">
+            <div className="project-heading_rectangle"></div>
+            <span className="brand-display xxl">research</span>
+          </div>
 
-					<div className="written left">
-						<p>
-							To understand the needs of the project brief I initially conducted
-							topic research focusing on understanding what{" "}
-							<i>artist studios</i> and <i>resident artists</i> are. I also
-							researched other small art galleries found throughout Perth,
-							analysing their online presence including social media pages.
-						</p>
-						<p>
-							I discovered that small art galleries typically feature raw and
-							unfinished materials in their buildings, imperfections that give
-							these spaces a relaxed and inviting atmosphere
-						</p>
-					</div>
+          <div className="written left">
+            <p>
+              To understand the needs of the project brief I initially conducted
+              topic research focusing on understanding what{" "}
+              <i>artist studios</i> and <i>resident artists</i> are. I also
+              researched other small art galleries found throughout Perth,
+              analysing their online presence including social media pages.
+            </p>
+            <p>
+              I discovered that small art galleries typically feature raw and
+              unfinished materials in their buildings, imperfections that give
+              these spaces a relaxed and inviting atmosphere
+            </p>
+          </div>
 
-					<div className="quote right staunton-research-quote">
-						<p>
-							“Many young people do not feel at home in art galleries or are
-							inhibited from visiting them by the very way in which these
-							institutions collect and display art” (Mason, 2006)
-						</p>
-					</div>
+          <div className="quote right staunton-research-quote">
+            <p>
+              “Many young people do not feel at home in art galleries or are
+              inhibited from visiting them by the very way in which these
+              institutions collect and display art” (Mason, 2006)
+            </p>
+          </div>
 
-					<div className="written left">
-						<h2>Competitor Analysis</h2>
-						<p>
-							Based on my analysis of art galleries from around the world I
-							discovered that there’s a tendency to present a plethora of
-							information to the user at any given moment. White space is used
-							in an attempt to give this content space to breathe, but the
-							contrasting colours and photography can quickly cause overwhelm.
-							Notably, Frans Hals Museum has an incredibly unique and creative
-							website that features microinteractions, playful colours, and huge
-							typography that engages users.
-						</p>
-					</div>
+          <div className="written left">
+            <h2>Competitor Analysis</h2>
+            <p>
+              Based on my analysis of art galleries from around the world I
+              discovered that there’s a tendency to present a plethora of
+              information to the user at any given moment. White space is used
+              in an attempt to give this content space to breathe, but the
+              contrasting colours and photography can quickly cause overwhelm.
+              Notably, Frans Hals Museum has an incredibly unique and creative
+              website that features microinteractions, playful colours, and huge
+              typography that engages users.
+            </p>
+          </div>
 
-					<div className="written left">
-						<h2>User Research</h2>
-						<p>
-							Initial user research revealed that although art is enjoyed by
-							people of all ages and genders, those that typically browse art
-							galleries tend to be more educated, well-paid, and professional. I
-							also uncovered interviews suggesting that young people believe
-							that art galleries are uninviting, silent, and cold.
-						</p>
-					</div>
+          <div className="written left">
+            <h2>User Research</h2>
+            <p>
+              Initial user research revealed that although art is enjoyed by
+              people of all ages and genders, those that typically browse art
+              galleries tend to be more educated, well-paid, and professional. I
+              also uncovered interviews suggesting that young people believe
+              that art galleries are uninviting, silent, and cold.
+            </p>
+          </div>
 
-					<div className="persona-swiper">
-						<PersonaSwiper personas={personas} />
-					</div>
+          <div className="persona-swiper">
+            <ProjectSwiper images={personas} />
+          </div>
 
-					<div className="project-heading full-width ideation">
-						<div className="project-heading_rectangle"></div>
-						<span className="brand-display xxl">ideation & wireframes</span>
-					</div>
+          <div className="project-heading full-width ideation">
+            <div className="project-heading_rectangle"></div>
+            <span className="brand-display xxl">ideation & wireframes</span>
+          </div>
 
-					<div className="written left">
-						<p>
-							Initial stages of ideation involved multiple quick brainstorms,
-							followed by extensive sketching of a range of concepts aiming for
-							a high quantity of potential website layouts. To help filter
-							through the options I used red and green sticky dots to vote for a
-							design element.
-						</p>
-						<p>
-							I then created low-fidelity mockups in Figma to visualise these
-							chosen sketches.
-						</p>
-					</div>
+          <div className="written left">
+            <p>
+              Initial stages of ideation involved multiple quick brainstorms,
+              followed by extensive sketching of a range of concepts aiming for
+              a high quantity of potential website layouts. To help filter
+              through the options I used red and green sticky dots to vote for a
+              design element.
+            </p>
+            <p>
+              I then created low-fidelity mockups in Figma to visualise these
+              chosen sketches.
+            </p>
+          </div>
 
-					<div className="landscape-swiper">
-						<LandscapeSwiper images={drafts} />
-					</div>
+          <div className="landscape-swiper">
+            <ProjectSwiper images={drafts} />
+          </div>
 
-					<div className="project-heading full-width mockups">
-						<div className="project-heading_rectangle"></div>
-						<span className="brand-display xxl">high-fidelity mockups</span>
-					</div>
+          <div className="project-heading full-width mockups">
+            <div className="project-heading_rectangle"></div>
+            <span className="brand-display xxl">high-fidelity mockups</span>
+          </div>
 
-					<div className="written left">
-						<p>
-							From the initial wireframes I created high-fidelity mockups that
-							feature parallax animation. Ultimately I decided to remove this
-							as, while this parallax animation looked interesting and unique,
-							it didn’t serve to enhance the artworks or photography on display.
-						</p>
-						<p>
-							Upon removal of the large background images I opted to include
-							more of the brand colour in the design, choosing to strategically
-							add colour blocks to various sections of the design. These blocks
-							of colour add to the structure of the website and an element of
-							interest without taking away from the incredible artworks on
-							display.
-						</p>
-						<p className="bold-italic">
-							Click through to the Figma Design to explore the design iterations
-							and responsive variations.
-						</p>
-					</div>
+          <div className="written left">
+            <p>
+              From the initial wireframes I created high-fidelity mockups that
+              feature parallax animation. Ultimately I decided to remove this
+              as, while this parallax animation looked interesting and unique,
+              it didn’t serve to enhance the artworks or photography on display.
+            </p>
+            <p>
+              Upon removal of the large background images I opted to include
+              more of the brand colour in the design, choosing to strategically
+              add colour blocks to various sections of the design. These blocks
+              of colour add to the structure of the website and an element of
+              interest without taking away from the incredible artworks on
+              display.
+            </p>
+            <p className="bold-italic">
+              Click through to the Figma Design to explore the design iterations
+              and responsive variations.
+            </p>
+          </div>
 
-					<div className="link-body">
-						<ul>
-							<a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
-								<li>
-									<Icon icon="bxl:figma" />
-									Figma Design
-								</li>
-							</a>
-						</ul>
-					</div>
+          <div className="link-body">
+            <ul>
+              <a href="https://www.figma.com/file/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A4868">
+                <li>
+                  <Icon icon="bxl:figma" />
+                  Figma Design
+                </li>
+              </a>
+            </ul>
+          </div>
 
-					{/* Slider Three ------------------------------------- */}
-					<div className="landscape-swiper">
-						<LandscapeSwiper images={mockups} />
-					</div>
+          {/* Slider Three ------------------------------------- */}
+          <div className="landscape-swiper">
+            <ProjectSwiper images={mockups} />
+          </div>
 
-					{/* Slider Three END ------------------------------------- */}
+          {/* Slider Three END ------------------------------------- */}
 
-					<div className="project-heading full-width prototype">
-						<div className="project-heading_rectangle"></div>
-						<span className="brand-display xxl">prototype</span>
-					</div>
+          <div className="project-heading full-width prototype">
+            <div className="project-heading_rectangle"></div>
+            <span className="brand-display xxl">prototype</span>
+          </div>
 
-					<div className="project_figma-container">
-						{/* https://github.com/nagelflorian/react-figma-embed */}
-						{/* <FigmaEmbed url="https://www.figma.com/proto/BSzPFzFGqQiWPlmDEri3DE/Staunton-Gallery?node-id=727%3A5551&scaling=scale-down&page-id=727%3A4868&starting-point-node-id=727%3A5551"/> */}
-					</div>
+          <div className="project_figma-container"></div>
 
-					{/* <div className="project-heading full-width design-system">
+          {/* <div className="project-heading full-width design-system">
                         <div className="project-heading_rectangle"></div>
                         <span className="brand-display xxl">design system</span>
                     </div>
@@ -336,33 +354,33 @@ function Staunton() {
 
                     <div className="written left">Some stuff</div> */}
 
-					<div className="project_fine-print">
-						<p>
-							This is a fictional brief. This project has been created as part
-							of an assignment in an approved course of study for Curtin
-							University and contains copyright material not created by the
-							author. All copyright material used remains copyright of the
-							respective owners and has been used here pursuant to Section 40 of
-							the Copyright Act 1968 (Commonwealth of Australia). No part of
-							this work may be reproduced without consent of the original
-							copyright owners.
-						</p>
-						<div className="project_references">
-							<p>
-								<b>References</b>
-							</p>
-							<p>
-								Mason, David. 2006. "'The feeling of exclusion': Young peoples'
-								perceptions of art galleries." Museum Management and Curatorship
-								21 (1): 20-31. https://doi.org/10.1016/j.musmancur.2005.11.002.{" "}
-							</p>
-						</div>
-					</div>
-				</section>
-			</section>
-			<Footer />
-		</>
-	);
+          <div className="project_fine-print">
+            <p>
+              This is a fictional brief. This project has been created as part
+              of an assignment in an approved course of study for Curtin
+              University and contains copyright material not created by the
+              author. All copyright material used remains copyright of the
+              respective owners and has been used here pursuant to Section 40 of
+              the Copyright Act 1968 (Commonwealth of Australia). No part of
+              this work may be reproduced without consent of the original
+              copyright owners.
+            </p>
+            <div className="project_references">
+              <p>
+                <b>References</b>
+              </p>
+              <p>
+                Mason, David. 2006. "'The feeling of exclusion': Young peoples'
+                perceptions of art galleries." Museum Management and Curatorship
+                21 (1): 20-31. https://doi.org/10.1016/j.musmancur.2005.11.002.{" "}
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <Footer />
+    </>
+  );
 }
 
 export default Staunton;
