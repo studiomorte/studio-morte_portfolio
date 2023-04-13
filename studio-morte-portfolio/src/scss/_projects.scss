@@ -307,20 +307,15 @@ a {
 
 .swiper {
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: $space-between;
+    margin-bottom: $space-below;
 
     .swiper-wrapper {
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
 
     .swiper-slide {
-
         height: auto;
-
-        // img {
-        //     max-height: 800px;
-        // }
     }
 
     .swiper-button-next,

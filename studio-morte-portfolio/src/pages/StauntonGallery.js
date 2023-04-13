@@ -1,11 +1,11 @@
 /* IMPORTS */
+import React from "react";
 import Footer from "./../components/Footer";
 import { Icon } from "@iconify/react";
-import React from "react";
 import ProjectSwiper from "../components/ProjectSwiper";
 
 /* IMAGES */
-import bullet from "./../images/bullet.png";
+import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/stauntonv3.jpg";
 import featureImg from "./../images/staunton1.jpg";
 import brandLogo from "./../images/staunton-logo.png";

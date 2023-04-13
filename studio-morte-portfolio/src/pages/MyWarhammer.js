@@ -5,7 +5,7 @@ import React from "react";
 import ProjectSwiper from "../components/ProjectSwiper";
 
 /* IMAGES */
-import bullet from "./../images/bullet.png";
+import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/warhammer-header.jpg";
 import featureImg from "./../images/warhammer-feature.jpg";
 import warhammerLogo from "./../images/logo-warhammer.png";

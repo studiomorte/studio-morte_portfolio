@@ -1,11 +1,11 @@
 /* IMPORTS */
+import React from "react";
 import Footer from "./../components/Footer";
 import { Icon } from "@iconify/react";
-import React from "react";
 import ProjectSwiper from "../components/ProjectSwiper";
 
 /* IMAGES */
-import bullet from "./../images/bullet.png";
+import bullet from "./../images/bullet.svg";
 import headerImg from "./../images/susvic1.jpg";
 import featureImg from "./../images/sustainabilityvic1.jpg";
 import brandLogo from "./../images/logo-sustainabilityvic.png";

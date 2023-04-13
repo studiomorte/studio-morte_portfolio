@@ -13,15 +13,17 @@
 }
 
 .navigation_logo {
-    transform: scale(0.8);
-    transition: 0.5s ease;
-    margin-left: -20px;
+    padding-left: 20px;
+
+    a {
+        @include reset-spacing;
+    }
 
     .studio {
         @include reset-spacing;
 
         font-family: Lato-Thin;
-        font-size: 40px;
+        font-size: 25px;
         letter-spacing: 6px;
         color: $brand-white;
         text-transform: uppercase;
@@ -34,26 +36,28 @@
         @include reset-spacing;
 
         color: $brand-pink;
-        font-size: 128px;
+        font-size: 115px;
         letter-spacing: 1px;
-        line-height: 60px;
+        line-height: 50px;
+
+        transition: {
+            property: letter-spacing;
+            duration: $timing;
+            timing-function: $ease-std;
+        }
     }
 
-    a {
-        margin: 0;
-        padding: 0;
+    &:hover {
+        .morte {
+            letter-spacing: 5px;
+        }
     }
-}
-
-.navigation_logo:hover {
-    transform: scale(0.9);
 }
 
 .navigation_right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     text-align: right;
     color: $brand-pink;
 
@@ -63,48 +67,47 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+
+        a {
+            position: relative;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 30px;
+
+            &:not(:last-of-type) {
+                margin-right: 30px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 3px;
+                display: block;
+                transition: all 0.3s ease;
+                bottom: -3px;
+            }
+
+            &:hover::after {
+                width: 100%;
+                height: 3px;
+                background-color: $brand-pink;
+            }
+        }
     }
 
-    nav a {
-        position: relative;
-        font-size: 15px;
-        font-weight: 600;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        line-height: 30px;
-    }
-
-    nav a:not(:last-of-type) {
-        margin-right: 30px;
-    }
-
-    nav a:after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 3px;
-        display: block;
-        transition: all 0.3s ease;
-        bottom: -7px;
-    }
-
-    nav a:hover::after {
-        width: 100%;
-        height: 3px;
-        background-color: $brand-pink;
-    }
-
-    #menuIcon {
-        display: none;
-    }
-
+    #menuIcon,
     #closeIcon {
+        transition: 1s ease-in-out;
         display: none;
     }
 }
 
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 
 .navigation_designer {
@@ -120,7 +123,7 @@
 .isActive {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 13px;
+    text-underline-offset: 9px;
 }
 
 .menuItem {
@@ -133,15 +136,6 @@
 
 .hide-menu {
     transform: translateX(100%);
-}
-
-
-#menuIcon {
-    transition: 1s ease-in-out;
-}
-
-#closeIcon {
-    transition: 1s ease-in-out;
 }
 
 #mobileMenu {
@@ -160,7 +154,7 @@
     align-items: center;
 
     transform: translateX(100%);
-    transition: transform 0.2s;
+    transition: transform 0.3s ease-in-out;
 
     ul {
         padding: 0;
@@ -194,7 +188,6 @@
     }
 
     .navigation_logo {
-        transform: scale(0.8);
 
         .studio {
             font-size: 20px;
@@ -204,10 +197,6 @@
         .morte {
             font-size: 80px;
         }
-    }
-
-    .navigation_logo:hover {
-        transform: scale(0.8);
     }
 
     .navigation_designer {
@@ -229,7 +218,7 @@
     }
 
     .navigation_logo {
-        transform: scale(0.8);
+        margin-left: -10px;
 
         .studio {
             font-size: 20px;
@@ -239,10 +228,6 @@
         .morte {
             font-size: 80px;
         }
-    }
-
-    .navigation_logo:hover {
-        transform: scale(0.8);
     }
 
     .navigation_designer {
@@ -281,8 +266,6 @@
     }
 
     .navigation_logo {
-        transform: scale(0.8);
-
         .studio {
             font-size: 20px;
             line-height: 5px;
@@ -322,15 +305,13 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
-
+@media only screen and (max-width: 430px) {
     .navigation_logo {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        transform: scale(1);
-        margin-left: 0;
+        margin-left: -20px;
 
         .studio {
             font-size: 1em;
