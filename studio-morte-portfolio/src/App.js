@@ -1,11 +1,10 @@
-import { Outlet } from "react-router-dom"
-import Navbar from './components/Navbar';
-import './scss/main.scss';
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import "./scss/style.scss";
 
 // PROJECT PAGE -------------------------------
 
-function App(  ) {
-
+function App() {
   return (
     <>
       <Navbar />

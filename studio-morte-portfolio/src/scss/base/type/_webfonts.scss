@@ -1,0 +1,103 @@
+@use "sass:math";
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/functions" as *;
+@use "../../abstracts/mixins" as *;
+
+$path: "../../../fonts/";
+
+@font-face {
+    font-family: "Norfolk Serif";
+    src: url('#{$path}NorfolkSerif-Regular.woff2') format('woff2');
+    font-weight: $fw-regular;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("#{$path}Lato-Regular.ttf") format("truetype");
+    font-weight: $fw-regular;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("#{$path}Lato-Italic.ttf") format("truetype");
+    font-weight: $fw-regular;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Thin.ttf") format("truetype");
+    font-weight: $fw-thin;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Light.ttf") format("truetype");
+    font-weight: $fw-light;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Medium.ttf") format("truetype");
+    font-weight: $fw-medium;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Semibold.ttf") format("truetype");
+    font-weight: $fw-semibold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-SemiboldItalic.ttf") format("truetype");
+    font-weight: $fw-semibold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Bold.ttf") format("truetype");
+    font-weight: $fw-bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-BoldItalic.ttf") format("truetype");
+    font-weight: $fw-bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Heavy.ttf") format("truetype");
+    font-weight: $fw-heavy;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("#{$path}Lato-Black.ttf") format("truetype");
+    font-weight: $fw-black;
+    font-style: normal;
+    font-display: swap;
+}

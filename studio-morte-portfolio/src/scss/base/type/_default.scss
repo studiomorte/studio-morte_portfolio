@@ -1,0 +1,43 @@
+@use "sass:math";
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/functions" as *;
+// @use "../../abstracts/mixins" as *;
+
+html {
+    // Smooth scrolling to a named anchor
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    position: relative;
+    font-size: rem(16);
+    font-family: $font-stack;
+    font-weight: $fw-regular;
+    // line-height: math.div(24, 16);
+    color: $text-color;
+    background-color: $brand-white;
+}
+
+strong {
+    font-weight: $fw-bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+a {
+    transition: {
+        property: color;
+        duration: $timing;
+        timing-function: $ease-std;
+    }
+}

@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/functions" as *;
+@use "../../abstracts/mixins" as *;
+
+.logo-sustainabilityvic {
+    width: clamp(350px, 50vw, 600px);
+}
+
+.susvic-quote-research {
+    margin-top: $space-above;
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: 0;
+    }
+}
+
+.susvic-revisited {
+    margin-top: -20px;
+
+    .written {
+        margin-top: 0;
+    }
+}
+
+.testing,
+.final-design-rev {
+    margin-top: $space-above;
+}
+
+.final-design {
+    margin-top: 100px;
+}

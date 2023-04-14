@@ -1,6 +1,4 @@
-import SocialIcons from "../components/SocialIcons";
 import Footer from "./../components/Footer";
-
 import aboutMe from "./../images/about-me.jpg";
 import aboutMeMobile from "./../images/about-me-mobile.jpg";
 
@@ -21,9 +19,9 @@ function About() {
 
         <div className="about_body written">
           <h1 className="m">
-            <span>Hey, I'm Rachael</span> - a passionate creative with a love of
-            cats, carbs, and caffeine. I have experience in web design, web
-            development, UX design, and QA testing.
+            Hey, I'm Rachael - a passionate creative with a love of cats, carbs,
+            and caffeine. I have experience in web design, web development, UX
+            design, and QA testing.
           </h1>
           <p>
             Throughout 2022 I've had the incredible opportunity to intern at

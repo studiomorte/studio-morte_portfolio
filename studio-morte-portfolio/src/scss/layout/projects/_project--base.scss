@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/functions" as *;
+@use "../../abstracts/mixins" as *;
+
 .project-pages_header {
     display: grid;
     height: clamp(300px, 30vw, 500px);
@@ -73,13 +78,6 @@
     max-width: 100%;
     margin-top: $space-between;
 
-    h2 {
-        font-family: Lato-Black;
-        font-size: 1.5em;
-        letter-spacing: 1px;
-        margin-bottom: 1.5em;
-    }
-
     .list-container {
         margin-top: $space-between;
         display: flex;
@@ -91,7 +89,6 @@
             color: unset;
         }
     }
-
 
     @media only screen and (max-width: 1300px) {
         .written {
@@ -154,12 +151,6 @@
     margin-top: 130px;
 }
 
-h2 {
-    font-family: Lato-Black;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    margin-bottom: 1.5em;
-}
 
 .written {
     max-width: 500px;
@@ -171,10 +162,6 @@ h2 {
         line-height: 1.4em;
     }
 
-    .project-status {
-        font-family: Lato-Heavy;
-    }
-
     .fictional-brief {
         font-size: 0.7em;
     }
@@ -184,17 +171,19 @@ h2 {
     }
 }
 
-.bullets {
-    ul {
-        margin: 0;
-        padding: 0;
+.project-status {
+    margin-top: 30px;
+
+    p {
+        @include reset-spacing;
+        font-weight: $fw-heavy;
+        line-height: rem(35);
     }
 
-    li {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        margin-bottom: 20px;
+    p:last-of-type {
+        font-weight: $fw-regular;
+        line-height: rem(25);
+        font-size: rem(14);
     }
 }
 

@@ -1,0 +1,18 @@
+@use "sass:math";
+@use "../functions/rem" as *;
+
+@mixin fluid($property, $value1, $value2, $points: (768, 992, 1200), $bp: 1440) {
+    #{$property}: rem($value1);
+
+    @each $point in $points {
+        @if math.div($value2, $bp) * $point >$value1 {
+            @media (min-width: #{$point}px) {
+                #{$property}: rem(math.div($value2, $bp) * $point);
+            }
+        }
+    }
+
+    @media (min-width: #{$bp}px) {
+        #{$property}: rem($value2);
+    }
+}

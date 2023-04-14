@@ -270,11 +270,9 @@ function MyWarhammer() {
             <div className="project-heading_rectangle"></div>
             <span className="brand-display xxl">a quick look back</span>
           </div>
-
           <div className="warhammer-logo-container">
             <img src={battleHonoursLogo} alt="Battle Honours logo" />
           </div>
-
           <div className="written left">
             <p>
               The Battle Honours programme is designed to introduce new
@@ -285,19 +283,16 @@ function MyWarhammer() {
               online?{" "}
             </p>
           </div>
-
           <LinkBlock
             items={battleHonoursLink}
             className="link-body citadel-colour"
           />
-
           <div className="project_side-image full-width warhammer-right-image">
             <img
               src={battleHonoursImg}
               alt="mockup of Battle Honours redesigned website"
             />
           </div>
-
           {/* <div className="warhammer-container project-pages_staggered-container">
                         <div className="written left">
                             <p>The Battle Honours programme is designed to introduce new hobbyists to Warhammer by encouraging them to complete activities to receive exclusive rewards. The programme launched in mid 2021, a time where many potential hobbyists were isolated due to the Covid 19 pandemic, but what if this programme was available online? </p>
@@ -315,7 +310,6 @@ function MyWarhammer() {
                             <p>Summary</p>
                         </div>
                     </div> */}
-
           {/* <div className="written left">
                         <p className="bold-italic">Click through to explore Figma design files</p>
                     </div>
@@ -330,11 +324,9 @@ function MyWarhammer() {
                             </a>
                         </ul>
                     </div> */}
-
           <div className="warhammer-logo-container">
             <img src={citadelColourLogo} alt="Citadel Colour logo" />
           </div>
-
           <div className="written left">
             <p>
               Games Workshop's very own paint range, Citadel Colour, offers
@@ -354,18 +346,15 @@ function MyWarhammer() {
               developing the redesigned My Warhammer website.
             </p>
           </div>
-
           <LinkBlock
             items={citadelColourLink}
             className="link-body citadel-colour"
           />
-
           <img
             src={citadelColourImg}
             alt="screenshot of redesigned citadel colour website"
             className="project_side-image full-width citadel-right-image"
           />
-
           {/* <div className="warhammer-container project-pages_staggered-container">
                         <div className="written left">
                             <p>Games Workshop's very own paint range, Citadel Colour, offers hobbyists a wide variety of paints and tools to get their miniature projects looking spectacular. Currently the Citadel Colour website and mobile app offer different content, the website offering limited in comparison to the recently updated mobile app. The goal of this project was to bring the same mobile app offering of step-by-step tutorials and the inventory/wishlist to a reimagined web application, including a brand new "my projects" section to support the painting process of all Warhammer hobbyists.</p>
@@ -383,12 +372,10 @@ function MyWarhammer() {
                             <p>Summary</p>
                         </div>
                     </div> */}
-
           <div className="project-heading first-heading full-width">
             <div className="project-heading_rectangle"></div>
             <span className="brand-display xxl">user research</span>
           </div>
-
           <div className="written left">
             <p>
               Through surveys, quizzes, and observations, I determined that the
@@ -403,15 +390,12 @@ function MyWarhammer() {
               identified.
             </p>
           </div>
-
           <div className="persona-swiper">
             <ProjectSwiper images={personas} />
           </div>
-
           <div className="landscape-swiper">
             <ProjectSwiper images={scenarios} />
           </div>
-
           <div className="further-development bullets warhammer-usergoals">
             <h2>User Goals</h2>
             <div className="list-container">
@@ -419,12 +403,10 @@ function MyWarhammer() {
               <BulletList items={userGoalsRight} />
             </div>
           </div>
-
           <div className="project-heading first-heading full-width">
             <div className="project-heading_rectangle"></div>
             <span className="brand-display xxl">information architecture</span>
           </div>
-
           <div className="written left">
             <p>
               With the complexity of this project the information architecture
@@ -433,18 +415,15 @@ function MyWarhammer() {
               seamless user flow.
             </p>
           </div>
-
           <img
             src={infoArch}
             alt="information architecture for My Warhammer website"
             className="project-large-image margin-width"
           />
-
           <div className="project-heading full-width">
             <div className="project-heading_rectangle"></div>
             <span className="brand-display xxl">prototype</span>
           </div>
-
           <div className="written left">
             <p>
               Combining ideation, wireframing, and mockups from the original
@@ -457,18 +436,14 @@ function MyWarhammer() {
               the full high-fidelity mockup.
             </p>
           </div>
-
+          .
           <LinkBlock items={prototypeLinks} className="link-body" />
-
           <div className="project_figma-container"></div>
-
           <div className="project-heading full-width conclusion">
             <div className="project-heading_rectangle"></div>
-            <span className="brand-display xxl">Further Development</span>
+            <span className="brand-display xxl">further development</span>
           </div>
-
           {/* <div className="written left">Some stuff</div> */}
-
           <div className="further-development bullets">
             {/* <h2>Further Development</h2> */}
             <div className="list-container">
@@ -476,7 +451,6 @@ function MyWarhammer() {
               <BulletList items={furtherDevRight} />
             </div>
           </div>
-
           <div className="project_fine-print">
             <p>
               This is a fictional brief. This project has been created as part

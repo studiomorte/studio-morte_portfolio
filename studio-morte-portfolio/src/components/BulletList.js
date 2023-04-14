@@ -1,4 +1,4 @@
-import bullet from "./../images/bullet.svg";
+import bullet from "./../images/icons/bullet.svg";
 
 function BulletList({ items }) {
   const bulletPoint = items.map((item) => (

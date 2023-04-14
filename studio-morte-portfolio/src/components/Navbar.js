@@ -72,17 +72,17 @@ function Navbar() {
 
           <nav>
             <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? activeClassName : null)}
+            >
+              About
+            </NavLink>
+            <NavLink
               to="/"
               end
               className={({ isActive }) => (isActive ? activeClassName : null)}
             >
               Projects
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? activeClassName : null)}
-            >
-              About
             </NavLink>
             {/* <NavLink to="/showreel"
                             className={({ isActive }) =>
@@ -98,19 +98,19 @@ function Navbar() {
         <ul>
           <li className="menuItem">
             <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? activeClassName : null)}
+            >
+              About
+            </NavLink>
+          </li>
+          <li className="menuItem">
+            <NavLink
               to="/"
               end
               className={({ isActive }) => (isActive ? activeClassName : null)}
             >
               Projects
-            </NavLink>
-          </li>
-          <li className="menuItem">
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? activeClassName : null)}
-            >
-              About
             </NavLink>
           </li>
           {/* <li className="menuItem">

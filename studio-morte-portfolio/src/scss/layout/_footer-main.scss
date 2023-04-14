@@ -1,9 +1,12 @@
+@use "sass:math";
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
 .footer {
     width: 100%;
-
     padding: 0 50px;
     background-color: $brand-black;
-
 
     .footer-container {
         margin: 0 auto;
@@ -14,12 +17,17 @@
         justify-content: space-between;
         align-items: center;
         color: $brand-white;
-    
-        font-family: Lato-Medium ;
+
+        font-family: Lato-Medium;
         letter-spacing: 0.5px;
+
+        @media only screen and (max-width: 700px) {
+            padding: 20px 0 10px 0;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
     }
 }
-
 
 .footer_social-container {
     opacity: 0.8;
@@ -32,15 +40,4 @@
     align-items: center;
 
     padding: 10px 0 10px 20px;
-}
-
-
-@media only screen and (max-width: 700px) {
-    .footer {
-        .footer-container {
-            padding: 20px 0 10px 0;
-            flex-direction: column-reverse;
-            justify-content: center;
-        }
-    }
 }

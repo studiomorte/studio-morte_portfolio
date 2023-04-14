@@ -88,17 +88,19 @@ function Djaliny() {
           alt="Collection of screens designed for Sustainability Victoria"
         />
       </header>
+
       <section className="project-pages_container">
-        {/* Opening Section ------------------------------------------- */}
         <section className="project_summary">
-          <div className="djaliny-title">
+          <h1 className="djaliny-title">
+            <p className="hidden">Project Summary</p>
             <p className="xxl">Curtin Creative Jam 2021</p>
             <p className="xl">
-              First Place <i>Best Overall</i> Design
+              First Place <strong className="italic">Best Overall</strong>{" "}
+              Design
             </p>
-          </div>
+          </h1>
           <div className="opening-block written left">
-            <h2>Overview</h2>
+            <h3>Overview</h3>
             <p>
               The Curtin Creative Jam is an intensive design competition open to
               all current Curtin students. The CCJ21 theme focused on the NAIDOC
@@ -110,23 +112,23 @@ function Djaliny() {
               within a four day time period, with the 4th day dedicated to
               presenting their designs to their peers and industry leaders.
             </p>
-            <br />
-            <span className="project-status">Project Status:</span>
-            <i> Complete</i>
-            <br />
-            <span className="fictional-brief">
-              This is a
-              <i>
-                <b>fictional brief</b>
-              </i>
-              , further details at the end of this page
-            </span>
+            <div className="project-status">
+              <p>
+                Project Status:
+                <strong className="italic"> Complete</strong>
+              </p>
+              <p>
+                This is a
+                <strong className="bold-italic"> fictional brief</strong>,
+                further details at the end of this page
+              </p>
+            </div>
           </div>
 
           <LinkBlock items={topLinks} />
 
           <div className="djaliny-sponsors">
-            <h2>Sponsored By</h2>
+            <h3>Sponsored By</h3>
             <div>
               <img src={curtinLogo} alt="curtin university logo" />
               <img src={adobeLogo} alt="adobe logo" />
@@ -145,12 +147,12 @@ function Djaliny() {
           </div>
 
           <div className="project-goals written left bullets">
-            <h2>Project Goals</h2>
+            <h3>Project Goals</h3>
             <BulletList items={projectGoals} />
           </div>
 
           <div className="project-solution written right">
-            <h2>The Solution</h2>
+            <h3>The Solution</h3>
             <p>
               Djaliny (Noongar for “listening”) is a mobile app that delivers a
               relaxing auditory experience through nature sounds, music, and
@@ -177,10 +179,10 @@ function Djaliny() {
         {/* CASE STUDY Section ------------------------------------------- */}
 
         <section className="project-pages_case-study">
-          <div className="project-heading first-heading full-width">
-            <div className="project-heading_rectangle"></div>
+          <h2 className="project-heading first-heading full-width">
+            <div className="project-heading_rectangle" aria-hidden="true"></div>
             <span className="brand-display xxl">my role as team leader</span>
-          </div>
+          </h2>
 
           <div className="written left">
             <p>
@@ -212,13 +214,13 @@ function Djaliny() {
             <p>Mali Merttens (ideation & audio)</p>
           </div>
 
-          <div className="project-heading full-width the-process">
-            <div className="project-heading_rectangle"></div>
+          <h2 className="project-heading full-width the-process">
+            <div className="project-heading_rectangle" aria-hidden="true"></div>
             <span className="brand-display xxl">the process</span>
-          </div>
+          </h2>
 
           <div className="written left">
-            <h2>Ideation</h2>
+            <h3>Ideation</h3>
             <p>
               Following the day one opening activities on campus the three of us
               spent the evening brainstorming potential design ideas. The next
@@ -232,7 +234,7 @@ function Djaliny() {
           </div>
 
           <div className="written left">
-            <h2>Research</h2>
+            <h3>Research</h3>
             <p>
               Given the short timeframe of the design challenge, research and
               ideation were performed simultaneously. The research process
@@ -276,7 +278,7 @@ function Djaliny() {
           </div>
 
           <div className="written left">
-            <h2>Mockups & Prototyping</h2>
+            <h3>Mockups & Prototyping</h3>
             <p>
               With the sketched wireframes finalised we began creating
               high-fidelity mockups, making adjustments to the sketched design
@@ -289,7 +291,7 @@ function Djaliny() {
           </div>
 
           <div className="written left">
-            <h2>Pitch Presentation</h2>
+            <h3>Pitch Presentation</h3>
             <p>
               With little sleep and the presentations start time looming myself
               and Mali arrived on campus early to put together the final
@@ -309,7 +311,7 @@ function Djaliny() {
           </div>
 
           <div className="further-development">
-            <h2>Further Development</h2>
+            <h3>Further Development</h3>
             <p className="written">
               In the final presentation we also recognised some points for
               further development, listed below:
@@ -325,10 +327,10 @@ function Djaliny() {
                         <span className="brand-display xxl">prototype</span>
                     </div> */}
 
-          <div className="project-heading full-width conclusion">
-            <div className="project-heading_rectangle"></div>
+          <h2 className="project-heading full-width conclusion">
+            <div className="project-heading_rectangle" aria-hidden="true"></div>
             <span className="brand-display xxl">conclusion</span>
-          </div>
+          </h2>
 
           <div className="written left">
             <p>

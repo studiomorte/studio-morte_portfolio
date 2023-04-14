@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function bp($sm, $lg, $container: 1440) {
+    @return #{math.floor(math.div($sm, math.div($lg, $container)))}px;
+}

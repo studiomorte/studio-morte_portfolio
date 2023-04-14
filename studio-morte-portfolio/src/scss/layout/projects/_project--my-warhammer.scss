@@ -1,0 +1,104 @@
+@use "sass:math";
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/functions" as *;
+@use "../../abstracts/mixins" as *;
+
+
+.project-pages_header {
+    .logo-warhammer {
+        width: clamp(150px, 20vw, 300px);
+    }
+
+    .logo-left {
+        width: clamp(120px, 20vw, 200px);
+        justify-self: flex-start;
+        margin-left: 10%;
+    }
+
+    .logo-right {
+        width: clamp(120px, 20vw, 200px);
+        justify-self: flex-end;
+        margin-right: 10%;
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        .logo-left,
+        .logo-right {
+            display: none;
+        }
+    }
+}
+
+.warhammer-container {
+    .project-pages_staggered-container {
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .right:last-of-type {
+        grid-row: 4 / 6;
+    }
+}
+
+.warhammer-logo-container {
+    margin-top: $space-above;
+    grid-column: 2 / 6;
+
+    img {
+        width: 150px;
+    }
+}
+
+.warhammer-right-image {
+    grid-column: 2 / -1;
+
+    img {
+        object-fit: cover;
+        object-position: 0 30%;
+        height: 300px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1500px) {
+        grid-column: 1 / -1;
+    }
+}
+
+.citadel-right-image {
+    grid-column: 2 / -1;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 300px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 1500px) {
+        grid-column: 1 / -1;
+    }
+}
+
+.warhammer-scenarios {
+    margin-top: -$space-above;
+
+    .carousel__slide {
+        height: 700px;
+
+        img {
+            box-shadow: unset !important;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: -80px;
+    }
+}
+
+.warhammer-usergoals {
+    margin-top: 0;
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: $space-above;
+    }
+}

@@ -5,17 +5,18 @@
     ~ [DONE] Link block component
     ~ Research better way to include component props?
 
-
 ~ [DONE] remove showreel tab?
 ~ [DONE] replace bullet.png with svg, style accordingly
+~ [DONE] external links
 ~ homepage GSAP/swiper (mobile)
 ~ animations when elements enter viewport
-~ external links
 ~ revisit logo animation
     ~ Make logo an svg (multiple paths)
 ~ restyle underline on navbar links
-~ restructure folders based on learning
+~ [DONE] restructure folders based on learning
+~ RESTRUCTURE CSS
 ~ RESTRUCTURE HTML (SEMANTICS)
+~ Convert all fonts to WOFF2
 
 
 ~ rewrite about me section

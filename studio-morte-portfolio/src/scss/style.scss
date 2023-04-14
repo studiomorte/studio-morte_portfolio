@@ -1,0 +1,18 @@
+// Base / Global styles
+@use "base";
+
+// Utility / Classes (at DOM level)
+@use "utilities";
+
+// Components / Building blocks (within layouts)
+@use "components/banners";
+@use "components/link-block";
+@use "components/social-icons";
+@use "components/bullet-list";
+
+// Sections / Entire areas of layouts
+@use "layout/homepage";
+@use "layout/projects";
+@use "layout/about";
+@use "layout/footer-main";
+@use "layout/header-main";

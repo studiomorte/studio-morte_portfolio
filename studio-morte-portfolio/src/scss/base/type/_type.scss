@@ -1,0 +1,67 @@
+@use "sass:math";
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/functions" as *;
+@use "../../abstracts/mixins" as *;
+
+.xxl,
+.xl,
+.l,
+.m,
+.s {
+    font-family: $font-stack;
+}
+
+.xxl {
+    font-size: rem(64);
+}
+
+.xl {
+    font-size: 2em;
+}
+
+.l {
+    font-size: 1.8em;
+}
+
+.m {
+    font-size: 1.3em;
+}
+
+.s {
+    font-size: 1em;
+}
+
+.bold-italic {
+    padding-top: rem(16);
+    font-weight: $fw-bold;
+    font-style: italic;
+    // font-size: 0.9em;
+    // line-height: 1.3em;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: $fw-regular;
+}
+
+.brand-display {
+    font-family: $font-headings;
+    font-weight: $fw-regular;
+    color: $brand-pink;
+}
+
+h1 {
+    font-weight: $fw-regular;
+}
+
+h2,
+h3 {
+    font-size: rem(24);
+    font-weight: $fw-heavy;
+    letter-spacing: rem(1);
+    margin-bottom: rem(30);
+}
+
+// strong {
+//     font-style: italic;
+// }
