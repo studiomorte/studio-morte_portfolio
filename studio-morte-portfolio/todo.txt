@@ -17,6 +17,7 @@
 ~ RESTRUCTURE CSS
 ~ RESTRUCTURE HTML (SEMANTICS)
 ~ Convert all fonts to WOFF2
+~ Revisit projects homepage link container alignment
 
 
 ~ rewrite about me section

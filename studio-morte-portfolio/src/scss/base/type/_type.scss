@@ -3,65 +3,110 @@
 @use "../../abstracts/functions" as *;
 @use "../../abstracts/mixins" as *;
 
+h1 {
+	font-weight: $fw-regular;
+}
+
+h2,
+h3 {
+	font-size: rem(24);
+	font-weight: $fw-heavy;
+	letter-spacing: rem(1);
+	margin-bottom: rem(30);
+}
+
 .xxl,
 .xl,
 .l,
 .m,
 .s {
-    font-family: $font-stack;
+	font-family: $font-stack;
 }
 
 .xxl {
-    font-size: rem(64);
+	font-size: rem(64);
+
+	@media only screen and (max-width: 500px) {
+		font-size: rem(40);
+	}
 }
 
 .xl {
-    font-size: 2em;
+	font-size: 2em;
 }
 
 .l {
-    font-size: 1.8em;
+	font-size: 1.8em;
 }
 
 .m {
-    font-size: 1.3em;
+	font-size: 1.3em;
 }
 
 .s {
-    font-size: 1em;
+	font-size: 1em;
 }
 
 .bold-italic {
-    padding-top: rem(16);
-    font-weight: $fw-bold;
-    font-style: italic;
-    // font-size: 0.9em;
-    // line-height: 1.3em;
+	padding-top: rem(16);
+	font-weight: $fw-bold;
+	font-style: italic;
 }
 
 .italic {
-    font-style: italic;
-    font-weight: $fw-regular;
+	font-style: italic;
+	font-weight: $fw-regular;
 }
 
 .brand-display {
-    font-family: $font-headings;
-    font-weight: $fw-regular;
-    color: $brand-pink;
+	font-family: $font-headings;
+	font-weight: $fw-regular;
+	color: $brand-pink;
 }
 
-h1 {
-    font-weight: $fw-regular;
+.written {
+	max-width: 500px;
+	margin-top: $space-between;
+	font-size: rem(18);
+
+	@media only screen and (max-width: 1000px) {
+		max-width: 100%;
+	}
+
+	@media only screen and (max-width: 500px) {
+		font-size: rem(16);
+		line-height: rem(23);
+	}
 }
 
-h2,
-h3 {
-    font-size: rem(24);
-    font-weight: $fw-heavy;
-    letter-spacing: rem(1);
-    margin-bottom: rem(30);
+.quote {
+	border-left: 3px solid $brand-pink;
+	padding-left: 50px;
+	color: rgba(#3a3a3a, 0.5);
+	font-weight: 700;
+	font-style: italic;
+	line-height: 1.7em;
+
+	align-self: center;
+	height: auto;
 }
 
-// strong {
-//     font-style: italic;
-// }
+.fine-print {
+	margin-top: $space-above;
+	font-size: 0.8em;
+
+	.project_references {
+		display: flex;
+		gap: 50px;
+		font-style: italic;
+
+		.bold-italic {
+			padding: unset;
+		}
+
+		@media only screen and (max-width: 500px) {
+			flex-direction: column;
+			gap: 0;
+		}
+	}
+}

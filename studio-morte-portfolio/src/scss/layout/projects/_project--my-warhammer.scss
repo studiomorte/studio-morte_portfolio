@@ -3,102 +3,61 @@
 @use "../../abstracts/functions" as *;
 @use "../../abstracts/mixins" as *;
 
+.mywarhammer {
+	.project__logo {
+		&--center {
+			width: clamp(150px, 20vw, 300px);
+		}
 
-.project-pages_header {
-    .logo-warhammer {
-        width: clamp(150px, 20vw, 300px);
-    }
+		&--left {
+			width: clamp(120px, 20vw, 200px);
+			justify-self: flex-start;
+			margin-left: 10%;
+		}
 
-    .logo-left {
-        width: clamp(120px, 20vw, 200px);
-        justify-self: flex-start;
-        margin-left: 10%;
-    }
+		&--right {
+			width: clamp(120px, 20vw, 200px);
+			justify-self: flex-end;
+			margin-right: 10%;
+		}
 
-    .logo-right {
-        width: clamp(120px, 20vw, 200px);
-        justify-self: flex-end;
-        margin-right: 10%;
-    }
+		@media only screen and (max-width: 500px) {
+			&--left,
+			&--right {
+				display: none;
+			}
+		}
+	}
 
-    @media only screen and (max-width: 500px) {
+	.project__image--large {
+		grid-column: 2 / -1;
 
-        .logo-left,
-        .logo-right {
-            display: none;
-        }
-    }
-}
+		img {
+			object-fit: cover;
+			max-height: 300px;
+			width: 100%;
+		}
 
-.warhammer-container {
-    .project-pages_staggered-container {
-        grid-template-rows: repeat(5, 1fr);
-    }
+		@media only screen and (max-width: 1500px) {
+			grid-column: 1 / -1;
+		}
+	}
 
-    .right:last-of-type {
-        grid-row: 4 / 6;
-    }
-}
+	.battle-honours img {
+		object-position: 0 30%;
+	}
 
-.warhammer-logo-container {
-    margin-top: $space-above;
-    grid-column: 2 / 6;
+	.citadel img {
+		object-position: center;
+	}
 
-    img {
-        width: 150px;
-    }
-}
+	.logo {
+		margin-top: $space-above;
+		grid-column: 2 / 6;
+		width: 150px;
+	}
 
-.warhammer-right-image {
-    grid-column: 2 / -1;
-
-    img {
-        object-fit: cover;
-        object-position: 0 30%;
-        height: 300px;
-        width: 100%;
-    }
-
-    @media only screen and (max-width: 1500px) {
-        grid-column: 1 / -1;
-    }
-}
-
-.citadel-right-image {
-    grid-column: 2 / -1;
-
-    img {
-        object-fit: cover;
-        object-position: center;
-        height: 300px;
-        width: 100%;
-    }
-
-    @media only screen and (max-width: 1500px) {
-        grid-column: 1 / -1;
-    }
-}
-
-.warhammer-scenarios {
-    margin-top: -$space-above;
-
-    .carousel__slide {
-        height: 700px;
-
-        img {
-            box-shadow: unset !important;
-        }
-    }
-
-    @media only screen and (max-width: 1000px) {
-        margin-top: -80px;
-    }
-}
-
-.warhammer-usergoals {
-    margin-top: 0;
-
-    @media only screen and (max-width: 1000px) {
-        margin-top: $space-above;
-    }
+	.landscape-swiper {
+		margin-bottom: $space-below;
+	}
 }

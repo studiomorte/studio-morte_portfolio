@@ -3,22 +3,12 @@
 @use "../../abstracts/functions" as *;
 @use "../../abstracts/mixins" as *;
 
-.logo-staunton {
-    width: clamp(350px, 50vw, 600px);
-}
+.staunton {
+	.project__logo {
+		width: clamp(350px, 50vw, 600px);
+	}
 
-.staunton-hero {
-    object-position: center bottom;
-}
-
-.staunton-research-quote {
-    @media only screen and (max-width: 900px) {
-        margin-top: $space-between;
-        height: unset;
-    }
-}
-
-.design-system,
-.conclusion {
-    margin-top: $space-above;
+	.project__hero {
+		object-position: center bottom;
+	}
 }

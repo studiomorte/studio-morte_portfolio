@@ -3,469 +3,335 @@
 @use "../../abstracts/functions" as *;
 @use "../../abstracts/mixins" as *;
 
-
-.project_page-container {
-    position: relative;
-    height: 100%;
-    width: 100vw;
-    overflow: hidden;
+.project-banner__container {
+	position: relative;
+	height: 100%;
+	width: 100vw;
+	overflow: hidden;
 }
 
 .project_navigation {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    margin-top: 100px;
-    margin-left: 200px;
-    z-index: 3;
-}
+	position: relative;
+	height: 100vh;
+	// width: 100vw;
+	width: 200vw;
+	// margin-top: 100px;
+	margin-left: -150px;
+	z-index: 3;
 
-.project_navigation ul {
-    width: 100vw;
-}
+	ul {
+		width: 115%;
+		transform: rotate(-8.93deg);
 
-.project_navigation li {
-    display: grid;
-    grid-template-columns: 1fr;
-    font-family: $font-stack;
-    font-weight: $fw-light;
-    font-size: 70px;
-    letter-spacing: 10px;
-    line-height: 0;
-    text-transform: uppercase;
-    text-align: left;
-}
+		@media only screen and (max-width: 1000px) {
+			position: absolute;
+			bottom: 0;
+			width: 150%;
+			margin-left: -15%;
+		}
 
+		@media only screen and (max-width: 700px) {
+			width: 300%;
+			margin-left: -75%;
+		}
 
-@keyframes changeFont {
-    from {}
+		li {
+			display: grid;
+			grid-template-columns: 200px max-content 5fr;
+			align-items: center;
+			gap: 50px;
+			height: 260px;
+			margin-top: -100px;
 
-    1% {
-        // @include brand-display;
-        font-family: $font-headings;
-        color: $brand-pink;
-        text-transform: lowercase;
-        line-height: 0px;
-    }
+			font-family: $font-stack;
+			font-weight: $fw-thin;
+			font-size: 70px;
+			letter-spacing: 10px;
+			line-height: 0;
+			text-transform: uppercase;
+			text-align: left;
 
-    to {
-        font-family: $font-headings;
-        color: $brand-pink;
-        text-transform: lowercase;
-        line-height: 0px;
-    }
-}
+			@media only screen and (max-width: 1000px) {
+				font-weight: $fw-light;
+				transform: scale(0.8);
+			}
 
-@keyframes changeFontReverse {
-    from {
-        font-family: $font-headings;
-        color: $brand-pink;
-        text-transform: lowercase;
-        line-height: 0px;
-    }
+			@media only screen and (max-width: 700px) {
+				font-weight: $fw-light;
+				transform: scale(0.5);
+				margin-top: -150px;
+			}
+		}
+	}
 
-    99% {
-        font-family: $font-headings;
-        color: $brand-pink;
-        text-transform: lowercase;
-        line-height: 0px;
-    }
+	.project_link-container {
+		.rectangle {
+			height: 80px;
+			width: 100%;
+			margin-top: 15px;
+			background-color: $brand-pink;
+			opacity: 0;
+			transition: opacity 0.5s ease;
+		}
 
-    to {}
-}
+		&.active {
+			.link {
+				font-family: $font-headings;
+				text-transform: lowercase;
+				color: $brand-pink;
+				animation: changeFont 0.5s;
+			}
 
-.project_page-container {
-    position: relative;
-    height: 100%;
-    width: 100vw;
-    overflow: hidden;
-    display: grid;
-    align-items: center;
-}
+			.rectangle {
+				opacity: 1;
+			}
+		}
 
-a {
-    color: inherit;
-}
-
-.project_navigation {
-    position: relative;
-    height: 100vh;
-    width: 200vw;
-    // margin-top: -5vw;
-    margin-left: -150px;
-
-    z-index: 3;
+		.hidden {
+			@media only screen and (min-width: 1700px) {
+				display: inline-block;
+			}
+		}
+	}
 }
 
 .project_navigation-mobile {
-    display: none;
+	display: none;
+}
+
+@keyframes changeFont {
+	from {
+	}
+
+	1% {
+		font-family: $font-headings;
+		color: $brand-pink;
+		text-transform: lowercase;
+		line-height: 0px;
+	}
+
+	to {
+		font-family: $font-headings;
+		color: $brand-pink;
+		text-transform: lowercase;
+		line-height: 0px;
+	}
+}
+
+@keyframes changeFontReverse {
+	from {
+		font-family: $font-headings;
+		color: $brand-pink;
+		text-transform: lowercase;
+		line-height: 0px;
+	}
+
+	99% {
+		font-family: $font-headings;
+		color: $brand-pink;
+		text-transform: lowercase;
+		line-height: 0px;
+	}
+
+	to {
+	}
 }
 
 .project_background-overlay {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
 
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.6) 69%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.6) 69%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.6) 69%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -moz-linear-gradient(
+		left,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		left,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
 }
 
 .project_background-image {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-    visibility: hidden;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	visibility: hidden;
 }
 
 #background-1 {
-    background-image: url("./../../../images/warhammer-header.jpg");
-    background-position: center;
+	background-image: url("./../../../images/warhammer-header.jpg");
+	background-position: center;
 }
 
 #background-2 {
-    background-image: url("./../../../images/stauntonv4.jpg");
-    background-position: right;
+	background-image: url("./../../../images/stauntonv4.jpg");
+	background-position: right;
 }
 
 #background-3 {
-    background-image: url("./../../../images/sustainabilityvic1.jpg");
-    background-position: center;
+	background-image: url("./../../../images/sustainabilityvic1.jpg");
+	background-position: center;
 }
 
 #background-4 {
-    background-image: url("./../../../images/djaliny-1.jpg");
+	background-image: url("./../../../images/djaliny-1.jpg");
 }
-
-
-.project_navigation ul {
-    transform: rotate(-8.93deg);
-    width: 115%;
-}
-
-.project_navigation li {
-    display: grid;
-    grid-template-columns: 200px max-content 5fr;
-    align-items: center;
-    gap: 50px;
-    height: 260px;
-    margin-top: -100px;
-
-    font-size: 70px;
-    letter-spacing: 10px;
-    line-height: 0;
-    text-transform: uppercase;
-    text-align: left;
-}
-
-.rectangle {
-    margin-top: 15px;
-    height: 80px;
-    width: 100%;
-    background-color: $brand-pink;
-    opacity: 0;
-}
-
-.project_link {
-
-    .rectangle {
-        opacity: 0;
-        transition: 0.5s ease;
-    }
-}
-
-.project_link-container.active {
-    .link {
-        font-family: $font-headings;
-        text-transform: lowercase;
-        color: $brand-pink;
-        animation: changeFont 0.5s;
-    }
-
-    .rectangle {
-        opacity: 1;
-    }
-}
-
-
-@keyframes changeFont {
-    from {}
-
-    1% {
-        font-family: $font-headings;
-        color: $brand-pink;
-        text-transform: lowercase;
-        line-height: 0px;
-    }
-
-    to {
-        font-family: $font-headings;
-        color: $brand-pink;
-        text-transform: lowercase;
-        line-height: 0px;
-    }
-}
-
 
 @media only screen and (max-height: 1300px) {
-    .project_navigation {
-        margin-top: -150px;
-    }
+	.project_navigation {
+		margin-top: -150px;
+	}
 }
-
 
 @media only screen and (max-width: 1920px) {
-    .project_navigation {
-        transform: scale(0.8);
-        margin-left: -27vw;
-        margin-top: -2vw;
-    }
-}
-
-
-@media only screen and (max-width: 1700px) {
-    .hidden {
-        display: none;
-    }
+	.project_navigation {
+		transform: scale(0.8);
+		margin-left: -27vw;
+		margin-top: -2vw;
+	}
 }
 
 @media only screen and (max-width: 1500px) {
-    .project_navigation {
-        transform: scale(0.7);
-        margin-left: -36vw;
-    }
+	.project_navigation {
+		transform: scale(0.7);
+		margin-left: -36vw;
+	}
 }
 
 @media only screen and (max-width: 1200px) {
-    .project_navigation {
-        width: 200vw;
-        transform: scale(0.6);
-        margin-left: -49vw;
-
-        .project_navigation li {
-            font-size: 200px;
-            margin-top: -90px;
-        }
-    }
+	.project_navigation {
+		width: 200vw;
+		transform: scale(0.6);
+		margin-left: -49vw;
+	}
 }
 
-
-
 @media only screen and (max-width: 1000px) {
-    // .project_navigation { display: none; }
+	.project_background-overlay {
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+88&0+1,0.6+31,1+68 */
+		background: -moz-linear-gradient(
+			top,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0) 1%,
+			rgba(255, 255, 255, 0.6) 31%,
+			rgba(255, 255, 255, 1) 68%,
+			rgba(255, 255, 255, 1) 88%
+		);
+		/* FF3.6-15 */
+		background: -webkit-linear-gradient(
+			top,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0) 1%,
+			rgba(255, 255, 255, 0.6) 31%,
+			rgba(255, 255, 255, 1) 68%,
+			rgba(255, 255, 255, 1) 88%
+		);
+		/* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0) 1%,
+			rgba(255, 255, 255, 0.6) 31%,
+			rgba(255, 255, 255, 1) 68%,
+			rgba(255, 255, 255, 1) 88%
+		);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+		/* IE6-9 */
+	}
 
-    .project_navigation {
-        ul {
-            position: absolute;
-            bottom: 0;
-            width: 150%;
-            margin-left: -15%;
-        }
+	.project_navigation-mobile {
+		z-index: 100;
+		display: grid;
+		height: 100%;
+		width: 100%;
+	}
 
-        li {
-            font-family: Lato-Medium;
-            transform: scale(0.8);
-        }
-    }
+	.project_navigation-slide {
+		display: flex;
+		align-items: flex-end;
+		overflow: hidden;
 
-    .project_background-overlay {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+88&0+1,0.6+31,1+68 */
-        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.6) 31%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 88%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.6) 31%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 88%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.6) 31%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 88%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
-        /* IE6-9 */
-    }
+		.project_background-image {
+			background-position: right center;
+		}
+	}
 
-    .project_navigation-mobile {
-        z-index: 100;
-        display: grid;
-        height: 100%;
-        width: 100%;
-    }
+	.project_slide-arrows {
+		grid-area: 1 / 1 / -1 / -1;
+		align-self: flex-end;
 
-    .project_navigation-slide {
-        display: flex;
-        align-items: flex-end;
-        overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 
-        .project_background-image {
-            background-position: right center;
-        }
-    }
+		svg {
+			height: 40px;
+			width: 40px;
+		}
 
-    .project_slide-arrows {
-        grid-area: 1 / 1 / -1 / -1;
-        align-self: flex-end;
+		#arrow-left {
+			transform: rotate(180deg);
+		}
+	}
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+	.project_slide-content {
+		grid-area: 1 / 1 / -1 / -1;
+		transform: rotate(-8.93deg);
+		text-align: center;
+		width: 120vw;
+		margin-left: -8vw;
+		margin-bottom: -100px;
 
-        svg {
-            height: 40px;
-            width: 40px;
-        }
+		p {
+			font-family: $font-headings;
+			font-size: 8vw;
+			color: $brand-pink;
+			margin-bottom: 30px;
+		}
 
-        #arrow-left {
-            transform: rotate(180deg);
-        }
-    }
-
-    .project_slide-content {
-        grid-area: 1 / 1 / -1 / -1;
-        transform: rotate(-8.93deg);
-        text-align: center;
-        width: 120vw;
-        margin-left: -8vw;
-        margin-bottom: -100px;
-
-        p {
-            font-family: $font-headings;
-            font-size: 8vw;
-            color: $brand-pink;
-            margin-bottom: 30px;
-        }
-
-        .project_slide-button {
-            width: 120vw;
-            height: 250px;
-            background-color: $brand-black;
-            color: $brand-pink;
-            font-size: 1.5em;
-            letter-spacing: 3px;
-            padding-top: 20px;
-            text-transform: uppercase;
-        }
-    }
+		.project_slide-button {
+			width: 120vw;
+			height: 250px;
+			background-color: $brand-black;
+			color: $brand-pink;
+			font-size: 1.5em;
+			letter-spacing: 3px;
+			padding-top: 20px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 @media only screen and (max-height: 800px) {
-    .project_page-container {
-        overflow-y: scroll;
-    }
+	.project-banner__container {
+		overflow-y: scroll;
+	}
 
-    .project_background-overlay {
-        height: 100vh;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .project_navigation {
-        ul {
-
-            width: 300%;
-            margin-left: -75%;
-
-        }
-
-        li {
-            font-family: Lato-Medium;
-            transform: scale(0.5);
-            margin-top: -150px;
-        }
-    }
-}
-
-
-// SWIPER CLASSES ---------------------------------------
-
-.swiper {
-    width: 100%;
-    margin-top: $space-between;
-    margin-bottom: $space-below;
-
-    .swiper-wrapper {
-        padding-bottom: 60px;
-    }
-
-    .swiper-slide {
-        height: auto;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        top: unset;
-        bottom: 0px;
-        z-index: 2;
-        color: $brand-black;
-
-        transition: {
-            property: color;
-            duration: $timing;
-            timing-function: $ease-std;
-        }
-
-        &::after {
-            font-size: 30px;
-        }
-
-        &:hover {
-            color: $brand-pink;
-            opacity: 1;
-        }
-    }
-
-    .swiper-pagination {
-        z-index: 1;
-
-        .swiper-pagination-bullet-active {
-            background-color: $brand-black;
-        }
-
-        .swiper-pagination-bullet {
-            transition: {
-                property: background-color, opacity;
-                duration: $timing;
-                timing-function: $ease-std;
-            }
-
-            &:hover {
-                background-color: $brand-pink;
-                opacity: 1;
-            }
-        }
-    }
-
-    .swiper-horizontal>.swiper-pagination-bullets,
-    .swiper-pagination-bullets.swiper-pagination-horizontal,
-    .swiper-pagination-custom,
-    .swiper-pagination-fraction {
-        bottom: 15px;
-    }
-}
-
-.persona-swiper,
-.landscape-swiper {
-    grid-column: 2 / -2;
-}
-
-.persona-swiper .swiper {
-    .swiper-slide {
-        width: auto;
-        height: auto;
-
-        @media only screen and (max-width: 850px) {
-            width: 90%;
-        }
-
-        img {
-            max-height: 800px;
-        }
-    }
-}
-
-.landscape-swiper .swiper {
-    .swiper-slide {
-        width: 90%;
-    }
+	.project_background-overlay {
+		height: 100vh;
+	}
 }
