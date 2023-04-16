@@ -391,10 +391,10 @@ function MyWarhammer() {
 								were identified.
 							</p>
 						</div>
-						<div className="persona-swiper">
+						<div className="swiper__persona">
 							<ProjectSwiper images={personas} />
 						</div>
-						<div className="landscape-swiper">
+						<div className="swiper__landscape">
 							<ProjectSwiper images={scenarios} />
 						</div>
 						<div className="margin-width bullets">
@@ -444,7 +444,12 @@ function MyWarhammer() {
 							</p>
 						</div>
 						<LinkBlock items={prototypeLinks} />
-						<div className="project_figma-container"></div>
+						<div className="project__figma-container">
+							<iframe
+								src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fb0wW4zp4bcrRvJp0MB1NDf%2FMy-Warhammer%3Fnode-id%3D153-3929%26starting-point-node-id%3D153%253A3929%26show-proto-sidebar%3D1"
+								allowfullscreen
+							></iframe>
+						</div>
 						<h2 className="project__heading full-width brand-display xxl">
 							<div
 								className="project__heading-rectangle"

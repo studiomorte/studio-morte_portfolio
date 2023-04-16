@@ -8,9 +8,13 @@
 	height: 100%;
 	width: 100vw;
 	overflow: hidden;
+
+	@media only screen and (max-height: 800px) {
+		overflow-y: scroll;
+	}
 }
 
-.project_navigation {
+.project-banner__navigation {
 	position: relative;
 	height: 100vh;
 	// width: 100vw;
@@ -18,6 +22,27 @@
 	// margin-top: 100px;
 	margin-left: -150px;
 	z-index: 3;
+
+	@media only screen and (max-height: 1300px) {
+		margin-top: -150px;
+	}
+
+	@media only screen and (max-width: 1920px) {
+		transform: scale(0.8);
+		margin-left: -27vw;
+		margin-top: -2vw;
+	}
+
+	@media only screen and (max-width: 1500px) {
+		transform: scale(0.7);
+		margin-left: -36vw;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		width: 200vw;
+		transform: scale(0.6);
+		margin-left: -49vw;
+	}
 
 	ul {
 		width: 115%;
@@ -64,7 +89,7 @@
 		}
 	}
 
-	.project_link-container {
+	.project-banner__link-container {
 		.rectangle {
 			height: 80px;
 			width: 100%;
@@ -95,8 +120,104 @@
 	}
 }
 
-.project_navigation-mobile {
-	display: none;
+.project-banner__background-overlay {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -moz-linear-gradient(
+		left,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		left,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
+
+	@media only screen and (max-width: 1000px) {
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+88&0+1,0.6+31,1+68 */
+		background: -moz-linear-gradient(
+			top,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0) 1%,
+			rgba(255, 255, 255, 0.6) 31%,
+			rgba(255, 255, 255, 1) 68%,
+			rgba(255, 255, 255, 1) 88%
+		);
+		/* FF3.6-15 */
+		background: -webkit-linear-gradient(
+			top,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0) 1%,
+			rgba(255, 255, 255, 0.6) 31%,
+			rgba(255, 255, 255, 1) 68%,
+			rgba(255, 255, 255, 1) 88%
+		);
+		/* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0) 1%,
+			rgba(255, 255, 255, 0.6) 31%,
+			rgba(255, 255, 255, 1) 68%,
+			rgba(255, 255, 255, 1) 88%
+		);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+		/* IE6-9 */
+	}
+
+	@media only screen and (max-height: 800px) {
+		height: 100vh;
+	}
+}
+
+.project-banner__background-image {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	visibility: hidden;
+}
+
+#background-1 {
+	background-image: url("./../../../images/warhammer-header.jpg");
+	background-position: center;
+}
+
+#background-2 {
+	background-image: url("./../../../images/stauntonv4.jpg");
+	background-position: right;
+}
+
+#background-3 {
+	background-image: url("./../../../images/sustainabilityvic1.jpg");
+	background-position: center;
+}
+
+#background-4 {
+	background-image: url("./../../../images/djaliny-1.jpg");
 }
 
 @keyframes changeFont {
@@ -137,201 +258,72 @@
 	}
 }
 
-.project_background-overlay {
-	position: absolute;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 2;
+// UNUSED MOBILE STUFF
 
-	background: linear-gradient(
-		to right,
-		rgba(255, 255, 255, 1) 12%,
-		rgba(255, 255, 255, 1) 32%,
-		rgba(255, 255, 255, 0.6) 69%,
-		rgba(255, 255, 255, 0) 99%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	background: -moz-linear-gradient(
-		left,
-		rgba(255, 255, 255, 1) 12%,
-		rgba(255, 255, 255, 1) 32%,
-		rgba(255, 255, 255, 0.6) 69%,
-		rgba(255, 255, 255, 0) 99%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	background: -webkit-linear-gradient(
-		left,
-		rgba(255, 255, 255, 1) 12%,
-		rgba(255, 255, 255, 1) 32%,
-		rgba(255, 255, 255, 0.6) 69%,
-		rgba(255, 255, 255, 0) 99%,
-		rgba(255, 255, 255, 0) 100%
-	);
-}
-
-.project_background-image {
-	position: absolute;
-	top: 0;
-	height: 100vh;
-	width: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: 1;
-	visibility: hidden;
-}
-
-#background-1 {
-	background-image: url("./../../../images/warhammer-header.jpg");
-	background-position: center;
-}
-
-#background-2 {
-	background-image: url("./../../../images/stauntonv4.jpg");
-	background-position: right;
-}
-
-#background-3 {
-	background-image: url("./../../../images/sustainabilityvic1.jpg");
-	background-position: center;
-}
-
-#background-4 {
-	background-image: url("./../../../images/djaliny-1.jpg");
-}
-
-@media only screen and (max-height: 1300px) {
-	.project_navigation {
-		margin-top: -150px;
-	}
-}
-
-@media only screen and (max-width: 1920px) {
-	.project_navigation {
-		transform: scale(0.8);
-		margin-left: -27vw;
-		margin-top: -2vw;
-	}
-}
-
-@media only screen and (max-width: 1500px) {
-	.project_navigation {
-		transform: scale(0.7);
-		margin-left: -36vw;
-	}
-}
-
-@media only screen and (max-width: 1200px) {
-	.project_navigation {
-		width: 200vw;
-		transform: scale(0.6);
-		margin-left: -49vw;
-	}
-}
+// .project-banner__navigation-mobile {
+// 	display: none;
+// }
 
 @media only screen and (max-width: 1000px) {
-	.project_background-overlay {
-		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+88&0+1,0.6+31,1+68 */
-		background: -moz-linear-gradient(
-			top,
-			rgba(255, 255, 255, 0) 0%,
-			rgba(255, 255, 255, 0) 1%,
-			rgba(255, 255, 255, 0.6) 31%,
-			rgba(255, 255, 255, 1) 68%,
-			rgba(255, 255, 255, 1) 88%
-		);
-		/* FF3.6-15 */
-		background: -webkit-linear-gradient(
-			top,
-			rgba(255, 255, 255, 0) 0%,
-			rgba(255, 255, 255, 0) 1%,
-			rgba(255, 255, 255, 0.6) 31%,
-			rgba(255, 255, 255, 1) 68%,
-			rgba(255, 255, 255, 1) 88%
-		);
-		/* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(
-			to bottom,
-			rgba(255, 255, 255, 0) 0%,
-			rgba(255, 255, 255, 0) 1%,
-			rgba(255, 255, 255, 0.6) 31%,
-			rgba(255, 255, 255, 1) 68%,
-			rgba(255, 255, 255, 1) 88%
-		);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
-		/* IE6-9 */
-	}
+	// .project-banner__navigation-mobile {
+	// 	z-index: 100;
+	// 	display: grid;
+	// 	height: 100%;
+	// 	width: 100%;
+	// }
 
-	.project_navigation-mobile {
-		z-index: 100;
-		display: grid;
-		height: 100%;
-		width: 100%;
-	}
+	// .project-banner__navigation-slide {
+	// 	display: flex;
+	// 	align-items: flex-end;
+	// 	overflow: hidden;
 
-	.project_navigation-slide {
-		display: flex;
-		align-items: flex-end;
-		overflow: hidden;
+	// 	.project_background-image {
+	// 		background-position: right center;
+	// 	}
+	// }
 
-		.project_background-image {
-			background-position: right center;
-		}
-	}
+	// .project_slide-arrows {
+	// 	grid-area: 1 / 1 / -1 / -1;
+	// 	align-self: flex-end;
 
-	.project_slide-arrows {
-		grid-area: 1 / 1 / -1 / -1;
-		align-self: flex-end;
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	justify-content: space-between;
 
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	// 	svg {
+	// 		height: 40px;
+	// 		width: 40px;
+	// 	}
 
-		svg {
-			height: 40px;
-			width: 40px;
-		}
+	// 	#arrow-left {
+	// 		transform: rotate(180deg);
+	// 	}
+	// }
 
-		#arrow-left {
-			transform: rotate(180deg);
-		}
-	}
+	// .project_slide-content {
+	// 	grid-area: 1 / 1 / -1 / -1;
+	// 	transform: rotate(-8.93deg);
+	// 	text-align: center;
+	// 	width: 120vw;
+	// 	margin-left: -8vw;
+	// 	margin-bottom: -100px;
 
-	.project_slide-content {
-		grid-area: 1 / 1 / -1 / -1;
-		transform: rotate(-8.93deg);
-		text-align: center;
-		width: 120vw;
-		margin-left: -8vw;
-		margin-bottom: -100px;
+	// 	p {
+	// 		font-family: $font-headings;
+	// 		font-size: 8vw;
+	// 		color: $brand-pink;
+	// 		margin-bottom: 30px;
+	// 	}
 
-		p {
-			font-family: $font-headings;
-			font-size: 8vw;
-			color: $brand-pink;
-			margin-bottom: 30px;
-		}
-
-		.project_slide-button {
-			width: 120vw;
-			height: 250px;
-			background-color: $brand-black;
-			color: $brand-pink;
-			font-size: 1.5em;
-			letter-spacing: 3px;
-			padding-top: 20px;
-			text-transform: uppercase;
-		}
-	}
-}
-
-@media only screen and (max-height: 800px) {
-	.project-banner__container {
-		overflow-y: scroll;
-	}
-
-	.project_background-overlay {
-		height: 100vh;
-	}
+	// 	.project_slide-button {
+	// 		width: 120vw;
+	// 		height: 250px;
+	// 		background-color: $brand-black;
+	// 		color: $brand-pink;
+	// 		font-size: 1.5em;
+	// 		letter-spacing: 3px;
+	// 		padding-top: 20px;
+	// 		text-transform: uppercase;
+	// 	}
+	// }
 }

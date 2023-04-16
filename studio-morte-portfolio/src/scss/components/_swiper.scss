@@ -68,12 +68,12 @@
 	}
 }
 
-.persona-swiper,
-.landscape-swiper {
+.swiper__persona,
+.swiper__landscape {
 	grid-column: 2 / -2;
 }
 
-.persona-swiper .swiper {
+.swiper__persona .swiper {
 	.swiper-slide {
 		width: auto;
 		height: auto;
@@ -88,7 +88,7 @@
 	}
 }
 
-.landscape-swiper .swiper {
+.swiper__landscape .swiper {
 	.swiper-slide {
 		width: 90%;
 	}

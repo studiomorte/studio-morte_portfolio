@@ -1,18 +1,18 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import HeaderMain from "./components/HeaderMain";
 import "./scss/style.scss";
 
 // PROJECT PAGE -------------------------------
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <div className="main-container">
-        <Outlet />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<HeaderMain />
+			<div className="main-container">
+				<Outlet />
+			</div>
+		</>
+	);
 }
 
 export default App;

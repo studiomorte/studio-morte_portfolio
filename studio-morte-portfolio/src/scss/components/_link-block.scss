@@ -2,3 +2,59 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/functions" as *;
 @use "../abstracts/mixins" as *;
+
+.link-block {
+	align-self: center;
+	grid-column: 8 / -1;
+	overflow: hidden;
+	padding: 50px 0;
+
+	@media only screen and (max-width: 1200px) {
+		grid-column: 7 / -1;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		grid-column: 2 / -1;
+		padding-left: 0px;
+
+		ul {
+			padding: 0;
+		}
+	}
+
+	li {
+		width: 110%;
+		transform: rotate(-8.93deg);
+		background-color: $brand-black;
+		color: rgba(255, 255, 255, 0.6);
+		height: 60px;
+		margin-bottom: 10px;
+
+		display: flex;
+		align-items: center;
+		padding-left: 20px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+
+		transition: {
+			property: color;
+			duration: $timing;
+			timing-function: $ease-std;
+		}
+
+		svg {
+			width: 30px;
+			height: 30px;
+			margin-right: 20px;
+		}
+
+		&:hover {
+			color: #fff;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			width: 110%;
+			transform: rotate(0deg);
+		}
+	}
+}

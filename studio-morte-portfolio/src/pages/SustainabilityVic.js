@@ -298,7 +298,7 @@ function SustainabilityVic() {
 						</div>
 
 						<div className="written left bullets">
-							<h2>User Goals</h2>
+							<h3>User Goals</h3>
 							<BulletList items={userGoals} />
 						</div>
 
@@ -325,13 +325,13 @@ function SustainabilityVic() {
 							className="project__image--large margin-width"
 						/>
 
-						<div className="persona-swiper">
+						<div className="swiper__persona">
 							<ProjectSwiper images={personas} />
 						</div>
 
 						<div className="project__staggered-container">
 							<div className="written">
-								<h2>Scenario: Jodie Shenfield</h2>
+								<h3>Scenario: Jodie Shenfield</h3>
 								<p>
 									Jodie sits outside on the couch sipping a soothing cup of
 									chamomile tea. Looking around the garden she see's the
@@ -348,7 +348,7 @@ function SustainabilityVic() {
 								</p>
 							</div>
 							<div className="written">
-								<h2>Scenario: Justin Nieves</h2>
+								<h3>Scenario: Justin Nieves</h3>
 								<p>
 									With his parents out of town for a week Justin takes the
 									opportunity to teach himself how to cook some simple dinners
@@ -365,7 +365,7 @@ function SustainabilityVic() {
 								</p>
 							</div>
 							<div className="written">
-								<h2>Scenario: Rosie Cheng</h2>
+								<h3>Scenario: Rosie Cheng</h3>
 								<p>
 									Rosie gets home from work earlier than usual and decides to
 									cook an easy dinner for her and her partner. She opens the
@@ -408,7 +408,7 @@ function SustainabilityVic() {
 
 						<LinkBlock items={designConceptsLink} />
 
-						<div className="landscape-swiper">
+						<div className="swiper__landscape">
 							<ProjectSwiper images={drafts} />
 						</div>
 
@@ -455,7 +455,7 @@ function SustainabilityVic() {
 						</h2>
 
 						<div className="written left">
-							<h2>The Original 'Final Design'</h2>
+							<h3>The Original 'Final Design'</h3>
 							<p>
 								With user testing completed I implemented the changes to the
 								design, however due to time limitations I was unable to include

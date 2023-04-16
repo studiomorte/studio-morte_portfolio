@@ -197,8 +197,6 @@ function Staunton() {
 						</div>
 					</section>
 
-					{/* Case Study Section ------------------------------------- */}
-
 					<section className="project__case-study">
 						<h2 className="project__heading full-width brand-display xxl">
 							<div
@@ -257,7 +255,7 @@ function Staunton() {
 							</p>
 						</div>
 
-						<div className="persona-swiper">
+						<div className="swiper__persona">
 							<ProjectSwiper images={personas} />
 						</div>
 
@@ -283,7 +281,7 @@ function Staunton() {
 							</p>
 						</div>
 
-						<div className="landscape-swiper">
+						<div className="swiper__landscape">
 							<ProjectSwiper images={drafts} />
 						</div>
 
@@ -319,11 +317,11 @@ function Staunton() {
 
 						<LinkBlock items={mockupLink} />
 
-						<div className="landscape-swiper">
+						<div className="swiper__landscape">
 							<ProjectSwiper images={mockups} />
 						</div>
 
-						<h2 className="project__heading full-width brand-display xxl">
+						{/* <h2 className="project__heading full-width brand-display xxl">
 							<div
 								className="project__heading-rectangle"
 								aria-hidden="true"
@@ -331,7 +329,12 @@ function Staunton() {
 							<span>prototype</span>
 						</h2>
 
-						<div className="project_figma-container"></div>
+						<div className="project__figma-container">
+							<iframe
+								src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBSzPFzFGqQiWPlmDEri3DE%2FStaunton-Gallery%3Fnode-id%3D727-5089%26scaling%3Dcontain%26page-id%3D727%253A4868%26starting-point-node-id%3D727%253A5042"
+								allowfullscreen
+							></iframe>
+						</div> */}
 
 						<div className="fine-print margin-width">
 							<p>

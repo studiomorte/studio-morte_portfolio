@@ -3,317 +3,314 @@
 @use "../abstracts/functions" as *;
 @use "../abstracts/mixins" as *;
 
-.navigation_container {
-    z-index: 100;
-    width: 100vw;
-    height: 150px;
-    background-color: $brand-black;
+.header-nav__container {
+	z-index: 100;
+	width: 100vw;
+	height: 150px;
+	background-color: $brand-black;
 
-    padding: 25px 50px 25px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	padding: 25px 50px 25px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-    overflow: hidden;
+	overflow: hidden;
 
-    @media only screen and (max-width: 1000px) {
-        height: 100px;
-        padding: 20px 30px 20px 25px;
-    }
+	@media only screen and (max-width: 1000px) {
+		height: 100px;
+		padding: 20px 30px 20px 25px;
+	}
 
-    @media only screen and (max-width: 430px) {
-        padding-inline: 6vw;
-    }
+	@media only screen and (max-width: 430px) {
+		padding-inline: 6vw;
+	}
 
-    // @media only screen and (max-height: 900px) {
-    //     height: 100px;
-    //     padding: 20px 30px 20px 25px;
-    // }
+	// @media only screen and (max-height: 900px) {
+	//     height: 100px;
+	//     padding: 20px 30px 20px 25px;
+	// }
 
-    @media only screen and (max-height: 700px) {
-        height: 100px;
-        padding: 20px 30px 20px 25px;
-    }
+	@media only screen and (max-height: 700px) {
+		height: 100px;
+		padding: 20px 30px 20px 25px;
+	}
 }
 
-.navigation_logo {
-    padding-left: 20px;
+.header-nav__logo {
+	padding-left: 20px;
 
-    @media only screen and (max-width: 1000px) {
-        padding-left: 10px;
-    }
+	@media only screen and (max-width: 1000px) {
+		padding-left: 10px;
+	}
 
-    @media only screen and (max-height: 700px) {
-        height: 100px;
-        // padding: 20px 30px 20px 25px;
-    }
+	@media only screen and (max-height: 700px) {
+		height: 100px;
+		// padding: 20px 30px 20px 25px;
+	}
 
-    @media only screen and (max-width: 430px) {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 0;
-    }
+	@media only screen and (max-width: 430px) {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 0;
+	}
 
+	a {
+		@include reset-spacing;
+	}
 
-    a {
-        @include reset-spacing;
-    }
+	.studio {
+		@include reset-spacing;
 
-    .studio {
-        @include reset-spacing;
+		font-weight: $fw-light;
+		font-size: rem(25);
+		letter-spacing: rem(6);
+		line-height: rem(30);
+		text-transform: uppercase;
+		color: $brand-white;
+		margin-bottom: 5px;
 
-        font-weight: $fw-light;
-        font-size: rem(25);
-        letter-spacing: rem(6);
-        line-height: rem(30);
-        text-transform: uppercase;
-        color: $brand-white;
-        margin-bottom: 5px;
+		@media only screen and (max-width: 1000px) {
+			font-size: rem(20);
+			line-height: rem(5);
+		}
 
-        @media only screen and (max-width: 1000px) {
-            font-size: rem(20);
-            line-height: rem(5);
-        }
+		@media only screen and (max-height: 900px) {
+			font-size: rem(15);
+			line-height: rem(5);
+		}
 
-        @media only screen and (max-height: 900px) {
-            font-size: rem(15);
-            line-height: rem(5);
-        }
+		@media only screen and (max-width: 430px) {
+			font-size: rem(15);
+			line-height: rem(5);
+		}
+	}
 
-        @media only screen and (max-width: 430px) {
-            font-size: rem(15);
-            line-height: rem(5);
-        }
-    }
+	.morte {
+		@include reset-spacing;
 
-    .morte {
-        @include reset-spacing;
+		font-family: $font-headings;
+		color: $brand-pink;
+		font-size: rem(115);
+		letter-spacing: rem(1);
+		line-height: rem(50);
 
-        font-family: $font-headings;
-        color: $brand-pink;
-        font-size: rem(115);
-        letter-spacing: rem(1);
-        line-height: rem(50);
+		transition: {
+			property: letter-spacing;
+			duration: $timing;
+			timing-function: $ease-std;
+		}
 
-        transition: {
-            property: letter-spacing;
-            duration: $timing;
-            timing-function: $ease-std;
-        }
+		@media only screen and (max-width: 1000px) {
+			font-size: rem(80);
+		}
 
-        @media only screen and (max-width: 1000px) {
-            font-size: rem(80);
-        }
+		@media only screen and (max-height: 900px) {
+			font-size: rem(70);
+			line-height: rem(40);
+		}
 
-        @media only screen and (max-height: 900px) {
-            font-size: rem(70);
-            line-height: rem(40);
-        }
+		@media only screen and (max-width: 430px) {
+			font-size: rem(48);
+			line-height: rem(30);
+		}
+	}
 
-        @media only screen and (max-width: 430px) {
-            font-size: rem(48);
-            line-height: rem(30);
-        }
-    }
-
-    &:hover {
-        .morte {
-            letter-spacing: rem(5);
-        }
-    }
-
-
+	&:hover {
+		.morte {
+			letter-spacing: rem(5);
+		}
+	}
 }
 
-.navigation_right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: right;
-    color: $brand-pink;
+.header-nav__right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: right;
+	color: $brand-pink;
 
-    @media only screen and (max-width: 1000px) {
-        justify-content: center;
-    }
+	@media only screen and (max-width: 1000px) {
+		justify-content: center;
+	}
 
-    @media only screen and (max-height: 900px) {
-        align-items: center;
-    }
+	@media only screen and (max-height: 900px) {
+		align-items: center;
+	}
 
-    @media only screen and (max-height: 700px) {
-        justify-content: center;
-    }
+	@media only screen and (max-height: 700px) {
+		justify-content: center;
+	}
 
-    nav {
-        @include reset-spacing;
+	nav {
+		@include reset-spacing;
 
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-items: flex-end;
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-items: flex-end;
 
-        a {
-            position: relative;
-            font-size: rem(15);
-            font-weight: $fw-semibold;
-            letter-spacing: rem(3);
-            text-transform: uppercase;
-            line-height: rem(30);
+		a {
+			position: relative;
+			font-size: rem(15);
+			font-weight: $fw-heavy;
+			letter-spacing: rem(3);
+			text-transform: uppercase;
+			line-height: rem(30);
 
-            transition: {
-                property: letter-spacing;
-                duration: $timing;
-                timing-function: $ease-std;
-            }
+			transition: {
+				property: letter-spacing;
+				duration: $timing;
+				timing-function: $ease-std;
+			}
 
-            &:after {
-                content: "";
-                position: absolute;
-                width: 0%;
-                height: 2px;
-                display: block;
-                transition: all 0.3s ease;
-                bottom: -3px;
-            }
+			&:after {
+				content: "";
+				position: absolute;
+				width: 0%;
+				height: 2px;
+				display: block;
+				transition: all 0.3s ease;
+				bottom: -3px;
+			}
 
-            &:hover::after {
-                width: 100%;
-                height: 2px;
-                background-color: $brand-pink;
-            }
+			&:hover::after {
+				width: 100%;
+				height: 2px;
+				background-color: $brand-pink;
+			}
 
-            @media only screen and (max-width: 1000px) {
-                display: none;
-            }
+			@media only screen and (max-width: 1000px) {
+				display: none;
+			}
 
-            @media only screen and (max-height: 700px) {
-                display: none;
-            }
-        }
-    }
+			@media only screen and (max-height: 700px) {
+				display: none;
+			}
+		}
+	}
 
-    .hamburger {
-        display: none;
-        cursor: pointer;
+	.hamburger {
+		display: none;
+		cursor: pointer;
 
-        #menuIcon,
-        #closeIcon {
-            transition: 1s ease-in-out;
-            display: none;
-        }
+		#menuIcon,
+		#closeIcon {
+			transition: 1s ease-in-out;
+			display: none;
+		}
 
-        @media only screen and (max-width: 1000px) {
-            display: block;
-            height: 50px;
-            width: 50px;
+		@media only screen and (max-width: 1000px) {
+			display: block;
+			height: 50px;
+			width: 50px;
 
-            svg {
-                height: 50px;
-                width: 50px;
-            }
+			svg {
+				height: 50px;
+				width: 50px;
+			}
 
-            #menuIcon {
-                display: block;
-            }
-        }
+			#menuIcon {
+				display: block;
+			}
+		}
 
-        @media only screen and (max-height: 700px) {
-            display: block;
-            height: 50px;
-            width: 50px;
+		@media only screen and (max-height: 700px) {
+			display: block;
+			height: 50px;
+			width: 50px;
 
-            svg {
-                height: 50px;
-                width: 50px;
-            }
+			svg {
+				height: 50px;
+				width: 50px;
+			}
 
-            #menuIcon {
-                display: block;
-            }
-        }
-    }
+			#menuIcon {
+				display: block;
+			}
+		}
+	}
 }
 
-.navigation_designer {
-    @include reset-spacing;
+.header-nav__designer {
+	@include reset-spacing;
 
-    font-family: $font-headings;
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: 1px;
-    padding-top: 5px;
+	font-family: $font-headings;
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	padding-top: 5px;
 
-    @media only screen and (max-width: 1000px) {
-        display: none;
-    }
+	@media only screen and (max-width: 1000px) {
+		display: none;
+	}
 
-    // @media only screen and (max-height: 900px) {
-    //     display: none;
-    // }
+	// @media only screen and (max-height: 900px) {
+	//     display: none;
+	// }
 
-    @media only screen and (max-height: 700px) {
-        display: none;
-    }
+	@media only screen and (max-height: 700px) {
+		display: none;
+	}
 }
 
 .isActive {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 10px;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 10px;
 }
 
 .menuItem {
-    font-size: 1.7em;
+	font-size: 1.7em;
 }
 
 .show-menu {
-    transform: translateX(0) !important;
+	transform: translateX(0) !important;
 }
 
 .hide-menu {
-    transform: translateX(100%);
+	transform: translateX(100%);
 }
 
 #mobileMenu {
-    position: fixed;
-    z-index: 5;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $brand-black;
-    color: $brand-pink;
+	position: fixed;
+	z-index: 5;
+	top: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $brand-black;
+	color: $brand-pink;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+	transform: translateX(100%);
+	transition: transform 0.3s ease-in-out;
 
-    ul {
-        padding: 0;
-        margin-top: -100px;
-    }
+	ul {
+		padding: 0;
+		margin-top: -100px;
+	}
 
-    li {
-        margin: 10vh 0;
-        text-align: center;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-    }
+	li {
+		margin: 10vh 0;
+		text-align: center;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+	}
 
-    .social_container {
-        background-color: transparent;
-        padding: 0;
-        bottom: 5vh;
-        right: unset;
-        display: flex;
+	.socials__container {
+		background-color: transparent;
+		padding: 0;
+		bottom: 5vh;
+		right: unset;
+		display: flex;
 
-        svg {
-            color: rgba($brand-white, 0.5);
-        }
-    }
+		svg {
+			color: rgba($brand-white, 0.5);
+		}
+	}
 }

@@ -3,42 +3,42 @@
 @use "../abstracts/functions" as *;
 @use "../abstracts/mixins" as *;
 
-.social_container {
-    z-index: 5;
-    position: absolute;
-    bottom: 20px;
-    right: 0;
-    width: max-content;
-    height: max-content;
+.socials__container {
+	z-index: 5;
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	width: max-content;
+	height: max-content;
 
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	align-items: center;
 
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 60px 10px 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 10px 60px 10px 20px;
 }
 
-.social_icon {
-    transition: 0.2s ease;
+.socials__icon {
+	transition: 0.2s ease;
 
-    svg {
-        color: $brand-black;
-    }
+	svg {
+		color: $brand-black;
+	}
 }
 
-.social_icon:last-of-type {
-    margin-left: -4px;
-    margin-top: 2px;
+.socials__icon:last-of-type {
+	margin-left: -4px;
+	margin-top: 2px;
 }
 
-.social_icon:hover {
-    transform: scale(1.2);
+.socials__icon:hover {
+	transform: scale(1.2);
 }
 
 @media only screen and (max-width: 1000px) {
-    .social_container {
-        display: none
-    }
+	.socials__container {
+		display: none;
+	}
 }
