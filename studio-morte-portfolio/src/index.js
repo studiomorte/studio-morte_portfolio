@@ -24,13 +24,13 @@ root.render(
         <Route index element={<Projects />} />
 
         <Route path="/" element={<Projects />} />
-        <Route path="mywarhammer" element={<MyWarhammer />} />
-        <Route path="stauntongallery" element={<StauntonGallery />} />
-        <Route path="sustainabilityvic" element={<SustainabilityVic />} />
-        <Route path="djaliny" element={<Djaliny />} />
+        <Route path="/mywarhammer" element={<MyWarhammer />} />
+        <Route path="/stauntongallery" element={<StauntonGallery />} />
+        <Route path="/sustainabilityvic" element={<SustainabilityVic />} />
+        <Route path="/djaliny" element={<Djaliny />} />
 
-        <Route path="about" element={<About />} />
-        <Route path="showreel" element={<Showreel />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/showreel" element={<Showreel />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
