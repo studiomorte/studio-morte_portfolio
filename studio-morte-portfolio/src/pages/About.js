@@ -3,45 +3,56 @@ import aboutMe from "./../images/about-me.jpg";
 import aboutMeMobile from "./../images/about-me-mobile.jpg";
 
 function About() {
-	return (
-		<>
-			<section className="about__container">
-				<img
-					className="about__image--desktop"
-					src={aboutMe}
-					alt="Rachael cuddles a stuffed unicorn"
-				/>
-				<img
-					className="about__image--mobile"
-					src={aboutMeMobile}
-					alt="Rachael cuddles a stuffed unicorn"
-				/>
+  return (
+    <>
+      <section className="about__container">
+        <img
+          className="about__image--desktop"
+          src={aboutMe}
+          alt="Rachael cuddles a stuffed unicorn"
+        />
+        <img
+          className="about__image--mobile"
+          src={aboutMeMobile}
+          alt="Rachael cuddles a stuffed unicorn"
+        />
 
-				<div className="about__content written">
-					<h1 className="m">
-						Hey, I'm Rachael - a passionate creative with a love of cats, carbs,
-						and caffeine. I have experience in web design, web development, UX
-						design, and QA testing.
-					</h1>
-					<p>
-						Throughout 2022 I've had the incredible opportunity to intern at
-						Humaan and in 2021 claimed first place for 'Best Overall Design' in
-						the Curtin Creative Jam. In 2022 I received recognition for being an
-						outstanding New To Curtin mentor and previously secured a spot on
-						the Curtin University Vice-Chancellors list.
-					</p>
-					<p>
-						I have an endless desire to learn and if there's one thing for
-						certain, you'll always find me busy doing something. Ultimately I
-						want to design for a better, brighter future and create meaningful,
-						memorable experiences.
-					</p>
-				</div>
+        <div className="about__content written">
+          <h1 className="brand-display xxl">hey!</h1>
+          <p>
+            I'm Rachael - a passionate creative with a love of cats, carbs, and
+            caffeine. I have experience in web development, web design, UX, and
+            QA testing. Creative Development is of particular interest to me and
+            eventually I aim to branch out into animation and motion graphics
+            for the web. I love to work in teams with quirky, passionate people
+            who share a desire to create exceptional digital products.
+            Ultimately, I want to design for a better, brighter future and
+            create meaningful, memorable experiences.
+          </p>
+          <p>
+            During my time as a student at Curtin University I received various
+            awards including: the DIGEX Industry Award from Equ (2022), 1st
+            Place for Best Overall Design in the Curtin Creative Jam (2021),
+            Admission to the Vice-Chancellors List in 2019, and various Letters
+            of Commendation and mentoring certificates.
+          </p>
+          <p>
+            In my down time you'll find me toying with various hobbies including
+            Warhammer, sewing, drawing, and playing RuneScape. In 2021 I won a
+            local award for my Warhammer miniature painting. I also love
+            watching Star Trek, cuddling my cats, and staying cozy in bed during
+            storms.
+          </p>
+          <p className="bold-italic">
+            I'm currently looking for work. <br />
+            Keen to chat? Please get in touch!
+          </p>
+        </div>
 
-				<Footer />
-			</section>
-		</>
-	);
+        <Footer />
+      </section>
+    </>
+  );
 }
 
 export default About;
