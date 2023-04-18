@@ -1,9 +1,8 @@
-~ 'reactify' project -- reusable components
+~ [DONE] 'reactify' project -- reusable components
     ~ [DONE] Condense separate swipers into one
     ~ [DONE] Swiper styles
     ~ [DONE] Bullet list component
     ~ [DONE] Link block component
-    ~ Research better way to include component props?
 
 ~ [DONE] remove showreel tab?
 ~ [DONE] replace bullet.png with svg, style accordingly
@@ -12,16 +11,16 @@
 ~ animations when elements enter viewport
 ~ revisit logo animation
     ~ Make logo an svg (multiple paths)
-~ restyle underline on navbar links
+~ [DONE] restyle underline on navbar links
 ~ [DONE] restructure folders based on learning
-~ RESTRUCTURE CSS
-~ RESTRUCTURE HTML (SEMANTICS)
+~ [DONE] RESTRUCTURE CSS
+~ [DONE] RESTRUCTURE HTML (SEMANTICS)
 ~ Convert all fonts to WOFF2
 ~ Revisit projects homepage link container alignment
+~ [DONE] FIX opening internal link in new tab
 
 
 ~ rewrite about me section
     ~ include testimonials?
-~ revisit CV
+~ [DONE] revisit CV
 ~ include CV PDF download
-~ write medium articles (as originally intended)
