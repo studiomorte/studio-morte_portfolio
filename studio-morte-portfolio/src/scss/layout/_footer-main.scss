@@ -5,39 +5,46 @@
 
 .footer {
 	width: 100%;
-	padding: 0 50px;
+	padding: 0 30px;
 	background-color: $brand-black;
 
 	.footer__container {
 		margin: 0 auto;
 		max-width: 1500px;
-		height: max-content;
+		height: 70px;
 		padding: 10px 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		color: $brand-white;
 
-		font-weight: $fw-medium;
+		font-weight: $fw-regular;
 		letter-spacing: 0.5px;
 
-		@media only screen and (max-width: 700px) {
-			padding: 20px 0 10px 0;
+		@media only screen and (max-width: 500px) {
+			height: 80px;
 			flex-direction: column-reverse;
 			justify-content: center;
+
+			p {
+				font-size: rem(12);
+				font-weight: $fw-regular;
+				padding: 0;
+				margin: 5px;
+			}
+		}
+
+		.socials__container {
+			position: unset;
+			display: flex;
+			padding-right: 0;
+
+			@media only screen and (max-width: 500px) {
+				padding: 0;
+				svg {
+					transform: scale(0.8);
+				}
+			}
 		}
 	}
-}
-
-.footer__socials-container {
-	opacity: 0.8;
-	width: max-content;
-	height: max-content;
-
-	display: flex;
-	flex-direction: row;
-	gap: 30px;
-	align-items: center;
-
-	padding: 10px 0 10px 20px;
 }
