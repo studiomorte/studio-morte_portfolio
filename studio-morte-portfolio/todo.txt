@@ -16,12 +16,12 @@
 ~ [DONE] FIX opening internal link in new tab
 ~ animations when elements enter viewport
 
-~ revisit logo animation
+~ [DONE] revisit logo animation
     ~ Make logo an svg (multiple paths)
 ~ [DONE] Convert all fonts to WOFF2
-~ Optimise all images and organise 
+~ [DONE] Optimise all images and organise 
 
 ~ [DONE] revisit CV
-~ rewrite about me section
+~ [DONE] rewrite about me section
     ~ include testimonials?
 ~ include CV PDF download
