@@ -15,7 +15,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: 'Lato';
-    src: url("#{$path}Lato-Regular.ttf") format("truetype");
+    src: url('#{$path}Lato-Regular.woff2') format('woff2');
     font-weight: $fw-regular;
     font-style: normal;
     font-display: swap;
@@ -23,7 +23,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: 'Lato';
-    src: url("#{$path}Lato-Italic.ttf") format("truetype");
+    src: url('#{$path}Lato-Italic.woff2') format('woff2');
     font-weight: $fw-regular;
     font-style: italic;
     font-display: swap;
@@ -31,7 +31,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Thin.ttf") format("truetype");
+    src: url('#{$path}Lato-Thin.woff2') format('woff2');
     font-weight: $fw-thin;
     font-style: normal;
     font-display: swap;
@@ -39,7 +39,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Light.ttf") format("truetype");
+    src: url('#{$path}Lato-Light.woff2') format('woff2');
     font-weight: $fw-light;
     font-style: normal;
     font-display: swap;
@@ -48,7 +48,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Medium.ttf") format("truetype");
+    src: url('#{$path}Lato-Medium.woff2') format('woff2');
     font-weight: $fw-medium;
     font-style: normal;
     font-display: swap;
@@ -56,7 +56,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Semibold.ttf") format("truetype");
+    src: url('#{$path}Lato-Semibold.woff2') format('woff2');
     font-weight: $fw-semibold;
     font-style: normal;
     font-display: swap;
@@ -64,7 +64,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-SemiboldItalic.ttf") format("truetype");
+    src: url('#{$path}Lato-SemiboldItalic.woff2') format('woff2');
     font-weight: $fw-semibold;
     font-style: italic;
     font-display: swap;
@@ -72,7 +72,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Bold.ttf") format("truetype");
+    src: url('#{$path}Lato-Bold.woff2') format('woff2');
     font-weight: $fw-bold;
     font-style: normal;
     font-display: swap;
@@ -80,7 +80,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-BoldItalic.ttf") format("truetype");
+    src: url('#{$path}Lato-BoldItalic.woff2') format('woff2');
     font-weight: $fw-bold;
     font-style: italic;
     font-display: swap;
@@ -88,7 +88,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Heavy.ttf") format("truetype");
+    src: url('#{$path}Lato-Heavy.woff2') format('woff2');
     font-weight: $fw-heavy;
     font-style: normal;
     font-display: swap;
@@ -96,7 +96,7 @@ $path: "../../../fonts/";
 
 @font-face {
     font-family: "Lato";
-    src: url("#{$path}Lato-Black.ttf") format("truetype");
+    src: url('#{$path}Lato-Black.woff2') format('woff2');
     font-weight: $fw-black;
     font-style: normal;
     font-display: swap;

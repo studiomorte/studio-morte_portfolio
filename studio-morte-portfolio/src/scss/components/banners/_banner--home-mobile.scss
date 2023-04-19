@@ -18,6 +18,43 @@
 
         .swiper-slide {
             overflow: hidden;
+
+            .slide-content {
+
+                transform: rotate(-8.93deg) translateX(5%) translateY(+30px);
+                opacity: 1;
+
+                transition: {
+                    property: transform, opacity;
+                    duration: 1s;
+                    // delay: 0.2s;
+                    timing-function: $ease-std;
+                }
+
+                h2 {
+                    transform: translateY(+10px);
+                    opacity: 0;
+
+                    transition: {
+                        property: transform, opacity;
+                        duration: 1s;
+                        delay: 0.2s;
+                        timing-function: $ease-std;
+                    }
+                }
+            }
+        }
+
+        .swiper-slide-active {
+            .slide-content {
+                transform: rotate(-8.93deg) translateX(5%) translateY(0);
+                opacity: 1;
+
+                h2 {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
         }
 
         .swiper-button-prev,
@@ -89,22 +126,22 @@
         }
 
         #slide-1 {
-            background-image: url("./../../../images/warhammer-header.jpg");
+            background-image: url("./../../../images/project-mywarhammer/warhammer-header.jpg");
             background-position: center;
         }
 
         #slide-2 {
-            background-image: url("./../../../images/stauntonv4.jpg");
+            background-image: url("./../../../images/project-staunton/stauntonv4.jpg");
             background-position: right;
         }
 
         #slide-3 {
-            background-image: url("./../../../images/sustainabilityvic1.jpg");
+            background-image: url("./../../../images/project-susvic/sustainabilityvic1.jpg");
             background-position: center;
         }
 
         #slide-4 {
-            background-image: url("./../../../images/djaliny-1.jpg");
+            background-image: url("./../../../images/project-djaliny/djaliny-1.jpg");
             background-position: 70% center;
         }
 

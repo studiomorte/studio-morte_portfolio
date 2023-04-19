@@ -7,20 +7,21 @@
 ~ [DONE] remove showreel tab?
 ~ [DONE] replace bullet.png with svg, style accordingly
 ~ [DONE] external links
-~ homepage GSAP/swiper (mobile)
-~ animations when elements enter viewport
-~ revisit logo animation
-    ~ Make logo an svg (multiple paths)
+~ [DONE] homepage GSAP/swiper (mobile)
 ~ [DONE] restyle underline on navbar links
 ~ [DONE] restructure folders based on learning
 ~ [DONE] RESTRUCTURE CSS
 ~ [DONE] RESTRUCTURE HTML (SEMANTICS)
-~ Convert all fonts to WOFF2
-~ Revisit projects homepage link container alignment
+~ [DONE] Revisit projects homepage link container alignment
 ~ [DONE] FIX opening internal link in new tab
+~ animations when elements enter viewport
 
+~ revisit logo animation
+    ~ Make logo an svg (multiple paths)
+~ [DONE] Convert all fonts to WOFF2
+~ Optimise all images and organise 
 
+~ [DONE] revisit CV
 ~ rewrite about me section
     ~ include testimonials?
-~ [DONE] revisit CV
 ~ include CV PDF download

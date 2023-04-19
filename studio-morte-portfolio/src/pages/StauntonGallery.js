@@ -5,17 +5,17 @@ import BulletList from "../components/BulletList";
 import LinkBlock from "../components/LinkBlock";
 
 /* IMAGES */
-import headerImg from "./../images/stauntonv3.jpg";
-import featureImg from "./../images/staunton1.jpg";
-import brandLogo from "./../images/staunton-logo.png";
-import persona1 from "./../images/persona-jason.jpg";
-import persona2 from "./../images/persona-cathy.jpg";
-import persona3 from "./../images/persona-heather.jpg";
-import ideation from "./../images/staunton-ideation.jpg";
-import wireframe1 from "./../images/staunton-wireframes1.jpg";
-import wireframe2 from "./../images/staunton-wireframes2.jpg";
-import mockup1 from "./../images/staunton-mockup1.jpg";
-import mockup2 from "./../images/staunton-mockup2.jpg";
+import headerImg from "./../images/project-staunton/stauntonv3.jpg";
+import featureImg from "./../images/project-staunton/staunton1.jpg";
+import brandLogo from "./../images/project-staunton/staunton-logo.png";
+import persona1 from "./../images/project-staunton/persona-jason.jpg";
+import persona2 from "./../images/project-staunton/persona-cathy.jpg";
+import persona3 from "./../images/project-staunton/persona-heather.jpg";
+import ideation from "./../images/project-staunton/staunton-ideation.jpg";
+import wireframe1 from "./../images/project-staunton/staunton-wireframes1.jpg";
+import wireframe2 from "./../images/project-staunton/staunton-wireframes2.jpg";
+import mockup1 from "./../images/project-staunton/staunton-mockup1.jpg";
+import mockup2 from "./../images/project-staunton/staunton-mockup2.jpg";
 
 function Staunton() {
   const personas = [

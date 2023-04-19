@@ -4,17 +4,22 @@
 @use "../abstracts/mixins" as *;
 
 .about__container {
-	position: relative;
+	display: grid;
+	grid-template-rows: 1fr auto;
 
 	.about__inner {
-		height: calc(100vh - (150px + 70px));
+		min-height: calc(100vh - (150px + 70px));
 		max-width: 1500px;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 
+		@media only screen and (max-height: 700px) {
+			min-height: calc(100vh - (100px + 70px));
+		}
+
 		@media only screen and (max-width: 1000px) {
-			height: calc(100vh - (100px + 70px));
+			min-height: calc(100vh - (100px + 70px));
 			grid-template-columns: 1fr 2fr;
 		}
 
@@ -22,14 +27,10 @@
 			grid-template-columns: 1fr;
 		}
 
-		@media only screen and (max-height: 700px) {
-			height: calc(100vh - (100px + 70px));
-		}
-
 		.about__photo {
 			grid-column: 1 / 2;
 			grid-row: 1 / -1;
-			background-image: url("./../../images/rachael-sitting-warhammer-edit1_compressed.jpg");
+			background-image: url("./../../images/about-me-sitting-warhammer.jpg");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -38,48 +39,41 @@
 				grid-row: 2 / 3;
 				grid-column: 1 / -1;
 				height: 700px;
-				margin-top: 50px;
 			}
 		}
 
 		.about__content {
-			max-height: 100%;
 			grid-column: 2 / -1;
 			grid-row: 1 / -1;
 			align-self: center;
 			padding-inline: 100px 50px;
-			font-size: 1.2em;
+			padding-block: clamp(50px, 5vh, 100px);
+			font-size: rem(20);
+			line-height: rem(25);
 
-			@media only screen and (max-height: 1000px) {
-				overflow-y: scroll;
-			}
+			@media only screen and (max-height: 1200px) {}
 
 			@media only screen and (max-width: 1500px) {
 				padding-inline: clamp(50px, 5vw, 100px);
 			}
 
+			@media only screen and (max-width: 1000px) {
+				font-size: rem(18);
+				line-height: rem(23);
+			}
+
 			@media only screen and (max-width: 600px) {
 				grid-row: 1 / 2;
 				grid-column: 1 / -1;
-				overflow-y: unset;
 				padding-inline: 10vw;
 			}
 
-			p {
-				max-width: 700px;
-			}
-
 			h1 {
+				font-size: rem(64);
 				line-height: 1.2em;
+				margin-top: 0;
 				margin-bottom: $space-between;
-				max-width: 700px;
 			}
 		}
-	}
-
-	.footer {
-		position: fixed;
-		bottom: 0;
-		z-index: 5;
 	}
 }
