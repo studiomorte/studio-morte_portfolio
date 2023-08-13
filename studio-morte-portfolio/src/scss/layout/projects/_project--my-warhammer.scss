@@ -21,7 +21,7 @@
 			margin-right: 10%;
 		}
 
-		@media only screen and (max-width: 500px) {
+		@media (max-width: 500px) {
 			&--left,
 			&--right {
 				display: none;
@@ -38,7 +38,7 @@
 			width: 100%;
 		}
 
-		@media only screen and (max-width: 1500px) {
+		@media (max-width: 1500px) {
 			grid-column: 1 / -1;
 		}
 	}

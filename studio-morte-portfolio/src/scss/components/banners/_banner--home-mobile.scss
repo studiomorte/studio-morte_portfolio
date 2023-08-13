@@ -4,114 +4,117 @@
 @use "../../abstracts/mixins" as *;
 
 .project-banner__mobile {
+	// Target this specific swiper instance:
+	#swiper-banner {
+		position: relative;
+		height: calc(100dvh - 100px);
+		width: 100vw;
+		margin-top: unset;
 
-    // Target this specific swiper instance:
-    #swiper-banner {
-        position: relative;
-        height: calc(100vh - 100px);
-        width: 100vw;
-        margin-top: unset;
+		@media (min-width: 1000px) {
+			display: none;
+		}
 
-        @media only screen and (min-width: 1000px) {
-            display: none;
-        }
+		.swiper-slide {
+			overflow: hidden;
+		}
 
-        .swiper-slide {
-            overflow: hidden;
-        }
+		.swiper-button-prev,
+		.swiper-button-next {
+			// reset changes made in swiper.scss, only for this swiper
+			top: var(--swiper-navigation-top-offset, 45%);
+			bottom: unset;
+		}
 
-        .swiper-button-prev,
-        .swiper-button-next {
-            // reset changes made in swiper.scss, only for this swiper
-            top: var(--swiper-navigation-top-offset, 45%);
-            bottom: unset;
-        }
+		.slide-content,
+		.background-overlay {
+			position: absolute;
+			width: 105%;
+			height: 100%;
+		}
 
-        .slide-content,
-        .background-overlay {
-            position: absolute;
-            width: 105%;
-            height: 100%;
-        }
+		.slide-content {
+			height: max-content;
+			margin-left: -5%;
+			bottom: 0;
+			z-index: 5;
+			transform: rotate(-8.93deg) translateX(5%);
+			text-align: center;
 
-        .slide-content {
-            height: max-content;
-            margin-left: -5%;
-            bottom: 0;
-            z-index: 5;
-            transform: rotate(-8.93deg) translateX(5%);
-            text-align: center;
+			h2 {
+				font-size: clamp(#{rem(40)}, 10vw, #{rem(64)});
+				padding-inline: 3%;
+				line-height: rem(40);
+				margin-bottom: rem(40);
 
-            h2 {
-                font-size: clamp(#{rem(40)}, 10vw, #{rem(64)});
-                padding-inline: 3%;
-                line-height: rem(40);
-                margin-bottom: rem(40);
+				@media (max-width: 500px) {
+					margin-bottom: rem(20);
+				}
+			}
 
-                @media only screen and (max-width: 500px) {
-                    margin-bottom: rem(20);
-                }
-            }
+			.slide-rectangle {
+				background-color: $brand-black;
+				height: 200px;
+				margin-bottom: -80px;
+				margin-left: -10%;
 
-            .slide-rectangle {
-                background-color: $brand-black;
-                height: 200px;
-                margin-bottom: -80px;
-                margin-left: -10%;
+				@media (max-width: 500px) {
+					height: 170px;
+				}
 
-                @media only screen and (max-width: 500px) {
-                    height: 170px;
-                }
+				p {
+					padding-left: 8%;
+					padding-top: 20px;
+					color: $brand-pink;
+					text-transform: uppercase;
+					letter-spacing: rem(5);
+					font-weight: $fw-bold;
+					font-size: rem(20);
 
-                p {
-                    padding-left: 8%;
-                    padding-top: 20px;
-                    color: $brand-pink;
-                    text-transform: uppercase;
-                    letter-spacing: rem(5);
-                    font-weight: $fw-bold;
-                    font-size: rem(20);
+					@media (max-width: 500px) {
+						font-size: rem(16);
+					}
+				}
+			}
+		}
 
-                    @media only screen and (max-width: 500px) {
-                        font-size: rem(16);
-                    }
-                }
-            }
-        }
+		#slide-1,
+		#slide-2,
+		#slide-3,
+		#slide-4 {
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
 
+		#slide-1 {
+			background-image: url("./../../../images/warhammer-header.jpg");
+			background-position: center;
+		}
 
-        #slide-1,
-        #slide-2,
-        #slide-3,
-        #slide-4 {
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+		#slide-2 {
+			background-image: url("./../../../images/stauntonv4.jpg");
+			background-position: right;
+		}
 
-        #slide-1 {
-            background-image: url("./../../../images/warhammer-header.jpg");
-            background-position: center;
-        }
+		#slide-3 {
+			background-image: url("./../../../images/sustainabilityvic1.jpg");
+			background-position: center;
+		}
 
-        #slide-2 {
-            background-image: url("./../../../images/stauntonv4.jpg");
-            background-position: right;
-        }
+		#slide-4 {
+			background-image: url("./../../../images/djaliny-1.jpg");
+			background-position: 70% center;
+		}
 
-        #slide-3 {
-            background-image: url("./../../../images/sustainabilityvic1.jpg");
-            background-position: center;
-        }
+		.background-overlay {
+			top: 0;
 
-        #slide-4 {
-            background-image: url("./../../../images/djaliny-1.jpg");
-            background-position: 70% center;
-        }
-
-        .background-overlay {
-            top: 0;
-
-            background: linear-gradient(0deg, #FFFFFF 12.5%, rgba(232, 232, 232, 0.81) 29.69%, rgba(196, 196, 196, 0) 100%);
-        }
-    }
+			background: linear-gradient(
+				0deg,
+				#ffffff 12.5%,
+				rgba(232, 232, 232, 0.81) 29.69%,
+				rgba(196, 196, 196, 0) 100%
+			);
+		}
+	}
 }

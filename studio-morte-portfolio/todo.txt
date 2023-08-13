@@ -7,10 +7,8 @@
 ~ [DONE] remove showreel tab?
 ~ [DONE] replace bullet.png with svg, style accordingly
 ~ [DONE] external links
-~ homepage GSAP/swiper (mobile)
+~ homepage swiper adjustments (mobile)
 ~ animations when elements enter viewport
-~ revisit logo animation
-    ~ Make logo an svg (multiple paths)
 ~ [DONE] restyle underline on navbar links
 ~ [DONE] restructure folders based on learning
 ~ [DONE] RESTRUCTURE CSS

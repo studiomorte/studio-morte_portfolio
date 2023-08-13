@@ -5,48 +5,42 @@
 
 .header-nav__container {
 	z-index: 100;
-	width: 100vw;
-	height: 150px;
 	background-color: $brand-black;
+	height: 70px;
+	padding-inline: 15px 10px;
 
-	padding: 25px 50px 25px 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 
 	overflow: hidden;
 
-	@media only screen and (max-width: 1000px) {
+	@media (min-width: $bp-xs) {
 		height: 100px;
-		padding: 20px 30px 20px 25px;
+		padding: 20px max(15px, 2vw);
 	}
 
-	@media only screen and (max-width: 430px) {
-		padding-inline: 6vw;
-	}
-
-	@media only screen and (max-height: 700px) {
-		height: 100px;
+	@media (min-width: $bp-md) {
+		height: 150px;
+		padding-block: 25px;
+		padding-inline: min(20px, 3vw) min(50px, 3vw);
 	}
 }
 
 .header-nav__logo {
-	padding-left: 20px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 0;
 
-	@media only screen and (max-width: 1000px) {
+	@media (min-width: $bp-xs) {
 		padding-left: 10px;
+		justify-content: unset;
 	}
 
-	@media only screen and (max-height: 700px) {
-		height: 100px;
-	}
-
-	@media only screen and (max-width: 430px) {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-left: 0;
+	@media (min-width: $bp-md) {
+		padding-left: 20px;
 	}
 
 	a {
@@ -57,25 +51,20 @@
 		@include reset-spacing;
 
 		font-weight: $fw-light;
-		font-size: rem(25);
+		font-size: rem(15);
+		line-height: rem(5);
 		letter-spacing: rem(6);
-		line-height: rem(30);
 		text-transform: uppercase;
 		color: $brand-white;
 		margin-bottom: 5px;
 
-		@media only screen and (max-width: 1000px) {
-			font-size: rem(20);
-			line-height: rem(5);
+		@media (min-width: $bp-xs) {
+			font-size: rem(25);
+			line-height: rem(30);
 		}
 
-		@media only screen and (max-height: 700px) {
+		@media (max-width: $bp-md) {
 			font-size: rem(20);
-			line-height: rem(5);
-		}
-
-		@media only screen and (max-width: 430px) {
-			font-size: rem(15);
 			line-height: rem(5);
 		}
 	}
@@ -84,27 +73,19 @@
 		@include reset-spacing;
 
 		font-family: $font-headings;
-		color: $brand-pink;
-		font-size: rem(115);
+		font-size: rem(48);
+		line-height: rem(30);
 		letter-spacing: rem(1);
-		line-height: rem(50);
-		transition: {
-			property: letter-spacing;
-			duration: $timing;
-			timing-function: $ease-std;
-		}
+		color: $brand-pink;
+		transition: letter-spacing $timing $ease-std;
 
-		@media only screen and (max-width: 1000px) {
+		@media (min-width: $bp-xs) {
 			font-size: rem(80);
+			line-height: rem(50);
 		}
-
-		@media only screen and (max-height: 700px) {
-			font-size: rem(80);
-		}
-
-		@media only screen and (max-width: 430px) {
-			font-size: rem(48);
-			line-height: rem(30);
+		@media (min-width: $bp-md) {
+			font-size: rem(115);
+			line-height: rem(50);
 		}
 	}
 
@@ -122,11 +103,7 @@
 	text-align: right;
 	color: $brand-pink;
 
-	@media only screen and (max-width: 1000px) {
-		justify-content: center;
-	}
-
-	@media only screen and (max-height: 700px) {
+	@media (max-width: 1000px) {
 		justify-content: center;
 	}
 
@@ -167,11 +144,11 @@
 				background-color: $brand-pink;
 			}
 
-			@media only screen and (max-width: 1000px) {
+			@media (max-width: 1000px) {
 				display: none;
 			}
 
-			@media only screen and (max-height: 700px) {
+			@media (max-height: 700px) {
 				display: none;
 			}
 		}
@@ -187,7 +164,7 @@
 			display: none;
 		}
 
-		@media only screen and (max-width: 1000px) {
+		@media (max-width: 1000px) {
 			display: block;
 			height: 50px;
 			width: 50px;
@@ -202,7 +179,7 @@
 			}
 		}
 
-		@media only screen and (max-height: 700px) {
+		@media (max-height: 700px) {
 			display: block;
 			height: 50px;
 			width: 50px;
@@ -228,11 +205,11 @@
 	letter-spacing: 1px;
 	padding-top: 5px;
 
-	@media only screen and (max-width: 1000px) {
+	@media (max-width: 1000px) {
 		display: none;
 	}
 
-	@media only screen and (max-height: 700px) {
+	@media (max-height: 700px) {
 		display: none;
 	}
 }
@@ -257,8 +234,8 @@
 
 #mobileMenu {
 	position: fixed;
-	z-index: 5;
-	top: 100px;
+	z-index: 6;
+	top: calc(70px - 1px);
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -273,6 +250,14 @@
 	transform: translateX(100%);
 	transition: transform 0.3s ease-in-out;
 
+	@media (min-width: $bp-xs) {
+		top: calc(100px - 1px);
+	}
+
+	@media (min-width: $bp-md) {
+		top: calc(150px - 1px);
+	}
+
 	ul {
 		padding: 0;
 		margin-top: -100px;
@@ -280,9 +265,37 @@
 
 	li {
 		margin: 10vh 0;
-		text-align: center;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
+		text-align: center;
+
+		a {
+			position: relative;
+
+			transition: {
+				property: letter-spacing;
+				duration: $timing;
+				timing-function: $ease-std;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: 0%;
+				height: 2px;
+				display: block;
+				transition: all 0.3s ease;
+				bottom: -6px;
+			}
+
+			&:hover:after {
+				width: 100%;
+				height: 2px;
+				background-color: $brand-pink;
+			}
+		}
 	}
 
 	.socials__container {

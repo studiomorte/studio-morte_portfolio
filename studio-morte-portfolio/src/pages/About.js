@@ -12,12 +12,15 @@ function About() {
 						<p>
 							I'm Rachael - a passionate creative with a love of cats, carbs,
 							and caffeine. I have experience in web development, web design,
-							UX, and QA testing. Creative Development is of particular interest
-							to me and eventually I aim to branch out into animation and motion
-							graphics for the web. I love to work in teams with quirky,
-							passionate people who share a desire to create exceptional digital
-							products. Ultimately, I want to design for a better, brighter
-							future and create meaningful, memorable experiences.
+							UX, and QA testing.
+						</p>
+						<p>
+							Creative Development is of particular interest to me and I aim to
+							delve deeper into web animation with a focus on accessibility
+							standards. I love to work in teams with quirky, passionate people
+							who share a desire to create exceptional digital products.
+							Ultimately, I want to design for a better, brighter future and
+							create meaningful, memorable experiences.
 						</p>
 						<p>
 							During my time as a student at Curtin University I received
@@ -33,10 +36,11 @@ function About() {
 							also love watching Star Trek, cuddling my cats, and staying cozy
 							in bed during storms.
 						</p>
-						<p className="bold-italic">
+						{/* <p className="bold-italic">
 							I'm currently looking for work. <br />
 							Keen to chat? Please get in touch!
-						</p>
+						</p> */}
+						<p className="bold-italic">Keen to chat? Please get in touch!</p>
 					</div>
 				</div>
 				<Footer />

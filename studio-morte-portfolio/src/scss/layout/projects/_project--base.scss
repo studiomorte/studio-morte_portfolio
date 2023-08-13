@@ -81,11 +81,7 @@
 		letter-spacing: 1px;
 		line-height: 1.4em;
 
-		@media only screen and (max-width: 1200px) {
-			// padding: 50px 10%;
-		}
-
-		@media only screen and (max-width: 1000px) {
+		@media (max-width: 1000px) {
 			padding: 50px 10%;
 			margin-top: 0;
 		}
@@ -113,7 +109,7 @@
 				grid-column: 2 / -1;
 			}
 
-			@media only screen and (max-width: 1000px) {
+			@media (max-width: 1000px) {
 				&:not(:first-of-type) {
 					margin-top: $space-above;
 				}
@@ -147,7 +143,7 @@
 				}
 			}
 
-			@media only screen and (max-width: 750px) {
+			@media (max-width: 750px) {
 				grid-template-columns: 1fr;
 				grid-gap: 30px;
 
@@ -177,7 +173,7 @@
 				box-shadow: 2px 5px 10px 5px rgba($brand-black, 0.1);
 			}
 
-			@media only screen and (max-width: 1000px) {
+			@media (max-width: 1000px) {
 				height: 40vh;
 			}
 		}
@@ -188,7 +184,7 @@
 	&--feature {
 		margin-top: $space-above;
 
-		@media only screen and (max-width: 1000px) {
+		@media (max-width: 1000px) {
 			height: 60vh;
 
 			img {
@@ -214,7 +210,7 @@
 			object-position: left;
 		}
 
-		@media only screen and (max-width: 1000px) {
+		@media (max-width: 1000px) {
 			&--aside {
 				align-self: unset;
 
@@ -232,7 +228,7 @@
 .left {
 	grid-column: 2 / 6;
 
-	@media only screen and (max-width: 1000px) {
+	@media (max-width: 1000px) {
 		grid-column: 2 / -2;
 	}
 }
@@ -240,7 +236,7 @@
 .right {
 	grid-column: 7 / 11;
 
-	@media only screen and (max-width: 1000px) {
+	@media (max-width: 1000px) {
 		grid-column: 2 / -2;
 	}
 }
@@ -264,13 +260,13 @@
 		}
 	}
 
-	@media only screen and (max-width: 1300px) {
+	@media (max-width: 1300px) {
 		.written {
 			max-width: 45%;
 		}
 	}
 
-	@media only screen and (max-width: 1000px) {
+	@media (max-width: 1000px) {
 		.written {
 			max-width: 100%;
 		}

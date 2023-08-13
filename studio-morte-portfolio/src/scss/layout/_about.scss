@@ -7,23 +7,23 @@
 	position: relative;
 
 	.about__inner {
-		height: calc(100vh - (150px + 70px));
 		max-width: 1500px;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 
-		@media only screen and (max-width: 1000px) {
-			height: calc(100vh - (100px + 70px));
+		@media (min-width: 600px) {
+			height: calc(100dvh - (100px + 70px));
 			grid-template-columns: 1fr 2fr;
 		}
 
-		@media only screen and (max-width: 600px) {
-			grid-template-columns: 1fr;
+		@media (min-width: $bp-md) {
+			height: calc(100dvh - (150px + 70px));
+			grid-template-columns: 1fr 1fr;
 		}
 
-		@media only screen and (max-height: 700px) {
-			height: calc(100vh - (100px + 70px));
+		@media (max-width: calc(600px - 1px)) {
+			grid-template-columns: 1fr;
 		}
 
 		.about__photo {
@@ -34,7 +34,7 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 
-			@media only screen and (max-width: 600px) {
+			@media (max-width: calc(600px - 1px)) {
 				grid-row: 2 / 3;
 				grid-column: 1 / -1;
 				height: 700px;
@@ -50,18 +50,17 @@
 			padding-inline: 100px 50px;
 			font-size: 1.2em;
 
-			@media only screen and (max-height: 1000px) {
-				overflow-y: scroll;
+			@media (min-width: 600px) {
+				overflow-y: auto;
 			}
 
-			@media only screen and (max-width: 1500px) {
+			@media (max-width: 1500px) {
 				padding-inline: clamp(50px, 5vw, 100px);
 			}
 
-			@media only screen and (max-width: 600px) {
+			@media (max-width: calc(600px - 1px)) {
 				grid-row: 1 / 2;
 				grid-column: 1 / -1;
-				overflow-y: unset;
 				padding-inline: 10vw;
 			}
 
@@ -78,8 +77,12 @@
 	}
 
 	.footer {
-		position: fixed;
-		bottom: 0;
-		z-index: 5;
+		@media (min-width: 600px) {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 5;
+		}
 	}
 }

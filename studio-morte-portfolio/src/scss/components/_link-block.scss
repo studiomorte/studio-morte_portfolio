@@ -9,17 +9,21 @@
 	overflow: hidden;
 	padding: 50px 0;
 
-	@media only screen and (max-width: 1200px) {
+	@media (max-width: calc(1200px - 1px)) {
 		grid-column: 7 / -1;
 	}
 
-	@media only screen and (max-width: 1000px) {
+	@media (max-width: calc(1000px - 1px)) {
 		grid-column: 2 / -1;
 		padding-left: 0px;
 
 		ul {
 			padding: 0;
 		}
+	}
+
+	a:focus li {
+		color: #fff;
 	}
 
 	li {
@@ -48,12 +52,11 @@
 			margin-right: 20px;
 		}
 
-		&:hover {
+		&:hover:hover {
 			color: #fff;
 		}
 
-		@media only screen and (max-width: 1000px) {
-			width: 110%;
+		@media (max-width: calc(1000px - 1px)) {
 			transform: rotate(0deg);
 		}
 	}

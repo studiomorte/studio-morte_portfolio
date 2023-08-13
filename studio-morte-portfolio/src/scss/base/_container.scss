@@ -1,15 +1,14 @@
 .main-container {
-    height: calc(100vh - 150px);
-    width: 100vw;
-    overflow-x: hidden;
+	height: calc(100dvh - 150px);
+	overflow-x: hidden;
 
-    @media only screen and (max-width: 1000px) {
-        height: calc(100vh - 100px);
-    }
+	@media (max-width: calc(1000px - 1px)) {
+		height: calc(100dvh - 100px);
+	}
 
-    @media only screen and (max-height: 900px) {
-        height: calc(100vh - 100px);
-    }
+	@media (max-width: calc(430px - 1px)) {
+		height: calc(100dvh - 70px);
+	}
 }
 
 // .showreel_container {

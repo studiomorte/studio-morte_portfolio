@@ -10,10 +10,6 @@
 
 	.quote {
 		margin-top: $space-above;
-
-		@media only screen and (max-width: 1000px) {
-			// margin-top: 0;
-		}
 	}
 
 	.project__image--large {

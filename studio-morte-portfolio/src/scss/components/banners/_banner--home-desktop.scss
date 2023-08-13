@@ -7,17 +7,15 @@
 	display: grid;
 	grid-template-rows: 50px auto auto;
 	height: calc(100vh - 150px);
-	width: 100vw;
 	overflow: hidden;
 
-	@media only screen and (max-width: 999px) {
+	@media (max-width: 999px) {
 		display: none;
 	}
 
-	@media only screen and (max-height: 900px) {
+	@media (max-height: 900px) {
 		height: calc(100vh - 100px);
 	}
-
 }
 
 .project-banner__navigation {
@@ -29,35 +27,34 @@
 		transform: rotate(-8.93deg) scale(1);
 		margin-left: -200px;
 
-		@media only screen and (max-width: 2100px) {
+		@media (max-width: 2100px) {
 			margin-left: -400px;
 			transform: rotate(-8.93deg) scale(0.9);
 		}
 
-		@media only screen and (max-width: 1800px) {
+		@media (max-width: 1800px) {
 			margin-left: -450px;
 			width: 150%;
 			transform: rotate(-8.93deg) scale(0.8);
 		}
 
-		@media only screen and (max-width: 1540px) {
+		@media (max-width: 1540px) {
 			margin-left: -560px;
 			width: 180%;
 			transform: rotate(-8.93deg) scale(0.7);
 		}
 
-		@media only screen and (max-width: 1340px) {
+		@media (max-width: 1340px) {
 			margin-left: -710px;
 			width: 230%;
 			transform: rotate(-8.93deg) scale(0.6);
 		}
 
-		@media only screen and (max-width: 1150px) {
+		@media (max-width: 1150px) {
 			margin-left: -800px;
 			width: 260%;
 			transform: rotate(-8.93deg) scale(0.5);
 		}
-
 
 		li {
 			overflow: hidden;
@@ -76,14 +73,13 @@
 			text-transform: uppercase;
 			text-align: left;
 
-			@media only screen and (max-width: 1340px) {
+			@media (max-width: 1340px) {
 				font-weight: $fw-light;
 			}
 		}
 	}
 
 	.project-banner__link-container {
-
 		.rectangle {
 			height: 80px;
 			width: 100%;
@@ -107,7 +103,7 @@
 		}
 
 		.hidden {
-			@media only screen and (min-width: 1800px) {
+			@media (min-width: 1800px) {
 				display: inline-block;
 			}
 		}
@@ -118,12 +114,14 @@
 	grid-area: 1 / 1 / -1 / -1;
 	z-index: 3;
 
-	background: linear-gradient(to right,
-			rgba(255, 255, 255, 1) 12%,
-			rgba(255, 255, 255, 1) 32%,
-			rgba(255, 255, 255, 0.6) 69%,
-			rgba(255, 255, 255, 0) 99%,
-			rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1) 12%,
+		rgba(255, 255, 255, 1) 32%,
+		rgba(255, 255, 255, 0.6) 69%,
+		rgba(255, 255, 255, 0) 99%,
+		rgba(255, 255, 255, 0) 100%
+	);
 }
 
 .project-banner__background-image {
@@ -133,7 +131,7 @@
 	z-index: 1;
 	visibility: hidden;
 
-	@media only screen and (min-height: 900px) {
+	@media (min-height: 900px) {
 		height: calc(100vh - 150px);
 	}
 }
@@ -158,7 +156,8 @@
 }
 
 @keyframes changeFont {
-	from {}
+	from {
+	}
 
 	1% {
 		font-family: $font-headings;
@@ -190,5 +189,6 @@
 		line-height: 0px;
 	}
 
-	to {}
+	to {
+	}
 }
