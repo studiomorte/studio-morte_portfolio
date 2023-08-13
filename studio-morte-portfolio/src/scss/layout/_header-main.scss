@@ -4,6 +4,10 @@
 @use "../abstracts/mixins" as *;
 
 .header-nav__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 100;
 	background-color: $brand-black;
 	height: 70px;
@@ -91,7 +95,7 @@
 
 	&:hover {
 		.morte {
-			letter-spacing: rem(2);
+			transform: scale(1.01) translateX(0.3%);
 		}
 	}
 }

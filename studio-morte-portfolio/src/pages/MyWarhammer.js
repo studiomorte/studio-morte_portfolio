@@ -5,20 +5,20 @@ import BulletList from "../components/BulletList";
 import LinkBlock from "../components/LinkBlock";
 
 /* IMAGES */
-import headerImg from "./../images/warhammer-header.jpg";
-import featureImg from "./../images/warhammer-feature.jpg";
-import warhammerLogo from "./../images/logo-warhammer.png";
-import battleHonoursLogo from "./../images/logo-battlehonours.png";
-import citadelColourLogo from "./../images/logo-citadelcolour.png";
-import battleHonoursImg from "./../images/mockup1-2.jpg";
-import citadelColourImg from "./../images/citadelcolour.jpg";
-import persona1 from "./../images/persona-warhammer1.jpg";
-import persona2 from "./../images/persona-warhammer2.jpg";
-import persona3 from "./../images/persona-warhammer3.jpg";
-import scenario1 from "./../images/scenario-warhammer1.jpg";
-import scenario2 from "./../images/scenario-warhammer2.jpg";
-import scenario3 from "./../images/scenario-warhammer3.jpg";
-import infoArch from "./../images/ia-warhammer.jpg";
+import headerImg from "./../images/project-mywarhammer/warhammer-header.jpg";
+import featureImg from "./../images/project-mywarhammer/warhammer-feature.jpg";
+import warhammerLogo from "./../images/project-mywarhammer/logo-warhammer.png";
+import battleHonoursLogo from "./../images/project-mywarhammer/logo-battlehonours.png";
+import citadelColourLogo from "./../images/project-mywarhammer/logo-citadelcolour.png";
+import battleHonoursImg from "./../images/project-mywarhammer/mockup1-2.jpg";
+import citadelColourImg from "./../images/project-mywarhammer/citadelcolour.jpg";
+import persona1 from "./../images/project-mywarhammer/persona-warhammer1.jpg";
+import persona2 from "./../images/project-mywarhammer/persona-warhammer2.jpg";
+import persona3 from "./../images/project-mywarhammer/persona-warhammer3.jpg";
+import scenario1 from "./../images/project-mywarhammer/scenario-warhammer1.jpg";
+import scenario2 from "./../images/project-mywarhammer/scenario-warhammer2.jpg";
+import scenario3 from "./../images/project-mywarhammer/scenario-warhammer3.jpg";
+import infoArch from "./../images/project-mywarhammer/ia-warhammer.jpg";
 
 function MyWarhammer() {
   const personas = [

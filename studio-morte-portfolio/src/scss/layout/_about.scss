@@ -4,7 +4,8 @@
 @use "../abstracts/mixins" as *;
 
 .about__container {
-	position: relative;
+	display: grid;
+	grid-template-rows: 1fr auto;
 
 	.about__inner {
 		max-width: 1500px;
@@ -29,7 +30,7 @@
 		.about__photo {
 			grid-column: 1 / 2;
 			grid-row: 1 / -1;
-			background-image: url("./../../images/rachael-sitting-warhammer-edit1_compressed.jpg");
+			background-image: url("./../../images/about-me-sitting-warhammer.jpg");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -38,20 +39,21 @@
 				grid-row: 2 / 3;
 				grid-column: 1 / -1;
 				height: 700px;
-				margin-top: 50px;
 			}
 		}
 
 		.about__content {
-			max-height: 100%;
 			grid-column: 2 / -1;
 			grid-row: 1 / -1;
 			align-self: center;
 			padding-inline: 100px 50px;
-			font-size: 1.2em;
+			padding-block: clamp(50px, 5vh, 100px);
+			font-size: rem(20);
+			line-height: rem(25);
 
 			@media (min-width: 600px) {
 				overflow-y: auto;
+				height: 100%;
 			}
 
 			@media (max-width: 1500px) {
@@ -64,14 +66,11 @@
 				padding-inline: 10vw;
 			}
 
-			p {
-				max-width: 700px;
-			}
-
 			h1 {
+				font-size: rem(64);
 				line-height: 1.2em;
+				margin-top: 0;
 				margin-bottom: $space-between;
-				max-width: 700px;
 			}
 		}
 	}

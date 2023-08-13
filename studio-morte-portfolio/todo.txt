@@ -13,12 +13,16 @@
 ~ [DONE] restructure folders based on learning
 ~ [DONE] RESTRUCTURE CSS
 ~ [DONE] RESTRUCTURE HTML (SEMANTICS)
-~ Convert all fonts to WOFF2
-~ Revisit projects homepage link container alignment
+~ [DONE] Revisit projects homepage link container alignment
 ~ [DONE] FIX opening internal link in new tab
+~ animations when elements enter viewport
 
+~ [DONE] revisit logo animation
+    ~ Make logo an svg (multiple paths)
+~ [DONE] Convert all fonts to WOFF2
+~ [DONE] Optimise all images and organise 
 
-~ rewrite about me section
-    ~ include testimonials?
 ~ [DONE] revisit CV
+~ [DONE] rewrite about me section
+    ~ include testimonials?
 ~ include CV PDF download
