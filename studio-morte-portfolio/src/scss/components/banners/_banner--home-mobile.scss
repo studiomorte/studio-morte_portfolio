@@ -7,9 +7,13 @@
 	// Target this specific swiper instance:
 	#swiper-banner {
 		position: relative;
-		height: calc(100dvh - 100px);
+		height: calc(100dvh - 70px);
 		width: 100vw;
 		margin-top: unset;
+
+		@media (min-width: $bp-xs) {
+			height: calc(100dvh - 100px);
+		}
 
 		@media (min-width: 1000px) {
 			display: none;
